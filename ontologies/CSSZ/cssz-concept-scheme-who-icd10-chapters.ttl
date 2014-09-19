@@ -1,0 +1,166 @@
+﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix icd10:   <http://linked.cssz.cz/resource/icd-10/chapter/> .
+@prefix icd10-onto:   <http://linked.cssz.cz/ontology/icd-10/> .
+
+icd10-onto:ICD10ChaptersScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of chapters (I–XIX) of the Tenth Revision of the International Statistical Classification of Diseases and Related Health Problems (ICD - 10) - WHO 1992"@en, "Číselník kapitol (I–XIX) Mezinárodní statistické klasifikace nemocí a přidružených zdravotních problémů (ve znění 10. decenální revize) - WHO 1992"@cs ;
+  rdfs:label "Code list of ICD-10 chapters (I–XIX)"@en, "Číselník kapitol (I–XIX) MKN-10"@cs ;
+  skos:notation "CL_WHO_ICD10_CHAPTERS" ;
+  skos:note "This code list is a representation of of chapters (I–XIX) of the Tenth Revision of the International Statistical Classification of Diseases and Related Health Problems (ICD - 10) published by WHO."@en,
+            "Tento číselník je reprezentací kapitol (I–XIX) Mezinárodní statistické klasifikace nemocí a přidružených zdravotních problémů (ve znění 10. decenální revize) vydávané WHO."@cs ;
+  skos:hasTopConcept icd10:C_T ;
+  rdfs:seeAlso icd10-onto:Chapter .
+  
+icd10-onto:Chapter a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_O a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "Nezařazeno"@cs, "Unclassified"@en ;
+  skos:notation "O";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_T a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "Total"@cs, "Total"@en ;
+  skos:notation "T";
+  skos:narrower icd10:C_O, icd10:C_1, icd10:C_2, icd10:C_3, icd10:C_4, icd10:C_5, icd10:C_6, icd10:C_7, icd10:C_8, icd10:C_9, icd10:C_10, icd10:C_11, icd10:C_12, icd10:C_13, icd10:C_14, icd10:C_15, icd10:C_16, icd10:C_17, icd10:C_18, icd10:C_19 ;
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_1 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "1. skupina"@cs, "1st chapter"@en ;
+  skos:definition "Některé infekční a parazitární nemoci A00–B99."@cs ,
+		  "Certain infectious and parasitic diseases A00–B99."@en ;
+  skos:notation "I.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_2 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "2. skupina"@cs, "2nd chapter"@en ;
+  skos:definition "Novotvary C00–D48."@cs ,
+		  "Neoplasms C00–D48."@en ;
+  skos:notation "II.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_3 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "3. skupina"@cs, "3rd chapter"@en ;
+  skos:definition "Nemoci krve, krvetvorných orgánů a některé poruchy týkající se mechanismu imunity D50–D89."@cs ,
+		  "Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism D50–D89."@en ;
+  skos:notation "III.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_4 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "4. skupina"@cs, "4th chapter"@en ;
+  skos:definition "Nemoci endokrinní, výživy a přeměny látek E00–E90."@cs ,
+		  "Endocrine, nutritional and metabolic diseases E00–E90."@en ;
+  skos:notation "IV.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_5 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "5. skupina"@cs, "5th chapter"@en ;
+  skos:definition "Duševní poruchy a poruchy chování F00–F99."@cs ,
+		  "Mental and behavioural disorders F00–F99."@en ;
+  skos:notation "V.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_6 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "6. skupina"@cs, "6th chapter"@en ;
+  skos:definition "Nemoci nervové soustavy G00–G99."@cs ,
+		  "Diseases of the nervous system G00–G99."@en ;
+  skos:notation "VI.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_7 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "7. skupina"@cs, "7th chapter"@en ;
+  skos:definition "Nemoci oka a očních adnex H00–H59."@cs ,
+		  "Diseases of the eye and adnexa H00–H59."@en ;
+  skos:notation "VII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_8 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "8. skupina"@cs, "8th chapter"@en ;
+  skos:definition "Nemoci ucha a bradavkového výběžku H60–H95."@cs ,
+		  "Diseases of the ear and mastoid process H60–H95."@en ;
+  skos:notation "VIII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_9 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "9. skupina"@cs, "9th chapter"@en ;
+  skos:definition "Nemoci oběhové soustavy I00–I99."@cs ,
+		  "Diseases of the circulatory system I00–I99."@en ;
+  skos:notation "IX.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_10 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "10. skupina"@cs, "10th chapter"@en ;
+  skos:definition "Nemoci dýchací soustavy J00–J99."@cs ,
+		  "Diseases of the respiratory system J00–J99."@en ;
+  skos:notation "X.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_11 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "11. skupina"@cs, "11th chapter"@en ;
+  skos:definition "Nemoci trávicí soustavy K00–K93."@cs ,
+		  "Diseases of the digestive system K00–K93."@en ;
+  skos:notation "XI.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_12 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "12. skupina"@cs, "12th chapter"@en ;
+  skos:definition "Nemoci kůže a podkožního vaziva L00–L99."@cs ,
+		  "Diseases of the skin and subcutaneous tissue L00–L99."@en ;
+  skos:notation "XII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_13 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "13. skupina"@cs, "13th chapter"@en ;
+  skos:definition "Nemoci svalové a kosterní soustavy a pojivové tkáně M00–M99."@cs ,
+		  "Diseases of the musculoskeletal system and connective tissue M00–M99."@en ;
+  skos:notation "XIII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_14 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "14. skupina"@cs, "14th chapter"@en ;
+  skos:definition "Nemoci močové a pohlavní soustavy N00–N99."@cs ,
+		  "Diseases of the genitourinary system N00–N99."@en ;
+  skos:notation "XIV.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_15 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "15. skupina"@cs, "15th chapter"@en ;
+  skos:definition "Těhotenství, porod a šestinedělí O00–O99."@cs ,
+		  "Pregnancy, childbirth and the puerperium O00–O99."@en ;
+  skos:notation "XV.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_16 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "16. skupina"@cs, "16th chapter"@en ;
+  skos:definition "Některé stavy vzniklé v perinatálním období P00–P96."@cs ,
+		  "Certain conditions originating in the perinatal period P00–P96."@en ;
+  skos:notation "XVI.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_17 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "17. skupina"@cs, "17th chapter"@en ;
+  skos:definition "Vrozené vady, deformace a chromozomální abnormality Q00–Q99."@cs ,
+		  "Congenital malformations, deformations and chromosomal abnormalities Q00–Q99."@en ;
+  skos:notation "XVII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_18 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "18. skupina"@cs, "18th chapter"@en ;
+  skos:definition "Příznaky, znaky a abnormální klinické a laboratorní nálezy nezařazené jinde R00–R99."@cs ,
+		  "Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified R00–R99."@en ;
+  skos:notation "XVIII.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .
+
+icd10:C_19 a skos:Concept, icd10-onto:Chapter ;
+  skos:prefLabel "19. skupina"@cs, "19th chapter"@en ;
+  skos:definition "Poranění, otravy a některé jiné následky vnějších příčin S00–T98."@cs ,
+		  "Injury, poisoning and certain other consequences of external causes S00–T98."@en ;
+  skos:notation "XIX.";
+  skos:inScheme icd10-onto:ICD10ChaptersScheme .

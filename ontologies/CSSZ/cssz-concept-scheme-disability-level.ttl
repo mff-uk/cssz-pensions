@@ -1,0 +1,41 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix dis:   <http://linked.cssz.cz/resource/disability-level/> .
+@prefix dis-onto:   <http://linked.cssz.cz/ontology/disability-levels/> .
+
+dis-onto:DisabilityLevelScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of disability levels"@en, "Číselník stupňů invalidity"@cs ;
+  rdfs:label "Code list of disability levels"@en, "Číselník stupňů invalidity"@cs ;
+  skos:notation "CL_CSSZ_DISABILITY_LEVEL" ;
+  skos:note "This code list is a representation of disability levels."@en,
+            "Tento číselník je reprezentací stupňů invalidity."@cs ;
+  rdfs:seeAlso dis-onto:DisabilityLevel .
+  
+dis-onto:DisabilityLevel a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso dis-onto:DisabilityLevelScheme .
+
+dis:DL_X a skos:Concept, dis-onto:DisabilityLevel ;
+  skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;
+  skos:notation "X";
+  skos:inScheme dis-onto:DisabilityLevelScheme .
+  
+dis:DL_1 a skos:Concept, dis-onto:DisabilityLevel ;
+  skos:prefLabel "1. stupeň"@cs ;
+  skos:notation "1";
+  skos:inScheme dis-onto:DisabilityLevelScheme .
+  
+dis:DL_2 a skos:Concept, dis-onto:DisabilityLevel ;
+  skos:prefLabel "2. stupeň"@cs ;
+  skos:notation "2";
+  skos:inScheme dis-onto:DisabilityLevelScheme .
+  
+dis:DL_3 a skos:Concept, dis-onto:DisabilityLevel ;
+  skos:prefLabel "3. stupeň"@cs ;
+  skos:notation "3";
+  skos:inScheme dis-onto:DisabilityLevelScheme .

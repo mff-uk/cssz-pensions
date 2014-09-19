@@ -1,0 +1,47 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix czgop:   <http://linked.cssz.cz/resource/group/> .
+@prefix czgop-onto:   <http://linked.cssz.cz/ontology/groups-of-persons/> .
+
+czgop-onto:CzechGroupsOfPersonsScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of the groups of the Czech population."@en, "Èíselník skupin osob èeské populace."@cs ;
+  rdfs:label "Code list of the groups of the Czech population."@en, "Èíselník skupin osob èeské populace."@cs ;
+  skos:note "Code list of groups of persons used to classify the population in the Czech pension statistics."@en, "Èíselník skupin osob použitých pro klasifikaci relativního rozložení populace v datech dùchodové statistiky ÈR."@cs ;
+  skos:hasTopConcept czgop:G_T ;
+  rdfs:seeAlso czgop-onto:Group .
+
+czgop-onto:Group a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso czgop-onto:CzechGroupsOfPersonsScheme .
+
+czgop:G_T a skos:Concept, czgop-onto:Group ;
+  skos:prefLabel "Celkem"@cs, "Total"@en ;
+  skos:notation "T" ;
+  skos:narrower czgop:G_Insured, czgop:G_PensionersNonOrphans, czgop:G_Y_LE19, czgop:G_O ;
+  skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
+
+czgop:G_Insured a skos:Concept, czgop-onto:Group ;
+  skos:prefLabel "Pojitìnci"@cs, "Insured"@en ;
+  skos:notation "G_Insured" ;
+  skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
+
+### Je to vhodnì pojmenováno?
+czgop:G_PensionersNonOrphans a skos:Concept, czgop-onto:Group ;
+  skos:prefLabel "Poèet dùchodcù bez sirotkù"@cs, "Number of pensioners without orphans"@en ;
+  skos:notation "G_PensionersNonOrphans" ;
+  skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
+
+czgop:G_Y_LE19 a skos:Concept, czgop-onto:Group ;
+  skos:prefLabel "Poèet obyvatel mladších 19 let"@cs, "Number of persons of age less than 19"@en ;
+  skos:notation "G_Y_LE19" ;
+  skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
+
+czgop:G_O a skos:Concept, czgop-onto:Group ;
+  skos:prefLabel "Ostatní"@cs, "Other"@en ;
+  skos:notation "G_O" ;
+  skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .

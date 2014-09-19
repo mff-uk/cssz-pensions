@@ -1,0 +1,50 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix dis:   <http://linked.cssz.cz/resource/disability-change-reason/> .
+@prefix dischange-onto:   <http://linked.cssz.cz/ontology/disability-change-reasons/> .
+
+dischange-onto:DisabilityChangeReasonScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of disability change reason"@en, "Číselník důvodů změny invalidního důchodu"@cs ;
+  rdfs:label "Code list of disability change reason"@en, "Číselník důvodů změny invalidního důchodu"@cs ;
+  skos:notation "CL_CSSZ_DISABILITY_CHANGE_REASON" ;
+  skos:note "This code list is a representation of disability change reasons."@en,
+            "Tento číselník je reprezentací důvodů změn invalidního důchodu."@cs ;
+  rdfs:seeAlso dischange-onto:DisabilityChangeReason .
+  
+dischange-onto:DisabilityChangeReason a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso dischange-onto:DisabilityChangeReasonScheme .
+
+dis:DCR_X a skos:Concept, dischange-onto:DisabilityChangeReason ;
+  skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;
+  skos:notation "X";
+  skos:inScheme dischange-onto:DisabilityChangeReasonScheme .
+  
+dis:DCR_01M a skos:Concept, dischange-onto:DisabilityChangeReason ;
+  skos:prefLabel "01M"@cs ;
+  skos:definition "zhoršení stavu o jeden stupeň, tj. IP na ID; ID na IT"@cs ;
+  skos:notation "01M" ;
+  skos:inScheme dischange-onto:DisabilityChangeReasonScheme .
+  
+dis:DCR_02M a skos:Concept, dischange-onto:DisabilityChangeReason ;
+  skos:prefLabel "02M"@cs ;
+  skos:definition "zlepšení stavu o jeden stupeň, tj. IT na ID; ID na IP"@cs ;
+  skos:notation "02M" ;
+  skos:inScheme dischange-onto:DisabilityChangeReasonScheme .
+  
+dis:DCR_03M a skos:Concept, dischange-onto:DisabilityChangeReason ;
+  skos:prefLabel "03M"@cs ;
+  skos:definition "zhoršení stavu o dva stupně, tj. IP na IT"@cs ;
+  skos:notation "03M" ;
+  skos:inScheme dischange-onto:DisabilityChangeReasonScheme .
+  
+dis:DCR_04M a skos:Concept, dischange-onto:DisabilityChangeReason ;
+  skos:prefLabel "04M"@cs ;
+  skos:definition "zlepšení stavu o dva stupně, tj. IT na IP"@cs ;
+  skos:notation "04M" ;
+  skos:inScheme dischange-onto:DisabilityChangeReasonScheme .

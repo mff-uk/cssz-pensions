@@ -1,0 +1,1246 @@
+﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+@prefix lex:        <http://purl.org/lex#> .
+
+@prefix pen:   <http://linked.cssz.cz/resource/pension-kind/> .
+@prefix pen-onto:   <http://linked.cssz.cz/ontology/pension-kinds/> .
+
+###
+### Referenční schéma obsahující definice druhů důchodů nezávisle na roku. Schéma neobsahuje hierarchii, tj. nejsou uvedeny vazby nadřazenosti a podřazenosti jednotlivých druhů důchodu.
+###
+
+pen-onto:PensionKindScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of kinds of pensions"@en, "Číselník druhů důchodů"@cs ;
+  rdfs:label "Code list of kinds of pensions"@en, "Číselník druhů důchodů"@cs ;
+  skos:notation "CL_CSSZ_PENSION_KINDS"@cs ;
+  skos:note "This code list is a representation kinds of pensions defined by the related Czech legislation."@en,
+            "Tento číselník je reprezentací druhů penzí definovaných související českou legislativou."@cs ;
+  rdfs:seeAlso pen-onto:PensionKind .
+  
+pen-onto:PensionKind a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso pen-onto:PensionKindScheme, pen-onto:PensionKindScheme_2008, pen-onto:PensionKindScheme_2010 .
+
+### Neudáno a netypické výplaty
+
+pen:PK_X a skos:Concept, pen-onto:PensionKind ;
+  skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;
+  skos:notation "PK_X" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_O a skos:Concept, pen-onto:PensionKind ;
+  skos:prefLabel "Netypické výplaty"@cs, "Special pensions"@en ;
+  skos:notation "PK_O" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+### Samostatné druhy důchodů
+
+pen:PK_S a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "S"@cs ;
+  skos:prefLabel "Starobní důchod S"@cs ;
+  skos:definition "starobní důchod - dle § 29 odst. 1 a 3, § 74, § 76 a § 94 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů (zahrnut i důchod SIN dle § 29 odst. 4 téhož zákona)"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/29/1>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/29/3>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/29/4>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/74>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/76>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/94> ;
+  skos:notation "PK_S" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SD a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SD"@cs ;
+  skos:prefLabel "Starobní důchod SD"@cs ;
+  skos:definition "starobní důchod - dle § 30 z. č. 155/1995 Sb. ve znění do 31. 12. 2009"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/30> ;
+  skos:notation "PK_SD" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_ST a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ST"@cs ;
+  skos:prefLabel "Starobní důchod ST"@cs ;
+  skos:definition "starobní důchod - dle § 31 z. č. 155/1995 Sb."@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/31> ;
+  skos:notation "PK_ST" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_SRN a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRN"@cs ;
+  skos:prefLabel "Starobní důchod SRN"@cs ;
+  skos:definition "starobní důchod - dle § 29 odst. 2 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/29/2> ;
+  skos:notation "PK_SRN" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_SR a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SR"@cs ;
+  skos:prefLabel "Poměrný starobní důchod"@cs ;
+  skos:definition "poměrný starobní důchod dle § 26 z. č. 100/1988 Sb. ve znění do 31. 12. 1995"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1988/100-1988/section/26> ;
+  skos:notation "PK_SR" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_SI a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SI"@cs ;
+  skos:prefLabel "Starobní důchod vzniklý transformací invalidního důchodu v 65 letech věku"@cs ;
+  skos:definition "starobní důchod vzniklý transformací invalidního důchodu v 65 letech věku - dle § 61a z. č. 155/1995 Sb. (příp. dle čl. II bodu 5 z. č. 306/2008 Sb.)"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/61a>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/2008/306-2008/section/II/5> ;
+  skos:notation "PK_SI" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_IT a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IT"@cs ;
+  skos:prefLabel "Invalidní důchod třetího stupně"@cs ;
+  skos:definition "invalidní důchod třetího stupně dle § 38 a § 39 odst. 2 písm. c) z. č. 155/1995 Sb. a čl. II bod 8 z. č. 306/2008 Sb."@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/38>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/39/2/c>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/2008/306-2008/section/II/8> ;
+  skos:notation "PK_IT" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_IM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IM"@cs ;
+  skos:prefLabel "Invalidní důchod (invalidita z mládí)"@cs ;
+  skos:definition "invalidní důchod - dle § 42 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů, tzv. invalidita z mládí"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/42> ;
+  skos:notation "PK_IM" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_ID a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ID"@cs ;
+  skos:prefLabel "Invalidní důchod druhého stupně"@cs ;
+  skos:definition "invalidní důchod druhého stupně dle § 38 a § 39 odst. 2 písm. b) z. č. 155/1995 Sb. a čl. II bod 8 z. č. 306/2008 Sb."@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/38>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/39/2/b>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/2008/306-2008/section/II/8> ;
+  skos:notation "PK_ID" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_IP a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IP"@cs ;
+  skos:prefLabel "Invalidní důchod prvního stupně"@cs ;
+  skos:definition "invalidní důchod prvního stupně dle § 38 a § 39 odst. 2 písm. a) z. č. 1 55/1995 S b. a čl. II bod 8 z. č. 306/2008 Sb."@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/38>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/39/2/a>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/2008/306-2008/section/II/8> ;
+  skos:notation "PK_IP" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_I a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "I"@cs ;
+  skos:prefLabel "Plný invalidní důchod"@cs ;
+  skos:definition "plný invalidní důchod dle § 38 a § 39 z. č. 155/1995 Sb. ve znění do 31. 12. 2009 nebo příslušných ustanovení předchozích předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/38>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/39> ;
+  skos:notation "PK_I" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_IC a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IČ"@cs ;
+  skos:prefLabel "Částečný invalidní důchod"@cs ;
+  skos:definition "částečný invalidní důchod dle § 43 a § 44 z. č. 155/1995 Sb. ve znění do 31. 12. 2009 nebo příslušných ustanovení předchozích předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/43>,
+    <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/44> ;
+  skos:notation "PK_IC" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_V a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V"@cs ;
+  skos:prefLabel "Vdovský důchod"@cs ;
+  skos:definition "vdovský důchod - dle § 49 odst. 1, z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/49/1> ;
+  skos:notation "PK_V" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_VM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM"@cs ;
+  skos:prefLabel "Vdovecký důchod"@cs ;
+  skos:definition "vdovecký důchod - dle § 49 odst. 2 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/49/2> ;
+  skos:notation "PK_VM" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+  
+pen:PK_D a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D"@cs ;
+  skos:prefLabel "Sirotčí důchod"@cs ;
+  skos:definition "sirotčí důchod - dle § 52 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů"@cs ;
+  lex:relatedAct <http://linked.opendata.cz/resource/legislation/cz/act/1995/155-1995/section/52> ;
+  skos:notation "PK_D" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_D-KMENY a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D-KMENY"@cs ;
+  skos:prefLabel "Příjemci sirotčího důchodu"@cs ;
+  skos:definition "Počet příjemců sirotčího důchodu. Jeden příjemce může jedním důchodovým listem dostávat sirotčí důchod pro více osiřelých dětí. Počet příjemců sirotčího důchodu tak může být menší než počet vyplácených sirotčích důchodů."@cs ;
+  skos:notation "PK_D-KMENY" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+### Kombinace/souběhy důchodů
+
+pen:PK_SV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem S"@cs ;
+  skos:definition "SV označuje současnou výplatu vdovského důchodu a starobního důchodu typu S."@cs ;
+  skos:notation "PK_SV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_S ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SIV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SIV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SI"@cs ;
+  skos:definition "SIV označuje současnou výplatu vdovského důchodu a starobního důchodu typu SI."@cs ;
+  skos:notation "PK_SIV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_SI ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SRNV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SRN"@cs ;
+  skos:definition "SRNV označuje současnou výplatu vdovského důchodu a starobního důchodu typu SRN."@cs ;
+  skos:notation "PK_SRNV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_SRN ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_STV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem ST"@cs ;
+  skos:definition "STV označuje současnou výplatu vdovského důchodu a starobního důchodu typu ST."@cs ;
+  skos:notation "PK_STV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_ST ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SDV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SD"@cs ;
+  skos:definition "SDV označuje současnou výplatu vdovského důchodu a starobního důchodu typu SD."@cs ;
+  skos:notation "PK_SDV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_SD ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SRV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SR"@cs ;
+  skos:definition "SDV označuje současnou výplatu vdovského důchodu a starobního důchodu typu SR."@cs ;
+  skos:notation "PK_SRV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_SR ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_ITV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ITV"@cs ;
+  skos:prefLabel "Vdovský důchod s invalidním důchodem třetího stupně"@cs ;
+  skos:definition "ITV označuje současnou výplatu vdovského důchodu a invalidního důchodu třetího stupně."@cs ;
+  skos:notation "PK_ITV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_IT ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IDV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IDV"@cs ;
+  skos:prefLabel "Vdovský důchod s invalidním důchodem druhého stupně"@cs ;
+  skos:definition "IDV označuje současnou výplatu vdovského důchodu a invalidního důchodu druhého stupně."@cs ;
+  skos:notation "PK_IDV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_ID ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IPV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IPV"@cs ;
+  skos:prefLabel "Vdovský důchod s invalidním důchodem prvního stupně"@cs ;
+  skos:definition "IPV označuje současnou výplatu vdovského důchodu a invalidního důchodu prvního stupně."@cs ;
+  skos:notation "PK_IPV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_IP ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IV"@cs ;
+  skos:prefLabel "Vdovský důchod s plným invalidním důchodem"@cs ;
+  skos:definition "IV označuje současnou výplatu vdovského důchodu a plného invalidního důchodu."@cs ;
+  skos:notation "PK_IV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_I ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_ICV a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ICV"@cs ;
+  skos:prefLabel "Vdovský důchod s částečným invalidním důchodem"@cs ;
+  skos:definition "ICV označuje současnou výplatu vdovského důchodu a částečného invalidního důchodu."@cs ;
+  skos:notation "PK_ICV" ;
+  rdfs:seeAlso pen:PK_V ;
+  rdfs:seeAlso pen:PK_IC ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem S"@cs ;
+  skos:definition "SVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu S."@cs ;
+  skos:notation "PK_SVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_S ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SIVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SIVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SI"@cs ;
+  skos:definition "SIVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu SI."@cs ;
+  skos:notation "PK_SIVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_SI ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SRNVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SRN"@cs ;
+  skos:definition "SRNVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu SRN."@cs ;
+  skos:notation "PK_SRNVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_SRN ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_STVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem ST"@cs ;
+  skos:definition "STVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu ST."@cs ;
+  skos:notation "PK_STVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_ST ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SDVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SD"@cs ;
+  skos:definition "SDVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu SD."@cs ;
+  skos:notation "PK_SDVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_SD ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SRVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SR"@cs ;
+  skos:definition "SDVM označuje současnou výplatu vdoveckého důchodu a starobního důchodu typu SR."@cs ;
+  skos:notation "PK_SRVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_SR ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_ITVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ITVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem třetího stupně"@cs ;
+  skos:definition "ITVM označuje současnou výplatu vdoveckého důchodu a invalidního důchodu třetího stupně."@cs ;
+  skos:notation "PK_ITVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_IT ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IDVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IDVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem druhého stupně"@cs ;
+  skos:definition "IDVM označuje současnou výplatu vdoveckého důchodu a invalidního důchodu druhého stupně."@cs ;
+  skos:notation "PK_IDVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_ID ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IPVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IPVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem prvního stupně"@cs ;
+  skos:definition "IPVM označuje současnou výplatu vdoveckého důchodu a invalidního důchodu prvního stupně."@cs ;
+  skos:notation "PK_IPVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_IP ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s plným invalidním důchodem"@cs ;
+  skos:definition "IVM označuje současnou výplatu vdoveckého důchodu a plného invalidního důchodu."@cs ;
+  skos:notation "PK_IVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_I ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_ICVM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ICVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s částečným invalidním důchodem"@cs ;
+  skos:definition "ICVM označuje současnou výplatu vdoveckého důchodu a částečného invalidního důchodu."@cs ;
+  skos:notation "PK_ICVM" ;
+  rdfs:seeAlso pen:PK_VM ;
+  rdfs:seeAlso pen:PK_IC ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+### Součtové a agregované druhy důchodů
+
+pen:PK_V-KOMB a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-KOMB"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem"@cs ;
+  skos:definition "(V kombinace) = výplata vdovského důchodu s přímým důchodem, tzv. souběh důchodů"@cs ;
+  skos:notation "PK_V-KOMB_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_V-KOMB_including_SI_IP_ID_IT_combinations a skos:Concept, pen-onto:PensionKind ;
+  rdfs:subPropertyOf pen:PK_V-KOMB ;
+  skos:altLabel "V-KOMB (kombinace V a S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem (zahrnuje S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:definition "(V kombinace) = výplata vdovského důchodu s přímým důchodem, tzv. souběh důchodů. Zahrnuje kombinace s důchody typu S, SI, SRN, ST, SD, SR, IP, ID, IT. Neobsahuje kombinace s důchody typu I, IČ."@cs ;
+  skos:notation "PK_V-KOMB_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_V-KOMB_including_I_IC_combinations a skos:Concept, pen-onto:PensionKind ;
+  rdfs:subPropertyOf pen:PK_V-KOMB ;
+  skos:altLabel "V-KOMB (kombinace V a S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem (zahrnuje S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:definition "(V kombinace) = výplata vdovského důchodu s přímým důchodem, tzv. souběh důchodů. Zahrnuje kombinace s důchody typu S, SRN, ST, SD, SR, I, IČ. Neobsahuje kombinace s důchody typu SI a IP, ID, IT."@cs ;
+  skos:notation "PK_V-KOMB_S3" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_VM-KOMB a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-KOMB"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem"@cs ;
+  skos:definition "(VM kombinace) = výplata vdoveckého důchodu s přímým důchodem, tzv. souběh důchodů"@cs ;
+  skos:notation "PK_VM-KOMB_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_VM-KOMB_including_SI_IP_ID_IT_combinations a skos:Concept, pen-onto:PensionKind ;
+  rdfs:subPropertyOf pen:PK_VM-KOMB ;
+  skos:altLabel "VM-KOMB (kombinace VM a S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:prefLabel "Vdovecký důchod s přímým důchodem (zahrnuje S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:definition "(VM kombinace) = výplata vdoveckého důchodu s přímým důchodem, tzv. souběh důchodů. Zahrnuje kombinace s důchody typu S, SI, SRN, ST, SD, SR, IP, ID, IT. Neobsahuje kombinace s důchody typu I, IČ."@cs ;
+  skos:notation "PK_VM-KOMB_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_VM-KOMB_including_I_IC_combinations a skos:Concept, pen-onto:PensionKind ;
+  rdfs:subPropertyOf pen:PK_VM-KOMB ;
+  skos:altLabel "VM-KOMB (kombinace V a S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:prefLabel "Vdovecký důchod s přímým důchodem (zahrnuje S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:definition "(VM kombinace) = výplata vdoveckého důchodu s přímým důchodem, tzv. souběh důchodů. Zahrnuje kombinace s důchody typu S, SRN, ST, SD, SR, I, IČ. Neobsahuje kombinace s důchody typu SI a IP, ID, IT."@cs ;
+  skos:notation "PK_VM-KOMB_S3" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchody sólo celkem (IP, ID, IT)"@cs ;
+  skos:prefLabel "Invalidní důchody sólo celkem (IP, ID a IT)"@cs ;
+  skos:definition "Celkem za sólo vyplácené invalidní důchody prvního, druhého a třetího stupně."@cs ;
+  skos:notation "PK_DISABILITY_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_IP_ID_IT_IM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchody sólo celkem (IP, ID, IT, IM)"@cs ;
+  skos:prefLabel "Invalidní důchody sólo celkem (IP, ID, IT, IM)"@cs ;
+  skos:definition "Celkem za sólo vyplácené invalidní důchody prvního, druhého a třetího stupně včetně invalidních důchodů z mládí."@cs ;
+  skos:notation "PK_DISABILITY_S6" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_IT_IM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IT včetně IM"@cs ;
+  skos:prefLabel "IT + IM"@cs ;
+  skos:definition "Invalidní důchody třetího stupně včetně invalidních důchodů z mládí."@cs ;
+  skos:notation "PK_DISABILITY_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_I_IM a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "I včetně IM"@cs ;
+  skos:prefLabel "I + IM"@cs ;
+  skos:definition "Plné invalidní důchody včetně invalidních důchodů z mládí."@cs ;
+  skos:notation "PK_DISABILITY_S3" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_I_IM_IC a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchody sólo celkem (I, IM, IČ)"@cs ;
+  skos:prefLabel "Invalidní důchody sólo celkem (I, IM, IČ)"@cs ;
+  skos:definition "Celkem za sólo vyplácené částečné invalidní důchody a plné invalidní důchody včetně invalidních důchodů z mládí."@cs ;
+  skos:notation "PK_DISABILITY_S4" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_I_IC a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchody sólo celkem (I, IČ)"@cs ;
+  skos:prefLabel "Invalidní důchody sólo celkem (I, IČ)"@cs ;
+  skos:definition "Celkem za sólo vyplácené plné invalidní důchody a částečné invalidní důchody."@cs ;
+  skos:notation "PK_DISABILITY_S5" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_old_age_total_S_SI_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SI, SRN, ST, SD celkem"@cs ;
+  skos:prefLabel "Starobní důchody S, SI, SRN, ST, SD celkem"@cs ;
+  skos:definition "Celkem za starobní důchody typu S, SI, SRN, ST, SD. Nezahrnuje důchody typu SR."@cs ;
+  skos:notation "PK_OLDAGE_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme . PK_Starobní-důchody-S,-SI,-SRN,-ST,-SD-celkem
+
+pen:PK_old_age_total_S_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SRN, ST, SD celkem"@cs ;
+  skos:prefLabel "Starobní důchody S, SRN, ST, SD celkem"@cs ;
+  skos:definition "Celkem za starobní důchody typu S, SRN, ST, SD. Nezahrnuje důchůdy typu SR."@cs ;
+  skos:notation "PK_OLDAGE_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_old_age_total_S_SI_SRN_ST_SD_SR a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SI, SRN, ST, SD, SR celkem"@cs ;
+  skos:prefLabel "Starobní důchody S, SI, SRN, ST, SD, SR celkem"@cs ;
+  skos:definition "Celkem za starobní důchody, zahrnuje důchody typu S, SI, SRN, ST, SD, SR."@cs ;
+  skos:notation "PK_OLDAGE_S3" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_old_age_total_S_SRN_ST_SD_SR a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SRN, ST, SD, SR celkem"@cs ;
+  skos:prefLabel "Starobní důchody S, SRN, ST, SD, SR celkem"@cs ;
+  skos:definition "Celkem za starobní důchody, zahrnuje důchody typu S, SRN, ST, SD, SR."@cs ;
+  skos:notation "PK_OLDAGE_S4" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_V_total_including_SI_IP_ID_IT_combinations a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-Celkem (zahrnuje V sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:prefLabel "Vdovské důchody celkem (zahrnuje V sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:definition "Celkem za vdovské důchody. Zahrnuje jak vdovské důchody vyplácené solo, tak i souběh důchodů. Zahrnuje kombinace s důchody typu S, SI, SRN, ST, SD, SR, IP, ID, IT."@cs ;
+  skos:notation "PK_WIDOWS_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_V_total_including_I_IC_combinations a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-Celkem (zahrnuje V sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:prefLabel "Vdovské důchody celkem (zahrnuje V sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:definition "Celkem za vdovské důchody. Zahrnuje jak vdovské důchody vyplácené solo, tak i souběh důchodů. Zahrnuje kombinace s důchody typu S, SRN, ST, SD, SR, I, IČ."@cs ;
+  skos:notation "PK_WIDOWS_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_VM_total_including_SI_IP_ID_IT_combinations a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-Celkem (zahrnuje VM sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:prefLabel "Vdovecké důchody celkem (zahrnuje VM sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:definition "Celkem za vdovecké důchody. Zahrnuje jak vdovecké důchody vyplácené solo, tak i souběh důchodů. Zahrnuje kombinace s důchody typu S, SI, SRN, ST, SD, SR, IP, ID, IT."@cs ;
+  skos:notation "PK_WIDOWERS_S1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_VM_total_including_I_IC_combinations a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-Celkem (zahrnuje VM sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:prefLabel "Vdovecké důchody celkem (zahrnuje VM sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:definition "Celkem za vdovecké důchody. Zahrnuje jak vdovecké důchody vyplácené solo, tak i souběh důchodů. Zahrnuje kombinace s důchody typu S, SRN, ST, SD, SR, I, IČ."@cs ;
+  skos:notation "PK_WIDOWERS_S2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_total_without_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
+  skos:prefLabel "Důchody celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
+  skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D."@cs ;
+  skos:notation "PK_PENSIONS_T1" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_total_without_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
+  skos:prefLabel "Důchody celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
+  skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D."@cs ;
+  skos:notation "PK_PENSIONS_T2" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_total_with_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:prefLabel "Důchody celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:definition "Celkem včetně netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D a netypické výplaty."@cs ;
+  skos:notation "PK_PENSIONS_T3" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_total_with_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem včetně netypických výplat (zahrbuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:prefLabel "Důchody celkem včetně netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:definition "Celkem včetně netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D a netypické výplaty."@cs ;
+  skos:notation "PK_PENSIONS_T4" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_old_age_pensions_S_ST_SD a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchod sólo (S, ST, SD)"@cs ;
+  skos:prefLabel "Starobní důchod sólo (zahrnuje druhy důchodu S, ST, SD)"@cs ;
+  skos:definition "Sólo vyplácené starobní důchody typu S, ST a SD."@cs ;
+  skos:notation "PK_OLDAGE_S5" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_solo_old_age_pensions_S_SI_ST_SD a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchod sólo (S, SI, ST, SD)"@cs ;
+  skos:prefLabel "Starobní důchod sólo (zahrnuje druhy důchodu S, SI, ST, SD)"@cs ;
+  skos:definition "Sólo vyplácené starobní důchody typu S, ST, SI a SD."@cs ;
+  skos:notation "PK_OLDAGE_S6" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+### Součty v kap. 6 - nemusí být využity
+
+pen:PK_I_IC_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchody celkem (I, IČ, IP, ID, IT)"@cs ;
+  skos:prefLabel "Invalidní důchody celkem za I, IČ, IP, ID a IT"@cs ;
+  skos:definition "Celkem za invalidní důchody. Zahrnuty plné invalidní důchody (I), částečné invalidní důchody (IČ) a invalidní důchody prvního, druhého a třetího stupně (IP, ID, IT)."@cs ;
+  skos:notation "PK_DISABILITY_S5" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_S_SI a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody (S a SI)"@cs ;
+  skos:prefLabel "Starobní důchody celkem za starobní důchody S a SI"@cs ;
+  skos:definition "Celkem za starobní důchod (S) a starobní důchod vzniklý transformací invalidního důchodu v 65 letech věku (SI)."@cs ;
+  skos:notation "PK_OLDAGE_S7" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_SR_SRN a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody (SR a SRN)"@cs ;
+  skos:prefLabel "Starobní důchody celkem za starobní důchody SR a SRN"@cs ;
+  skos:definition "Celkem za poměrný starobní důchod (S) a starobní důchod dle § 29 odst. 2 z. č. 155/1995 Sb. nebo příslušných ustanovení předcházejících předpisů (SRN)."@cs ;
+  skos:notation "PK_OLDAGE_PS8" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+###
+### Schéma druhů důchodu platné od roku 2008 do roku 2009. Schéma obsahuje hierarchii druhů důchodu.
+###
+
+pen-onto:PensionKindScheme_2008 a skos:ConceptScheme, sdmx:CodeList ;
+  skos:altLabel "Code list of kinds of pensions valid from 2008"@en, "Číselník druhů důchodů platný od roku 2008"@cs ;
+  rdfs:label "Code list of kinds of pensions valid from 2008"@en, "Číselník druhů důchodů platný od 2008"@cs ;
+  skos:notation "CL_CSSZ_PENSION_KINDS_2008"@cs ;
+  skos:note "This code list is a representation kinds of pensions defined by the related Czech legislation. It reflects the state of the legislation in year 2008."@en,
+            "Tento číselník je reprezentací druhů penzí definovaných související českou legislativou. Číselník je vytvořen podle legislativy platné v roce 2008."@cs ;
+  skos:hasTopConcept pen:PK_total_with_special_pensions_2008 ;
+  rdfs:seeAlso pen-onto:PensionKind .
+
+### Netypické výplaty
+
+pen:PK_O_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:prefLabel "Netypické výplaty"@cs, "Special pensions"@en ;
+  skos:notation "PK_O" ;
+  skos:exactMatch pen:PK_O ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+### Samostatné druhy důchodů
+
+pen:PK_S_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "S"@cs ;
+  skos:prefLabel "Starobní důchod S"@cs ;
+  skos:notation "PK_S" ;
+  skos:exactMatch pen:PK_S ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SD_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SD"@cs ;
+  skos:prefLabel "Starobní důchod SD"@cs ;
+  skos:notation "PK_SD" ;
+  skos:exactMatch pen:PK_SD ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_ST_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ST"@cs ;
+  skos:prefLabel "Starobní důchod ST"@cs ;
+  skos:notation "PK_ST" ;
+  skos:exactMatch pen:PK_ST ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_SRN_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRN"@cs ;
+  skos:prefLabel "Starobní důchod SRN"@cs ;
+  skos:notation "PK_SRN" ;
+  skos:exactMatch pen:PK_SRN ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_SR_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SR"@cs ;
+  skos:prefLabel "Poměrný starobní důchod"@cs ;
+  skos:notation "PK_SR" ;
+  skos:exactMatch pen:PK_SR ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_IM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IM"@cs ;
+  skos:prefLabel "Invalidní důchod (invalidita z mládí)"@cs ;
+  skos:notation "PK_IM" ;
+  skos:exactMatch pen:PK_IM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_I_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "I"@cs ;
+  skos:prefLabel "Plný invalidní důchod"@cs ;
+  skos:notation "PK_I" ;
+  skos:exactMatch pen:PK_I ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_IC_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IČ"@cs ;
+  skos:prefLabel "Částečný invalidní důchod"@cs ;
+  skos:notation "PK_IC" ;
+  skos:exactMatch pen:PK_IC ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_V_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V"@cs ;
+  skos:prefLabel "Vdovský důchod"@cs ;
+  skos:notation "PK_V" ;
+  skos:exactMatch pen:PK_V ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_VM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM"@cs ;
+  skos:prefLabel "Vdovecký důchod"@cs ;
+  skos:notation "PK_VM" ;
+  skos:exactMatch pen:PK_VM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+  
+pen:PK_D_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D"@cs ;
+  skos:prefLabel "Sirotčí důchod"@cs ;
+  skos:notation "PK_D" ;
+  skos:exactMatch pen:PK_D ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_D-KMENY_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D-KMENY"@cs ;
+  skos:prefLabel "Příjemci sirotčího důchodu"@cs ;
+  skos:note "Počet příjemců sirotčího důchodu se nezapočítává do sumy vyplácených důchodů."@cs ;
+  skos:notation "PK_D-KMENY" ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+### Kombinace/souběhy důchodů
+
+pen:PK_SV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem S"@cs ;
+  skos:notation "PK_SV" ;
+  skos:exactMatch pen:PK_SV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SRNV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SRN"@cs ;
+  skos:notation "PK_SRNV" ;
+  skos:exactMatch pen:PK_SRNV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_STV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem ST"@cs ;
+  skos:notation "PK_STV" ;
+  skos:exactMatch pen:PK_STV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SDV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDV"@cs ;
+  skos:prefLabel "Vdovský důchod se starobním důchodem SD"@cs ;
+  skos:notation "PK_SDV" ;
+  skos:exactMatch pen:PK_SDV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SRV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem SR"@cs ;
+  skos:notation "PK_SRV" ;
+  skos:exactMatch pen:PK_SRV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_IV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IV"@cs ;
+  skos:prefLabel "Vdovský důchod s plným invalidním důchodem"@cs ;
+  skos:notation "PK_IV" ;
+  skos:exactMatch pen:PK_IV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_ICV_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ICV"@cs ;
+  skos:prefLabel "Vdovský důchod s částečným invalidním důchodem"@cs ;
+  skos:notation "PK_ICV" ;
+  skos:exactMatch pen:PK_ICV ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem S"@cs ;
+  skos:notation "PK_SVM" ;
+  skos:exactMatch pen:PK_SVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SRNVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SRN"@cs ;
+  skos:notation "PK_SRNVM" ;
+  skos:exactMatch pen:PK_SRNVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_STVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem ST"@cs ;
+  skos:notation "PK_STVM" ;
+  skos:exactMatch pen:PK_STVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SDVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SD"@cs ;
+  skos:notation "PK_SDVM" ;
+  skos:exactMatch pen:PK_SDVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_SRVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SR"@cs ;
+  skos:notation "PK_SRVM" ;
+  skos:exactMatch pen:PK_SRVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_IVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s plným invalidním důchodem"@cs ;
+  skos:notation "PK_IVM" ;
+  skos:exactMatch pen:PK_IVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_ICVM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ICVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s částečným invalidním důchodem"@cs ;
+  skos:notation "PK_ICVM" ;
+  skos:exactMatch pen:PK_ICVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+### Součtové a agregované druhy důchodů
+
+pen:PK_V-KOMB_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-KOMB"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem"@cs ;
+  skos:notation "PK_V-KOMB_S3" ;
+  skos:exactMatch pen:PK_V-KOMB_including_I_IC_combinations ;
+  skos:narrower pen:PK_SV_2008, pen:PK_SRNV_2008, pen:PK_STV_2008, pen:PK_SDV_2008, pen:PK_SRV_2008, pen:PK_IV_2008, pen:PK_ICV_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_VM-KOMB_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-KOMB"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem"@cs ;
+  skos:notation "PK_VM-KOMB_S3" ;
+  skos:exactMatch pen:PK_VM-KOMB_including_I_IC_combinations ;
+  skos:narrower pen:PK_SVM_2008, pen:PK_SRNVM_2008, pen:PK_STVM_2008, pen:PK_SDVM_2008, pen:PK_SRVM_2008, pen:PK_IVM_2008, pen:PK_ICVM_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_I_IM_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "I včetně IM"@cs ;
+  skos:prefLabel "I + IM"@cs ;
+  skos:notation "PK_DISABILITY_S3" ;
+  skos:exactMatch pen:PK_IT_IM ;
+  skos:narrower pen:PK_I_2008, pen:PK_IM_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_solo_I_IM_IC_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchod sólo (I, IM, IČ)"@cs ;
+  skos:prefLabel "Celkem za I, IM a IČ"@cs ;
+  skos:notation "PK_DISABILITY_S4" ;
+  skos:exactMatch pen:PK_solo_I_IM_IC ;
+  skos:narrower pen:PK_I_IM_2008, pen:PK_IC_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_solo_I_IC_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchod sólo (I, IČ)"@cs ;
+  skos:prefLabel "Celkem za I a IČ"@cs ;
+  skos:notation "PK_DISABILITY_S5" ;
+  skos:exactMatch pen:PK_solo_I_IC ;
+  skos:narrower pen:PK_I_2008, pen:PK_IC_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_solo_old_age_pensions_S_ST_SD_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchod sólo (S, ST, SD)"@cs ;
+  skos:prefLabel "Starobní důchod sólo (zahrnuje druhy důchodu S, ST, SD)"@cs ;
+  skos:notation "PK_OLDAGE_S5" ;
+  skos:exactMatch pen:PK_solo_old_age_pensions_S_ST_SD ;
+  skos:narrower pen:PK_S_2008, pen:PK_ST_2008, pen:PK_SD_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_old_age_total_S_SRN_ST_SD_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SRN, ST, SD celkem"@cs ;
+  skos:prefLabel "S-Celkem (S, SRN, ST, SD)"@cs ;
+  skos:notation "PK_OLDAGE_S2" ;
+  skos:exactMatch pen:PK_old_age_total_S_SRN_ST_SD ;
+  skos:narrower pen:PK_solo_old_age_pensions_S_ST_SD_2008, pen:PK_SRN_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_old_age_total_S_SRN_ST_SD_SR_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SRN, ST, SD, SR celkem"@cs ;
+  skos:prefLabel "S-Celkem (S, SRN, ST, SD, SR)"@cs ;
+  skos:notation "PK_OLDAGE_S4" ;
+  skos:exactMatch pen:PK_old_age_total_S_SRN_ST_SD_SR ;
+  skos:narrower pen:PK_SR_2008, pen:PK_old_age_total_S_SRN_ST_SD_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_V_total_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-CELKEM"@cs ;
+  skos:prefLabel "Celkem za vdovské důchody (zahrnuje V sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:notation "PK_WIDOWS_S2" ;
+  skos:exactMatch pen:PK_V_total_including_I_IC_combinations ;
+  skos:narrower pen:PK_V_2008, pen:PK_V-KOMB_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_VM_total_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-CELKEM"@cs ;
+  skos:prefLabel "Celkem za vdovecké důchody (zahrnuje VM sólo a kombinace S, SRN, ST, SD, SR, I, IČ)"@cs ;
+  skos:notation "PK_WIDOWERS_S2" ;
+  skos:exactMatch pen:PK_VM_total_including_I_IC_combinations ;
+  skos:narrower pen:PK_VM_2008, pen:PK_VM-KOMB_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_total_without_special_pensions_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:notation "PK_PENSIONS_T2" ;
+  skos:exactMatch pen:PK_total_without_special_pensions_including_I_IC ;
+  skos:narrower pen:PK_D_2008, pen:PK_V_total_2008, pen:PK_VM_total_2008, pen:PK_solo_I_IM_IC_2008, pen:PK_solo_I_IC_2008, pen:PK_old_age_total_S_SRN_ST_SD_SR_2008 ;
+  skos:note "pen:PK_solo_I_IM_IC_2008 i pen:PK_solo_I_IC_2008 zahrnují částečné invalidní důchody (IČ), nelze sčítat oba tyto mezisoučty současně do sumy důchodů."@cs ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+pen:PK_total_with_special_pensions_2008 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:notation "PK_PENSIONS_T4" ;
+  skos:exactMatch pen:PK_total_with_special_pensions_including_I_IC ;
+  skos:narrower pen:PK_total_without_special_pensions_2008, pen:PK_O_2008 ;
+  skos:inScheme pen-onto:PensionKindScheme_2008 .
+
+###
+### Schéma druhů důchodu platné od roku 2010. Schéma obsahuje hierarchii druhů důchodu.
+###
+
+pen-onto:PensionKindScheme_2010 a skos:ConceptScheme, sdmx:CodeList ;
+  skos:altLabel "Code list of kinds of pensions valid from 2010"@en, "Číselník druhů důchodů platný od roku 2010"@cs ;
+  rdfs:label "Code list of kinds of pensions valid from 2010"@en, "Číselník druhů důchodů platný od 2010"@cs ;
+  skos:notation "CL_CSSZ_PENSION_KINDS_2010"@cs ;
+  skos:note "This code list is a representation kinds of pensions defined by the related Czech legislation. It reflects the state of the legislation in year 2010."@en,
+            "Tento číselník je reprezentací druhů penzí definovaných související českou legislativou. Číselník je vytvořen podle legislativy platné v roce 2010."@cs ;
+  skos:hasTopConcept pen:PK_total_with_special_pensions_2010 ;
+  rdfs:seeAlso pen-onto:PensionKind .
+
+### Netypické výplaty
+
+pen:PK_O_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Netypické výplaty"@cs, "Special pensions"@en ;
+  skos:notation "PK_O" ;
+  skos:exactMatch pen:PK_O ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+### Samostatné druhy důchodů
+
+pen:PK_S_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "S"@cs ;
+  skos:prefLabel "starobní důchod"@cs ;
+  skos:notation "PK_S" ;
+  skos:exactMatch pen:PK_S ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SD_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SD"@cs ;
+  skos:prefLabel "starobní důchod"@cs ;
+  skos:notation "PK_SD" ;
+  skos:exactMatch pen:PK_SD ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_ST_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ST"@cs ;
+  skos:prefLabel "starobní důchod"@cs ;
+  skos:notation "PK_ST" ;
+  skos:exactMatch pen:PK_ST ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_SRN_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRN"@cs ;
+  skos:prefLabel "starobní důchod"@cs ;
+  skos:notation "PK_SRN" ;
+  skos:exactMatch pen:PK_SRN ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_SR_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SR"@cs ;
+  skos:prefLabel "poměrný starobní důchod"@cs ;
+  skos:notation "PK_SR" ;
+  skos:exactMatch pen:PK_SR ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SI_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SI"@cs ;
+  skos:prefLabel "poměrný starobní důchod"@cs ;
+  skos:notation "PK_SI" ;
+  skos:exactMatch pen:PK_SI ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IM"@cs ;
+  skos:prefLabel "invalidní důchod (invalidita z mládí)"@cs ;
+  skos:notation "PK_IM" ;
+  skos:exactMatch pen:PK_IM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IT_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IT"@cs ;
+  skos:prefLabel "invalidní důchod třetího stupně"@cs ;
+  skos:notation "PK_IT" ;
+  skos:exactMatch pen:PK_IT ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_ID_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ID"@cs ;
+  skos:prefLabel "invalidní důchod druhého stupně"@cs ;
+  skos:notation "PK_ID" ;
+  skos:exactMatch pen:PK_ID ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IP_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IP"@cs ;
+  skos:prefLabel "invalidní důchod prvního stupně"@cs ;
+  skos:notation "PK_IP" ;
+  skos:exactMatch pen:PK_IP ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_V_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V"@cs ;
+  skos:prefLabel "vdovský důchod"@cs ;
+  skos:notation "PK_V" ;
+  skos:exactMatch pen:PK_V ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_VM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM"@cs ;
+  skos:prefLabel "vdovecký důchod"@cs ;
+  skos:notation "PK_VM" ;
+  skos:exactMatch pen:PK_VM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+  
+pen:PK_D_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D"@cs ;
+  skos:prefLabel "sirotčí důchod"@cs ;
+  skos:notation "PK_D" ;
+  skos:exactMatch pen:PK_D ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_D-KMENY_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "D-KMENY"@cs ;
+  skos:prefLabel "příjemci sirotčího důchodu"@cs ;
+  skos:note "Počet příjemců sirotčího důchodu se nezapočítává do sumy vyplácených důchodů."@cs ;
+  skos:notation "PK_D-KMENY" ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+### Kombinace/souběhy důchodů
+
+pen:PK_SV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem S"@cs ;
+  skos:notation "PK_SV" ;
+  skos:exactMatch pen:PK_SV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SIV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SIV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem SI"@cs ;
+  skos:notation "PK_SIV" ;
+  skos:exactMatch pen:PK_SIV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SRNV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem SRN"@cs ;
+  skos:notation "PK_SRNV" ;
+  skos:exactMatch pen:PK_SRNV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_STV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem ST"@cs ;
+  skos:notation "PK_STV" ;
+  skos:exactMatch pen:PK_STV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SDV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem SD"@cs ;
+  skos:notation "PK_SDV" ;
+  skos:exactMatch pen:PK_SDV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SRV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRV"@cs ;
+  skos:prefLabel "vdovský důchod se starobním důchodem SR"@cs ;
+  skos:notation "PK_SRV" ;
+  skos:exactMatch pen:PK_SRV ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_ITV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ITV"@cs ;
+  skos:prefLabel "vdovský důchod s invalidním důchodem třetího stupně"@cs ;
+  skos:notation "PK_ITV" ;
+  skos:exactMatch pen:PK_ITV ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IDV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IDV"@cs ;
+  skos:prefLabel "Vdovský důchod s invalidním důchodem druhého stupně"@cs ;
+  skos:notation "PK_IDV" ;
+  skos:exactMatch pen:PK_IDV ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IPV_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IPV"@cs ;
+  skos:prefLabel "Vdovský důchod s invalidním důchodem prvního stupně"@cs ;
+  skos:notation "PK_IPV" ;
+  skos:exactMatch pen:PK_IPV ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem S"@cs ;
+  skos:notation "PK_SVM" ;
+  skos:exactMatch pen:PK_SVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SIVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SIVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SI"@cs ;
+  skos:notation "PK_SIVM" ;
+  skos:exactMatch pen:PK_SIVM ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SRNVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRNVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SRN"@cs ;
+  skos:notation "PK_SRNVM" ;
+  skos:exactMatch pen:PK_SRNVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_STVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "STVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem ST"@cs ;
+  skos:notation "PK_STVM" ;
+  skos:exactMatch pen:PK_STVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SDVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SDVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SD"@cs ;
+  skos:notation "PK_SDVM" ;
+  skos:exactMatch pen:PK_SDVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_SRVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "SRVM"@cs ;
+  skos:prefLabel "Vdovecký důchod se starobním důchodem SR"@cs ;
+  skos:notation "PK_SRVM" ;
+  skos:exactMatch pen:PK_SRVM ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_ITVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "ITVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem třetího stupně"@cs ;
+  skos:notation "PK_ITVM" ;
+  skos:exactMatch pen:PK_ITVM ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IDVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IDVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem druhého stupně"@cs ;
+  skos:notation "PK_IDVM" ;
+  skos:exactMatch pen:PK_IDVM ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IPVM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IPVM"@cs ;
+  skos:prefLabel "Vdovecký důchod s invalidním důchodem prvního stupně"@cs ;
+  skos:notation "PK_IPVM" ;
+  skos:exactMatch pen:PK_IPVM ;
+  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+
+### Součtové a agregované druhy důchodů
+
+pen:PK_V-KOMB_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-KOMB"@cs ;
+  skos:prefLabel "Vdovský důchod s přímým důchodem"@cs ;
+  skos:notation "PK_V-KOMB_S2" ;
+  skos:exactMatch pen:PK_V-KOMB_including_SI_IP_ID_IT_combinations ;
+  skos:narrower pen:PK_SV_2010, pen:PK_SIV_2010, pen:PK_SRNV_2010, pen:PK_STV_2010, pen:PK_SDV_2010, pen:PK_SRV_2010, pen:PK_ITV_2010, pen:PK_IDV_2010, pen:PK_IPV_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_VM-KOMB_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-KOMB"@cs ;
+  skos:prefLabel "Vdovecký důchod s přímým důchodem"@cs ;
+  skos:notation "PK_VM-KOMB_S2" ;
+  skos:exactMatch pen:PK_VM-KOMB_including_SI_IP_ID_IT_combinations ;
+  skos:narrower pen:PK_SVM_2010, pen:PK_SIVM_2010, pen:PK_SRNVM_2010, pen:PK_STVM_2010, pen:PK_SDVM_2010, pen:PK_SRVM_2010, pen:PK_ITVM_2010, pen:PK_IDVM_2010, pen:PK_IPVM_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_IT_IM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "IT včetně IM"@cs ;
+  skos:prefLabel "IT + IM"@cs ;
+  skos:notation "PK_DISABILITY_S2" ;
+  skos:exactMatch pen:PK_IT_IM ;
+  skos:narrower pen:PK_IT_2010, pen:PK_IM_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_solo_IP_ID_IT_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchod sólo (IP, ID, IT)"@cs ;
+  skos:prefLabel "Celkem za IP, ID a IT"@cs ;
+  skos:notation "PK_DISABILITY_S1" ;
+  skos:exactMatch pen:PK_solo_IP_ID_IT ;
+  skos:narrower pen:PK_IT_2010, pen:PK_ID_2010, pen:PK_IP_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_solo_IP_ID_IT_IM_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Invalidní důchod sólo (IP, ID, IT, IM)"@cs ;
+  skos:prefLabel "Celkem za IP, ID a IT včetně IM"@cs ;
+  skos:notation "PK_DISABILITY_S6" ;
+  skos:exactMatch pen:PK_solo_IP_ID_IT_IM ;
+  skos:narrower pen:PK_IT_2010, pen:PK_ID_2010, pen:PK_IP_2010, pen:PK_IM_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_solo_old_age_pensions_S_SI_ST_SD_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchod sólo (S, SI, ST, SD)"@cs ;
+  skos:prefLabel "Starobní důchod sólo (zahrnuje druhy důchodu S, SI, ST, SD)"@cs ;
+  skos:notation "PK_OLDAGE_S6" ;
+  skos:exactMatch pen:PK_solo_old_age_pensions_S_ST_SD ;
+  skos:narrower pen:PK_S_2010, pen:PK_SI_2010, pen:PK_ST_2010, pen:PK_SD_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_old_age_total_S_SI_SRN_ST_SD_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SI, SRN, ST, SD celkem"@cs ;
+  skos:prefLabel "S-Celkem (S, SI, SRN, ST, SD)"@cs ;
+  skos:notation "PK_OLDAGE_S1" ;
+  skos:exactMatch pen:PK_old_age_total_S_SI_SRN_ST_SD ;
+  skos:narrower pen:PK_solo_old_age_pensions_S_SI_ST_SD_2010, pen:PK_SRN_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_old_age_total_S_SI_SRN_ST_SD_SR_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody S, SI, SRN, ST, SD, SR celkem"@cs ;
+  skos:prefLabel "S-Celkem (S, SI, SRN, ST, SD, SR)"@cs ;
+  skos:notation "PK_OLDAGE_S3" ;
+  skos:exactMatch pen:PK_old_age_total_S_SI_SRN_ST_SD_SR ;
+  skos:narrower pen:PK_SR_2010, pen:PK_old_age_total_S_SI_SRN_ST_SD_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_V_total_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "V-CELKEM"@cs ;
+  skos:prefLabel "Celkem za vdovské důchody (zahrnuje V sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:notation "PK_WIDOWS_S1" ;
+  skos:exactMatch pen:PK_V_total_including_SI_IP_ID_IT_combinations ;
+  skos:narrower pen:PK_V_2010, pen:PK_V-KOMB_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_VM_total_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "VM-CELKEM"@cs ;
+  skos:prefLabel "Celkem za vdovecké důchody (zahrnuje VM sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
+  skos:notation "PK_WIDOWERS_S1" ;
+  skos:exactMatch pen:PK_VM_total_including_SI_IP_ID_IT_combinations ;
+  skos:narrower pen:PK_VM_2010, pen:PK_VM-KOMB_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_total_without_special_pensions_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
+  skos:notation "PK_PENSIONS_T1" ;
+  skos:exactMatch pen:PK_total_without_special_pensions_including_SI_IP_ID_IT ;
+  skos:narrower pen:PK_D_2010, pen:PK_V_total_2010, pen:PK_VM_total_2010, pen:PK_solo_IP_ID_IT_2010, pen:PK_solo_IP_ID_IT_IM_2010, pen:PK_old_age_total_S_SI_SRN_ST_SD_SR_2010 ;
+  skos:note "pen:PK_solo_IP_ID_IT_2010 i pen:PK_solo_IP_ID_IT_IM_2010 zahrnují důchody IP, ID, IT, nelze sčítat oba tyto mezisoučty současně do sumy důchodů."@cs ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
+
+pen:PK_total_with_special_pensions_2010 a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
+  skos:notation "PK_PENSIONS_T3" ;
+  skos:exactMatch pen:PK_total_with_special_pensions_including_SI_IP_ID_IT ;
+  skos:narrower pen:PK_total_without_special_pensions_2010, pen:PK_O_2010 ;
+  skos:inScheme pen-onto:PensionKindScheme_2010 .

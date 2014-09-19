@@ -1,0 +1,67 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:     <http://www.w3.org/2006/time#> .
+
+@prefix qua:   <http://linked.opendata.cz/generated/resource/quantile/> .
+@prefix qua-onto:   <http://linked.opendata.cz/ontology/quantiles/> .
+
+@prefix age:   <http://linked.opendata.cz/ontology/age/> .
+
+qua-onto:QuantileScheme a skos:ConceptScheme ;
+  skos:prefLabel "Code list of quantiles"@en, "Číselník kvantilů"@cs ;
+  rdfs:label "Code list of quantiles"@en, "Číselník kvantilů"@cs ;
+  skos:notation "CL_QUANTILE"@cs ;
+  skos:note "This code list is a representation quantiles."@en,
+            "Tento číselník je reprezentací kvantilů."@cs;
+  rdfs:seeAlso qua-onto:Quantile .
+  
+qua-onto:Quantile a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso qua-onto:QuantileScheme .
+    
+qua:Q10 a skos:Concept, age:Age ;
+  skos:prefLabel "10. kvantil"@cs ;
+  skos:notation "Q10"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q20 a skos:Concept, age:Age ;
+  skos:prefLabel "20. kvantil"@cs ;
+  skos:notation "Q20"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q30 a skos:Concept, age:Age ;
+  skos:prefLabel "30. kvantil"@cs ;
+  skos:notation "Q30"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q40 a skos:Concept, age:Age ;
+  skos:prefLabel "40. kvantil"@cs ;
+  skos:notation "Q40"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q50 a skos:Concept, age:Age ;
+  skos:prefLabel "50. kvantil (medián)"@cs ;
+  skos:notation "Q50"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q60 a skos:Concept, age:Age ;
+  skos:prefLabel "60. kvantil"@cs ;
+  skos:notation "Q60"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q70 a skos:Concept, age:Age ;
+  skos:prefLabel "70. kvantil"@cs ;
+  skos:notation "Q70"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q80 a skos:Concept, age:Age ;
+  skos:prefLabel "80. kvantil"@cs ;
+  skos:notation "Q80"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .
+  
+qua:Q90 a skos:Concept, age:Age ;
+  skos:prefLabel "90. kvantil"@cs ;
+  skos:notation "Q90"@cs ;
+  skos:inScheme qua-onto:QuantileScheme .

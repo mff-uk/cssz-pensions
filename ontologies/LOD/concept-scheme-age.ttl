@@ -1,0 +1,1072 @@
+﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix time:     <http://www.w3.org/2006/time#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
+@prefix age-onto:   <http://linked.opendata.cz/ontology/age/> .
+
+age-onto:AgeScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of age categories according to SDMX"@en, "Číselník věkových kategorií dle SDMX"@cs ;
+  rdfs:label "Code list of age categories according to SDMX"@en, "Číselník věkových kategorií dle SDMX"@cs ;
+  skos:notation "CL_AGE"@cs ;
+  skos:note "This code list is a representation of the SDMX Cross-domain Code List AGE (CL_AGE). As specified by SDMX, it provides a set of building blocks to be used for creating simple or complex code identifiers relating to the concept of age, i.e. the length of time that a person has lived or a thing has existed."@en,
+            "Tento číselník je reprezentací SDMX mezidoménového číselníku AGE (CL_AGE). Jak specifikuje SDMX, číselník poskytuje sadu stavebních bloků použitelných pro vytváření jednoduchých i komplexních identifikačních kódů souvisejících s konceptem věku, tj. obdobní, ve kterém daná osoba žila či žije nebo, ve kterém daná věc existovala nebo existuje."@cs;
+  skos:hasTopConcept age:Y_GE0 ;
+  rdfs:seeAlso age-onto:Age .
+  
+age-onto:Age a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso age-onto:AgeScheme .
+
+### Zde bylo "ran:Y_X a skos:Concept, ran-onto:Range". Změněno na age:Y_X
+age:Y_X a skos:Concept, age:Age ;
+  skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;
+  skos:notation "X" ;
+  skos:inScheme age-onto:AgeScheme .
+    
+age:Y_GE0 a skos:Concept, age:Age ;
+  skos:prefLabel "Všechny věkové kategorie (0+)."@cs ;
+  skos:notation "0+"@cs ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y0T14 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GT0, age:Y0T19 ;
+  time:intervalMeets age:Y15T64 ;
+  skos:prefLabel "0-14 let"@cs ;
+  skos:notation "0-14"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y0T19 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GT0 ;
+  time:intervalMeets age:Y20T24 ;
+  skos:prefLabel "0-19 let"@cs ;
+  skos:notation "0-19"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y15T64 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GT0 ;
+  time:intervalMeets age:Y_GE65 ;
+  time:intervalOverlaps age:Y0T19 ;
+  skos:prefLabel "15-64 let"@cs ;
+  skos:notation "15-64"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y_GE65 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GT0 ;
+  skos:prefLabel "65 a více let"@cs ;
+  skos:notation "65+"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y_GE90 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  skos:prefLabel "90 a více let"@cs ;
+  skos:notation "90+"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y_GE95 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65, age:Y_GE90 ;
+  skos:prefLabel "95 a více let"@cs ;
+  skos:notation "95+"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y1T4 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y0T14, age:Y0T19 ;
+  time:intervalMeets age:Y5T9 ;
+  skos:prefLabel "1-4 roků"@cs ;
+  skos:notation "1-4"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y5T9 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y0T14, age:Y0T19 ;
+  time:intervalMeets age:Y10T14 ;
+  skos:prefLabel "5-9 roků"@cs ;
+  skos:notation "5-9"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y10T14 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y0T14, age:Y0T19 ;
+  time:intervalMeets age:Y15T19 ;
+  skos:prefLabel "10-14 let"@cs ;
+  skos:notation "10-14"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y15T19 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64, age:Y0T19 ;
+  time:intervalMeets age:Y20T24 ;
+  skos:prefLabel "15-19 let"@cs ;
+  skos:notation "15-19"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y20T24 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y25T29 ;
+  skos:prefLabel "20-24 let"@cs ;
+  skos:notation "20-24"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y25T29 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y30T34 ;
+  skos:prefLabel "25-29 let"@cs ;
+  skos:notation "25-29"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y30T34 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y35T39 ;
+  skos:prefLabel "30-34 let"@cs ;
+  skos:notation "30-34"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y35T39 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y40T44 ;
+  skos:prefLabel "35-39 let"@cs ;
+  skos:notation "35-39"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y40T44 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y45T49 ;
+  skos:prefLabel "40-44 let"@cs ;
+  skos:notation "40-44"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y45T49 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y50T54 ;
+  skos:prefLabel "45-49 let"@cs ;
+  skos:notation "45-49"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y50T54 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y55T59 ;
+  skos:prefLabel "50-54 let"@cs ;
+  skos:notation "50-54"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y55T59 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y60T64 ;
+  skos:prefLabel "55-59 let"@cs ;
+  skos:notation "55-59"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y60T64 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T64 ;
+  time:intervalMeets age:Y65T69, age:Y_GE65 ;
+  skos:prefLabel "60-64 let"@cs ;
+  skos:notation "60-64"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y65T69 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  time:intervalMeets age:Y70T74 ;
+  skos:prefLabel "65-69 let"@cs ;
+  skos:notation "65-69"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y70T74 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  time:intervalMeets age:Y75T79 ;
+  skos:prefLabel "70-74 let"@cs ;
+  skos:notation "70-74"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y75T79 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  time:intervalMeets age:Y80T84 ;
+  skos:prefLabel "75-79 let"@cs ;
+  skos:notation "75-79"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y80T84 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  time:intervalMeets age:Y85T89 ;
+  skos:prefLabel "80-84 let"@cs ;
+  skos:notation "80-84"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y85T89 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65 ;
+  time:intervalMeets age:Y90T94, age:Y_GE90 ;
+  skos:prefLabel "85-89 let"@cs ;
+  skos:notation "85-89"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y90T94 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE65, age:Y_GE65 ;
+  time:intervalMeets age:Y_GE95 ;
+  skos:prefLabel "90-94 let"@cs ;
+  skos:notation "90-94"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y0 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y0T14, age:Y0T19 ;
+  time:intervalMeets age:Y1 ;
+  skos:prefLabel "0 roků"@cs ;
+  skos:notation "0"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y1 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y1T4 ;
+  time:intervalMeets age:Y2 ;
+  skos:prefLabel "1 rok"@cs ;
+  skos:notation "1"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y2 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y1T4 ;
+  time:intervalMeets age:Y3 ;
+  skos:prefLabel "2 roky"@cs ;
+  skos:notation "2"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y3 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y1T4 ;
+  time:intervalMeets age:Y4 ;
+  skos:prefLabel "3 roky"@cs ;
+  skos:notation "3"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y4 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y1T4 ;
+  time:intervalMeets age:Y5 ;
+  skos:prefLabel "4 roky"@cs ;
+  skos:notation "4"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y5 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y5T9 ;
+  time:intervalMeets age:Y6 ;
+  skos:prefLabel "5 let"@cs ;
+  skos:notation "5"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y6 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y5T9 ;
+  time:intervalMeets age:Y7 ;
+  skos:prefLabel "6 let"@cs ;
+  skos:notation "6"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y7 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y5T9 ;
+  time:intervalMeets age:Y8 ;
+  skos:prefLabel "7 let"@cs ;
+  skos:notation "7"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y8 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y5T9 ;
+  time:intervalMeets age:Y9 ;
+  skos:prefLabel "8 let"@cs ;
+  skos:notation "8"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y9 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y5T9 ;
+  time:intervalMeets age:Y10 ;
+  skos:prefLabel "9 let"@cs ;
+  skos:notation "9"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y10 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y10T14 ;
+  time:intervalMeets age:Y11 ;
+  skos:prefLabel "10 let"@cs ;
+  skos:notation "10"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y11 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y10T14 ;
+  time:intervalMeets age:Y12 ;
+  skos:prefLabel "11 let"@cs ;
+  skos:notation "11"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y12 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y10T14 ;
+  time:intervalMeets age:Y13 ;
+  skos:prefLabel "12 let"@cs ;
+  skos:notation "12"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y13 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y10T14 ;
+  time:intervalMeets age:Y14 ;
+  skos:prefLabel "13 let"@cs ;
+  skos:notation "13"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y14 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y10T14 ;
+  time:intervalMeets age:Y15 ;
+  skos:prefLabel "14 let"@cs ;
+  skos:notation "14"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y15 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T19 ;
+  time:intervalMeets age:Y16 ;
+  skos:prefLabel "15 let"@cs ;
+  skos:notation "15"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y16 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T19 ;
+  time:intervalMeets age:Y17 ;
+  skos:prefLabel "16 let"@cs ;
+  skos:notation "16"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y17 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T19 ;
+  time:intervalMeets age:Y18 ;
+  skos:prefLabel "17 let"@cs ;
+  skos:notation "17"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y18 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T19 ;
+  time:intervalMeets age:Y19 ;
+  skos:prefLabel "18 let"@cs ;
+  skos:notation "18"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y19 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y15T19 ;
+  time:intervalMeets age:Y20 ;
+  skos:prefLabel "19 let"@cs ;
+  skos:notation "19"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y20 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y20T24 ;
+  time:intervalMeets age:Y21 ;
+  skos:prefLabel "20 let"@cs ;
+  skos:notation "20"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y21 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y20T24 ;
+  time:intervalMeets age:Y22 ;
+  skos:prefLabel "21 let"@cs ;
+  skos:notation "21"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y22 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y20T24 ;
+  time:intervalMeets age:Y23 ;
+  skos:prefLabel "22 let"@cs ;
+  skos:notation "22"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y23 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y20T24 ;
+  time:intervalMeets age:Y24 ;
+  skos:prefLabel "23 let"@cs ;
+  skos:notation "23"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y24 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y20T24 ;
+  time:intervalMeets age:Y25 ;
+  skos:prefLabel "24 let"@cs ;
+  skos:notation "24"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y25 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y25T29 ;
+  time:intervalMeets age:Y26 ;
+  skos:prefLabel "25 let"@cs ;
+  skos:notation "25"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y26 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y25T29 ;
+  time:intervalMeets age:Y27 ;
+  skos:prefLabel "26 let"@cs ;
+  skos:notation "26"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y27 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y25T29 ;
+  time:intervalMeets age:Y28 ;
+  skos:prefLabel "27 let"@cs ;
+  skos:notation "27"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y28 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y25T29 ;
+  time:intervalMeets age:Y29 ;
+  skos:prefLabel "28 let"@cs ;
+  skos:notation "28"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y29 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y25T29 ;
+  time:intervalMeets age:Y30 ;
+  skos:prefLabel "29 let"@cs ;
+  skos:notation "29"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y30 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y30T34 ;
+  time:intervalMeets age:Y31 ;
+  skos:prefLabel "30 let"@cs ;
+  skos:notation "30"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y31 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y30T34 ;
+  time:intervalMeets age:Y32 ;
+  skos:prefLabel "31 let"@cs ;
+  skos:notation "31"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y32 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y30T34 ;
+  time:intervalMeets age:Y33 ;
+  skos:prefLabel "32 let"@cs ;
+  skos:notation "32"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y33 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y30T34 ;
+  time:intervalMeets age:Y34 ;
+  skos:prefLabel "33 let"@cs ;
+  skos:notation "33"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y34 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y30T34 ;
+  time:intervalMeets age:Y35 ;
+  skos:prefLabel "34 let"@cs ;
+  skos:notation "34"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y35 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y35T39 ;
+  time:intervalMeets age:Y36 ;
+  skos:prefLabel "35 let"@cs ;
+  skos:notation "35"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y36 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y35T39 ;
+  time:intervalMeets age:Y37 ;
+  skos:prefLabel "36 let"@cs ;
+  skos:notation "36"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y37 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y35T39 ;
+  time:intervalMeets age:Y38 ;
+  skos:prefLabel "37 let"@cs ;
+  skos:notation "37"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y38 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y35T39 ;
+  time:intervalMeets age:Y39 ;
+  skos:prefLabel "38 let"@cs ;
+  skos:notation "38"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y39 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y35T39 ;
+  time:intervalMeets age:Y40 ;
+  skos:prefLabel "39 let"@cs ;
+  skos:notation "39"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y40 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y40T44 ;
+  time:intervalMeets age:Y41 ;
+  skos:prefLabel "40 let"@cs ;
+  skos:notation "40"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y41 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y40T44 ;
+  time:intervalMeets age:Y42 ;
+  skos:prefLabel "41 let"@cs ;
+  skos:notation "41"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y42 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y40T44 ;
+  time:intervalMeets age:Y43 ;
+  skos:prefLabel "42 let"@cs ;
+  skos:notation "42"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y43 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y40T44 ;
+  time:intervalMeets age:Y44 ;
+  skos:prefLabel "43 let"@cs ;
+  skos:notation "43"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y44 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y40T44 ;
+  time:intervalMeets age:Y45 ;
+  skos:prefLabel "44 let"@cs ;
+  skos:notation "44"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y45 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y45T49 ;
+  time:intervalMeets age:Y46 ;
+  skos:prefLabel "45 let"@cs ;
+  skos:notation "45"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y46 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y45T49 ;
+  time:intervalMeets age:Y47 ;
+  skos:prefLabel "46 let"@cs ;
+  skos:notation "46"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y47 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y45T49 ;
+  time:intervalMeets age:Y48 ;
+  skos:prefLabel "47 let"@cs ;
+  skos:notation "47"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y48 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y45T49 ;
+  time:intervalMeets age:Y49 ;
+  skos:prefLabel "48 let"@cs ;
+  skos:notation "48"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y49 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y45T49 ;
+  time:intervalMeets age:Y50 ;
+  skos:prefLabel "49 let"@cs ;
+  skos:notation "49"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y50 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y50T54 ;
+  time:intervalMeets age:Y51 ;
+  skos:prefLabel "50 let"@cs ;
+  skos:notation "50"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y51 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y50T54 ;
+  time:intervalMeets age:Y52 ;
+  skos:prefLabel "51 let"@cs ;
+  skos:notation "51"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y52 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y50T54 ;
+  time:intervalMeets age:Y53 ;
+  skos:prefLabel "52 let"@cs ;
+  skos:notation "52"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y53 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y50T54 ;
+  time:intervalMeets age:Y54 ;
+  skos:prefLabel "53 let"@cs ;
+  skos:notation "53"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y54 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y50T54 ;
+  time:intervalMeets age:Y55 ;
+  skos:prefLabel "54 let"@cs ;
+  skos:notation "54"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y55 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y55T59 ;
+  time:intervalMeets age:Y56 ;
+  skos:prefLabel "55 let"@cs ;
+  skos:notation "55"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y56 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y55T59 ;
+  time:intervalMeets age:Y57 ;
+  skos:prefLabel "56 let"@cs ;
+  skos:notation "56"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y57 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y55T59 ;
+  time:intervalMeets age:Y58 ;
+  skos:prefLabel "57 let"@cs ;
+  skos:notation "57"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y58 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y55T59 ;
+  time:intervalMeets age:Y59 ;
+  skos:prefLabel "58 let"@cs ;
+  skos:notation "58"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y59 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y55T59 ;
+  time:intervalMeets age:Y60 ;
+  skos:prefLabel "59 let"@cs ;
+  skos:notation "59"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y60 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y60T64 ;
+  time:intervalMeets age:Y61 ;
+  skos:prefLabel "60 let"@cs ;
+  skos:notation "60"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y61 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y60T64 ;
+  time:intervalMeets age:Y62 ;
+  skos:prefLabel "61 let"@cs ;
+  skos:notation "61"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y62 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y60T64 ;
+  time:intervalMeets age:Y63 ;
+  skos:prefLabel "62 let"@cs ;
+  skos:notation "62"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y63 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y60T64 ;
+  time:intervalMeets age:Y64 ;
+  skos:prefLabel "63 let"@cs ;
+  skos:notation "63"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y64 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y60T64 ;
+  time:intervalMeets age:Y65 ;
+  skos:prefLabel "64 let"@cs ;
+  skos:notation "64"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y65 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y65T69 ;
+  time:intervalMeets age:Y66 ;
+  skos:prefLabel "65 let"@cs ;
+  skos:notation "65"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y66 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y65T69 ;
+  time:intervalMeets age:Y67 ;
+  skos:prefLabel "66 let"@cs ;
+  skos:notation "66"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y67 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y65T69 ;
+  time:intervalMeets age:Y68 ;
+  skos:prefLabel "67 let"@cs ;
+  skos:notation "67"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y68 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y65T69 ;
+  time:intervalMeets age:Y69 ;
+  skos:prefLabel "68 let"@cs ;
+  skos:notation "68"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y69 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y65T69 ;
+  time:intervalMeets age:Y70 ;
+  skos:prefLabel "69 let"@cs ;
+  skos:notation "69"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y70 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y70T74 ;
+  time:intervalMeets age:Y71 ;
+  skos:prefLabel "70 let"@cs ;
+  skos:notation "70"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y71 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y70T74 ;
+  time:intervalMeets age:Y72 ;
+  skos:prefLabel "71 let"@cs ;
+  skos:notation "71"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y72 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y70T74 ;
+  time:intervalMeets age:Y73 ;
+  skos:prefLabel "72 let"@cs ;
+  skos:notation "72"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y73 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y70T74 ;
+  time:intervalMeets age:Y74 ;
+  skos:prefLabel "73 let"@cs ;
+  skos:notation "73"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y74 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y70T74 ;
+  time:intervalMeets age:Y75 ;
+  skos:prefLabel "74 let"@cs ;
+  skos:notation "74"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y75 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y75T79 ;
+  time:intervalMeets age:Y76 ;
+  skos:prefLabel "75 let"@cs ;
+  skos:notation "75"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y76 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y75T79 ;
+  time:intervalMeets age:Y77 ;
+  skos:prefLabel "76 let"@cs ;
+  skos:notation "76"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y77 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y75T79 ;
+  time:intervalMeets age:Y78 ;
+  skos:prefLabel "77 let"@cs ;
+  skos:notation "77"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y78 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y75T79 ;
+  time:intervalMeets age:Y79 ;
+  skos:prefLabel "78 let"@cs ;
+  skos:notation "78"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y79 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y75T79 ;
+  time:intervalMeets age:Y80 ;
+  skos:prefLabel "79 let"@cs ;
+  skos:notation "79"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y80 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y80T84 ;
+  time:intervalMeets age:Y81 ;
+  skos:prefLabel "80 let"@cs ;
+  skos:notation "80"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y81 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y80T84 ;
+  time:intervalMeets age:Y82 ;
+  skos:prefLabel "81 let"@cs ;
+  skos:notation "81"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y82 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y80T84 ;
+  time:intervalMeets age:Y83 ;
+  skos:prefLabel "82 let"@cs ;
+  skos:notation "82"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y83 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y80T84 ;
+  time:intervalMeets age:Y84 ;
+  skos:prefLabel "83 let"@cs ;
+  skos:notation "83"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y84 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y80T84 ;
+  time:intervalMeets age:Y85 ;
+  skos:prefLabel "84 let"@cs ;
+  skos:notation "84"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y85 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y85T89 ;
+  time:intervalMeets age:Y86 ;
+  skos:prefLabel "85 let"@cs ;
+  skos:notation "85"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y86 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y85T89 ;
+  time:intervalMeets age:Y87 ;
+  skos:prefLabel "86 let"@cs ;
+  skos:notation "86"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y87 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y85T89 ;
+  time:intervalMeets age:Y88 ;
+  skos:prefLabel "87 let"@cs ;
+  skos:notation "87"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y88 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y85T89 ;
+  time:intervalMeets age:Y89 ;
+  skos:prefLabel "88 let"@cs ;
+  skos:notation "88"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y89 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y85T89 ;
+  time:intervalMeets age:Y90 ;
+  skos:prefLabel "89 let"@cs ;
+  skos:notation "89"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y90 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y90T94 ;
+  time:intervalMeets age:Y91 ;
+  skos:prefLabel "90 let"@cs ;
+  skos:notation "90"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y91 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y90T94 ;
+  time:intervalMeets age:Y92 ;
+  skos:prefLabel "91 let"@cs ;
+  skos:notation "91"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y92 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y90T94 ;
+  time:intervalMeets age:Y93 ;
+  skos:prefLabel "92 let"@cs ;
+  skos:notation "92"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y93 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y90T94 ;
+  time:intervalMeets age:Y94 ;
+  skos:prefLabel "93 let"@cs ;
+  skos:notation "93"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y94 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y90T94 ;
+  time:intervalMeets age:Y95 ;
+  skos:prefLabel "94 let"@cs ;
+  skos:notation "94"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y95 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y96 ;
+  skos:prefLabel "95 let"@cs ;
+  skos:notation "95"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y96 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y97 ;
+  skos:prefLabel "96 let"@cs ;
+  skos:notation "96"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y97 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y98 ;
+  skos:prefLabel "97 let"@cs ;
+  skos:notation "97"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y98 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y99 ;
+  skos:prefLabel "98 let"@cs ;
+  skos:notation "98"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y99 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y100 ;
+  skos:prefLabel "99 let"@cs ;
+  skos:notation "99"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y100 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y101 ;
+  skos:prefLabel "100 let"@cs ;
+  skos:notation "100"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
+age:Y101 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y102 ;
+  skos:prefLabel "101 let"@cs ;
+  skos:notation "101"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y102 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y103 ;
+  skos:prefLabel "102 let"@cs ;
+  skos:notation "102"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y103 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y104 ;
+  skos:prefLabel "103 let"@cs ;
+  skos:notation "103"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+  
+age:Y104 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GE95 ;
+  time:intervalMeets age:Y1 ;
+  skos:prefLabel "104 let"@cs ;
+  skos:notation "104"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
