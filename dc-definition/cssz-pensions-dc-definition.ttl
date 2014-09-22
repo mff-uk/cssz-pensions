@@ -379,6 +379,11 @@ def-dc-penze:prum-delka-pobirani-s-duchodu a qb:DataStructureDefinition ;
     qb:order 2 ;
     rdfs:label "The dimension representing a sex for which the average year of paying-out old-age pension was measured."@en, "Dimenze reprezentující pohlaví, za které průměrná doba pobírání důchodu měřena."@cs
   ] ;
+  qb:component [
+    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:order 3 ;
+    rdfs:label "The dimension representing a kind of pension for which the average number of years some old-age pension is being paid-out to a pensioner was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrná délka vyplácení řádného starobního důchodu uvedena."@cs
+  ] ;
   # Measure
   qb:component [
     qb:measure def-dc-penze:prumerna-doba-pobirani-radneho-starobniho-duchodu ;
