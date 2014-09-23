@@ -470,6 +470,20 @@ pen:PK_old_age_total_S_SRN_ST_SD_SR a skos:Concept, pen-onto:PensionKind ;
   skos:notation "PK_OLDAGE_S4" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
+pen:PK_old_age_total_without_SR a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody bez SR"@cs ;
+  skos:prefLabel "Starobní důchody bez SR"@cs ;
+  skos:definition "Celkem za druhy starobních důchodů platných v daném roce, ale bez zahrnutí důchodů typu SR."@cs ;
+  skos:notation "PK_OLDAGE_S5" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
+pen:PK_old_age_total_with_SR a skos:Concept, pen-onto:PensionKind ;
+  skos:altLabel "Starobní důchody včetně SR"@cs ;
+  skos:prefLabel "Starobní důchody včetně SR"@cs ;
+  skos:definition "Celkem za druhy starobních důchodů platných v daném roce včetně důchodů typu SR."@cs ;
+  skos:notation "PK_OLDAGE_S6" ;
+  skos:inScheme pen-onto:PensionKindScheme .
+
 pen:PK_V_total_including_SI_IP_ID_IT_combinations a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "V-Celkem (zahrnuje V sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
   skos:prefLabel "Vdovské důchody celkem (zahrnuje V sólo a kombinace S, SI, SRN, ST, SD, SR, IP, ID, IT)"@cs ;
@@ -499,7 +513,7 @@ pen:PK_VM_total_including_I_IC_combinations a skos:Concept, pen-onto:PensionKind
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_D_and_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
-  skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
+  skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
   skos:prefLabel "Důchody celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB."@cs ;
   skos:notation "PK_PENSIONS_T5" ;
@@ -513,7 +527,7 @@ pen:PK_total_without_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_D_and_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
-  skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
+  skos:altLabel "Celkem bez bez sirotčích důchodů a netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
   skos:prefLabel "Důchody celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB."@cs ;
   skos:notation "PK_PENSIONS_T6" ;
