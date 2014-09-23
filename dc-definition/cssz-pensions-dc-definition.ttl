@@ -1296,7 +1296,7 @@ def-dc-penze:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
 
 def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobní-duchod a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of pensioners with solo old-age pension"@en, "počet důchodců pobírajících sólo starobní důchod"@cs ;
-  rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí."@cs ;
+  rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out. Pensions of the SR type are included starting from 2004, in the previous years this type of pension si not included."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí. Důchody typu SR nejsou zahrnuty do roku 2003 včetně."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
   
@@ -1336,9 +1336,8 @@ def-dc-penze:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-# Možná se nepoužije, řešeno s ČSSZ
 def-dc-penze:def-dc-penze:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v Kč"@cs ;
+  rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v tis. Kč"@cs ;
   rdfs:comment "The amount of money spent on pensions in thousands of CZK."@en, "Výše výdajů na důchody v tisících Kč."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
