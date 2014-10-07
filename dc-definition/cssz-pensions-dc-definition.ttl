@@ -77,6 +77,7 @@ def-dc-penze:obyvatelstvo-podle-kraju a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -110,6 +111,7 @@ def-dc-penze:obyvatelstvo-podle-veku a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -138,6 +140,7 @@ def-dc-penze:relat-rozlozeni-populace a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -171,6 +174,7 @@ def-dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataStructureDefin
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -204,6 +208,7 @@ def-dc-penze:vyplacene-duchody-v-cr a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -238,6 +243,7 @@ def-dc-penze:duchodci-v-cr a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -271,6 +277,7 @@ def-dc-penze:nove-priznane-duchody-v-cr a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -299,6 +306,7 @@ def-dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -327,6 +335,7 @@ def-dc-penze:vydaje-na-duchody-cr a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -360,6 +369,7 @@ def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadre
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -393,6 +403,7 @@ def-dc-penze:prum-delka-pobirani-s-duchodu a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -441,6 +452,7 @@ def-dc-penze:duchodci-prehled-cr a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:MeasureProperty
   ] .
@@ -489,6 +501,7 @@ def-dc-penze:duchodci-v-krajich a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:MeasureProperty
   ] .
@@ -539,6 +552,7 @@ def-dc-penze:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:MeasureProperty
   ] .
@@ -577,6 +591,7 @@ def-dc-penze:duchody-dle-veku a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -610,6 +625,7 @@ def-dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -648,6 +664,7 @@ def-dc-penze:vyplacene-duchody-dle-vyse a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -681,6 +698,7 @@ def-dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition 
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -719,6 +737,7 @@ def-dc-penze:nove-priznane-duchody-dle-veku a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -752,6 +771,7 @@ def-dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataStructureDefi
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -790,6 +810,7 @@ def-dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataStructureDefinition
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -823,6 +844,7 @@ def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a q
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -861,6 +883,7 @@ def-dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSt
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -894,6 +917,7 @@ def-dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-p
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -932,6 +956,7 @@ def-dc-penze:zanikle-duchody a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -975,6 +1000,7 @@ def-dc-penze:invalidita a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -1014,6 +1040,7 @@ def-dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataStructureDefinition 
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -1068,6 +1095,7 @@ def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:MeasureProperty
   ] .
@@ -1102,6 +1130,7 @@ def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:MeasureProperty
   ] .
@@ -1136,6 +1165,7 @@ def-dc-penze:casove-rady-grafy-9 a qb:DataStructureDefinition ;
   # Attributes
   qb:component [
     qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
@@ -1336,14 +1366,14 @@ def-dc-penze:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:def-dc-penze:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+def-dc-penze:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
   rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v tis. Kč"@cs ;
   rdfs:comment "The amount of money spent on pensions in thousands of CZK."@en, "Výše výdajů na důchody v tisících Kč."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "pensions spendings adjusted for cash advandes in CZK"@en, "výdaje na důchody opravené o zálohy v Kč"@cs ;
+def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "pensions spendings adjusted for cash advandes in thousands of CZK"@en, "výdaje na důchody opravené o zálohy v tisících Kč"@cs ;
   rdfs:comment "The amount of money spent on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en, "Výše výdajů na důchody v tisících Kč. Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
@@ -1378,7 +1408,7 @@ def-dc-penze:prumerny-osobni-vymerovaci-zaklad a rdf:Property, qb:MeasurePropert
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
 
-def-dc-penze:prumerny-osobni-vymerovaci-zaklad-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+def-dc-penze:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of the personal assessment base of pensioners with the newly avarded pension"@en, "průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů"@cs ;
   rdfs:comment "Average amount of the personal assessment base of pensioners with the newly avarded pension."@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
