@@ -1,0 +1,232 @@
+﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
+
+@prefix ybs:   <http://linked.cssz.cz/resource/yearbook-section/> .
+@prefix ybs-onto:   <http://linked.cssz.cz/ontology/yearbook-sections/> .
+
+###
+### Schéma kapitol ročenky důchodové statistiky ČSSZ v letech 2008-2012.
+###
+
+ybs-onto:YearbookSectionScheme a skos:ConceptScheme, sdmx:CodeList ;
+  skos:prefLabel "Code list of sections of the pension statistics yearbook published by the Czech Social Security Administration"@en, "Číselník kapitol ročenky důchodové statistiky"@cs ;
+  rdfs:label "Code list of sections of the pension statistics yearbook"@en, "Číselník kapitol ročenky důchodové statistiky"@cs ;
+  skos:notation "CL_CSSZ_YEARBOOK_SECTIONS"@cs ;
+  skos:note "Code list of sections of the pension statistics yearbook published by the Czech Social Security Administration between years 2008 and 2012."@en,
+            "Číselník kapitol statistické ročenky z oblasti důchodového pojištění České správy sociálního zabezpečení vydávané mezi roky 2008 a 2012."@cs ;
+  skos:hasTopConcept ybs:S_T_2008, ybs:S_T_2010, ybs:S_N ;
+  rdfs:seeAlso ybs-onto:YearbookSection .
+  
+ybs-onto:YearbookSection a rdfs:Class, owl:Class ;
+  rdfs:subClassOf skos:Concept ;
+  rdfs:seeAlso ybs-onto:YearbookSectionScheme .
+
+### Neudáno
+
+ybs:S_N a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Data nesouvisí s kapitolou"@cs, "Not applicable"@en ;
+  skos:altLabel "N/A"@cs, "N/A"@en ;
+  skos:notation "S_N" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+### Všechny kapitoly
+
+ybs:S_T_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Všechny kapitoly"@cs, "All sections"@en ;
+  skos:altLabel "Celkem"@cs, "Total"@en ;
+  skos:definition "Všechny kapitoly ročenky z oblasti důchodového pojištění v letech 2008-2009."@cs,
+                  "All sections of the pension statistics yearbook in years 2008 and 2009."@en ;
+  skos:notation "S_T" ;
+  skos:narrower ybs:S_Contents_2008,
+                ybs:S_Commentary_2008,
+                ybs:S_Demography_2008 ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_T_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Všechny kapitoly"@cs, "All sections"@en ;
+  skos:altLabel "Celkem"@cs, "Total"@en ;
+  skos:definition "Všechny kapitoly ročenky z oblasti důchodového pojištění v letech 2010-2012."@cs,
+                  "All sections of the pension statistics yearbook in years 2010 to 2012."@en ;
+  skos:notation "S_T" ;
+  skos:narrower ybs:S_Contents_2010,
+                ybs:S_Commentary_2010,
+                ybs:S_Demography_2010 ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+### Hlavní kolekce sdružující kapitoly na nejvyšší úrovni hierarchie
+
+ybs:C_Sections_2008 a OrderedCollection ;
+  skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění v letech 2008-2009"@cs,
+                 "Sections of the pension statistics yearbook in years 2008 and 2009"@en ;
+  skos:memberList (
+                    ybs:S_Contents_2008
+                    ybs:S_Commentary_2008
+                    ybs:C_Demography_2008
+                  ) ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:C_Sections_2010 a OrderedCollection ;
+  skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění v letech 2010-2012"@cs,
+                 "Sections of the pension statistics yearbook in years 2010 to 2012"@en ;
+  skos:memberList (
+                    ybs:S_Contents_2010
+                    ybs:S_Commentary_2010
+                    ybs:C_Demography_2008
+                  ) ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+### Dílčí kolekce 2008-2009 - kolekce kapitol na nižší úrovni hierarchie
+
+ybs:C_Demography_2008 a OrderedCollection ;
+  skos:prefLabel "Demografie"@cs,
+                 "Demography"@en ;
+  skos:memberList (
+                    ybs:S_Number_of_inhabitants_according_to_regions_2008
+                    ybs:S_Age_structure_of_Czech_population_2008
+                    ybs:S_Relative_distribution_of_population_2008
+                    ybs:S_Comparison_of_age_structure_of_population_2008
+                  ) ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+### Dílčí kolekce 2010-2012 - kolekce kapitol na nižší úrovni hierarchie
+
+ybs:C_Demography_2010 a OrderedCollection ;
+  skos:prefLabel "Demografie"@cs,
+                 "Demographics"@en ;
+  skos:memberList (
+                    ybs:S_Number_of_inhabitants_according_to_regions_2010
+                    ybs:S_Age_structure_of_Czech_population_2010
+                    ybs:S_Relative_distribution_of_population_2010
+                    ybs:S_Comparison_of_age_structure_of_population_2010
+                  ) ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+### Kapitoly 2008-2009
+
+ybs:S_Contents_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Obsah"@cs, "Contents"@en ;
+  skos:altLabel "1 Obsah"@cs, "1 Contents"@en ;
+  skos:altLabel "1"@cs, "1"@en ;
+  skos:notation "S_Contents" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Commentary_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Komentář"@cs, "Commentary"@en ;
+  skos:altLabel "2 Komentář"@cs, "2 Commentary"@en ;
+  skos:altLabel "2"@cs, "2"@en ;
+  skos:notation "S_Commentary" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+# Doplnit kapitoly 3 a 4
+
+ybs:S_Demography_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Demografie"@cs, "Demography"@en ;
+  skos:altLabel "5 Demografie"@cs, "5 Demography"@en ;
+  skos:altLabel "5"@cs, "5"@en ;
+  skos:notation "S_Demography" ;
+  skos:narrower ybs:S_Number_of_inhabitants_according_to_regions_2008,
+                ybs:S_Age_structure_of_Czech_population_2008,
+                ybs:S_Relative_distribution_of_population_2008,
+                ybs:S_Comparison_of_age_structure_of_population_2008 ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Number_of_inhabitants_according_to_regions_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Počet obyvatel podle krajů"@cs,
+                 "Number of inhabitants according to regions"@en ;
+  skos:altLabel "Počet obyvatel podle krajů"@cs,
+                "Number of inhabitants according to regions"@en ;
+  skos:notation "S_Number_of_inhabitants_according_to_regions" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Age_structure_of_Czech_population_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Věkové složení obyvatel České republiky"@cs,
+                 "Age structure of Czech population"@en ;
+  skos:altLabel "Věkové složení obyvatel České republiky"@cs,
+                "Age structure of Czech population"@en ;
+  skos:notation "S_Age_structure_of_Czech_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Relative_distribution_of_population_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Relativní rozložení populace"@cs,
+                 "Relative distribution of population"@en ;
+  skos:altLabel "Relativní rozložení populace"@cs,
+                "Relative distribution of population"@en ;
+  skos:notation "S_Relative_distribution_of_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Comparison_of_age_structure_of_population_2008 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Srovnání věkového složení obyvatel"@cs,
+                 "Comparison of age structure of population"@en ;
+  skos:altLabel "Srovnání věkového složení obyvatel"@cs,
+                "Comparison of age structure of population"@en ;
+  skos:notation "S_Comparison_of_age_structure_of_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+# Doplnit kapitoly 6 až přílohy
+
+### Kapitoly 2010-2012
+
+ybs:S_Contents_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Obsah"@cs, "Contents"@en ;
+  skos:altLabel "1 Obsah"@cs, "1 Contents"@en ;
+  skos:altLabel "1"@cs, "1"@en ;
+  skos:notation "S_Contents" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Commentary_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Komentář"@cs, "Commentary"@en ;
+  skos:altLabel "2 Komentář"@cs, "2 Commentary"@en ;
+  skos:altLabel "2"@cs, "2"@en ;
+  skos:notation "S_Commentary" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+# Doplnit kapitoly 3 a 4
+
+ybs:S_Demography_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Demografie"@cs, "Demographics"@en ;
+  skos:altLabel "5 Demografie"@cs, "5 Demographics"@en ;
+  skos:altLabel "5"@cs, "5"@en ;
+  skos:notation "S_Demography" ;
+  skos:narrower ybs:S_Number_of_inhabitants_according_to_regions_2010,
+                ybs:S_Age_structure_of_Czech_population_2010,
+                ybs:S_Relative_distribution_of_population_2010,
+                ybs:S_Comparison_of_age_structure_of_population_2010 ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Number_of_inhabitants_according_to_regions_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Počet obyvatel podle krajů"@cs,
+                 "Number of inhabitants according to regions"@en ;
+  skos:altLabel "5.1 Počet obyvatel podle krajů"@cs,
+                "5.1 Number of inhabitants according to regions"@en ;
+  skos:notation "S_Number_of_inhabitants_according_to_regions" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Age_structure_of_Czech_population_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Věkové složení obyvatel České republiky"@cs,
+                 "Age structure of Czech population"@en ;
+  skos:altLabel "5.2 Věkové složení obyvatel České republiky"@cs,
+                "5.2 Age structure of Czech population"@en ;
+  skos:notation "S_Age_structure_of_Czech_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Relative_distribution_of_population_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Relativní rozložení populace"@cs,
+                 "Relative distribution of population"@en ;
+  skos:altLabel "5.3 Relativní rozložení populace"@cs,
+                "5.3 Relative distribution of population"@en ;
+  skos:notation "S_Relative_distribution_of_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+ybs:S_Comparison_of_age_structure_of_population_2010 a skos:Concept, ybs-onto:YearbookSection ;
+  skos:prefLabel "Srovnání věkového složení obyvatel"@cs,
+                 "Comparison of age structure of population"@en ;
+  skos:altLabel "5.4 Srovnání věkového složení obyvatel"@cs,
+                "5.4 Comparison of age structure of population"@en ;
+  skos:notation "S_Comparison_of_age_structure_of_population" ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
+
+# Doplnit kapitoly 6 až přílohy
