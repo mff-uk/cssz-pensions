@@ -430,6 +430,7 @@ sdmx-code:sex skos:hasTopConcept <http://purl.org/linked-data/sdmx/2009/code#sex
     skos:prefLabel "Total"@en ;
     skos:prefLabel "Celkem"@cs ;
     skos:notation "T" ;
+    skos:narrower sdmx-code:sex-F, sdmx-code:sex-M, sdmx-code:sex-U, sdmx-code:sex-N ;
     . 
 sdmx-code:sex skos:hasTopConcept <http://purl.org/linked-data/sdmx/2009/code#sex-T> .
 
