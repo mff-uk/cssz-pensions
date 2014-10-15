@@ -1083,7 +1083,7 @@ def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
                "Měření průměrné výše důchodu vyplácená důchodcům podle roku a pohlaví."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobní-duchod ;
+    qb:measure def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobni-duchod ;
     rdfs:label "The measure of the number of pensioners with the solo old-age pension in a given year and with a given sex. It is a sum of different types of old pensions. These types are not the same in every of the reported years. Old-age pensions of the SI type are included since 2010."@en,
                "Měření počtu důchodců pobírajících sólo starobní důchod podle roku a pohlaví. Jedná se o sumu za různé druhy starobních důchodů. Typy starobních důchodů se mezi roky liší. Od roku 2010 jsou zahrnuty starobní důchody typu SI."@cs
   ] ;
@@ -1324,7 +1324,7 @@ def-dc-penze:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobní-duchod a rdf:Property, qb:MeasureProperty ;
+def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of pensioners with solo old-age pension"@en, "počet důchodců pobírajících sólo starobní důchod"@cs ;
   rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out. Pensions of the SR type are included starting from 2004, in the previous years this type of pension si not included."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí. Důchody typu SR nejsou zahrnuty do roku 2003 včetně."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
