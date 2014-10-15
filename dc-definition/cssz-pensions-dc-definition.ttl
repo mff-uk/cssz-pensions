@@ -584,9 +584,9 @@ def-dc-penze:duchody-dle-veku a qb:DataStructureDefinition ;
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
-    rdfs:label "The measure of the the number of pensioners in a given year, with a given kind, to persons of a given sex and age, and in a given region of Czech Republic."@en,
-               "Měření počtu důchodců podle roku, druhu důchodu, pohlaví, věku a kraje."@cs
+    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    rdfs:label "The measure of the the number of pensions in a given year, with a given kind, to persons of a given sex and age."@en,
+               "Měření počtu důchodů podle roku, druhu důchodu, pohlaví a věku."@cs
   ] ;
   # Attributes
   qb:component [
