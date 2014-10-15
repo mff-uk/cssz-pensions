@@ -1,7 +1,10 @@
-@prefix dc-penze:       <http://linked.cssz.cz/dataset/penze/> .
-@prefix def-dc-penze:   <http://linked.cssz.cz/ontology/dataset-definitions/penze#> .
-@prefix qb:              <http://purl.org/linked-data/cube#> .
+@prefix dc-penze:            <http://linked.cssz.cz/dataset/penze/> .
+@prefix def-dc-penze:        <http://linked.cssz.cz/ontology/dataset-definitions/penze#> .
+@prefix metadata-dc-penze:   <http://linked.cssz.cz/ontology/metadata/penze#> .
+@prefix qb:                  <http://purl.org/linked-data/cube#> .
 
+@prefix ybs:   <http://linked.cssz.cz/resource/yearbook-section/> .
+@prefix ybs-onto:   <http://linked.cssz.cz/ontology/yearbook-sections/> .
 
 @prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
 @prefix qua:   <http://linked.opendata.cz/generated/resource/quantile/> .
@@ -27,6 +30,13 @@
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms:  <http://purl.org/dc/terms/>.
 
+metadata-dc-penze:yearbookSection a rdf:Property ;
+  rdfs:subPropertyOf dcterms:source ;
+  rdfs:domain qb:DataSet ;
+  rdfs:range ybs-onto:YearbookSection ;
+  rdfs:comment "Kapitola ročenky z oblasti důchodového pojištění ČSSZ, ve které jsou obsažena zdrojová data datové kostky."@cs,
+               "Section of the pension statistics yearbook published by the Czech Social Security Administration which contains tje source data of the data cube." ;
+  
 ####### 5
 
 dc-penze:obyvatelstvo-podle-kraju a qb:DataSet ;
@@ -39,7 +49,8 @@ dc-penze:obyvatelstvo-podle-kraju a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:obyvatelstvo-podle-kraju .
+  qb:structure def-dc-penze:obyvatelstvo-podle-kraju ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_inhabitants_according_to_regions_2008, ybs:S_Number_of_inhabitants_according_to_regions_2009, ybs:S_Number_of_inhabitants_according_to_regions_2010 .
 
 dc-penze:obyvatelstvo-podle-veku a qb:DataSet ;
   dcterms:title "Numbers of citizens based on age"@en, "Počet obyvatel ve věkových skupinách"@cs ;
@@ -51,7 +62,8 @@ dc-penze:obyvatelstvo-podle-veku a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:obyvatelstvo-podle-veku .
+  qb:structure def-dc-penze:obyvatelstvo-podle-veku ;
+  metadata-dc-penze:yearbookSection ybs:S_Age_structure_of_Czech_population_2008, ybs:S_Age_structure_of_Czech_population_2009, ybs:S_Age_structure_of_Czech_population_2010 .
   
 dc-penze:relat-rozlozeni-populace a qb:DataSet ;
   dcterms:title "Relative distribution of the population"@en, "Relativní rozložení populace"@cs ;
@@ -63,7 +75,8 @@ dc-penze:relat-rozlozeni-populace a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:relat-rozlozeni-populace .
+  qb:structure def-dc-penze:relat-rozlozeni-populace ;
+  metadata-dc-penze:yearbookSection ybs:S_Relative_distribution_of_population_2008, ybs:S_Relative_distribution_of_population_2010 .
 
 dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataSet ;
   dcterms:title "Comparison of numbers of citizens based on age"@en, "Srovnání počtu obyvatel ve věkových skupinách"@cs ;
@@ -75,7 +88,12 @@ dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech .
+  qb:structure def-dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech ;
+  metadata-dc-penze:yearbookSection ybs:S_Comparison_of_age_structure_of_population_2008,
+                                    ybs:S_Comparison_of_age_structure_of_population_2009,
+                                    ybs:S_Comparison_of_age_structure_of_population_2010,
+                                    ybs:S_Comparison_of_age_structure_of_population_2011,
+                                    ybs:S_Comparison_of_age_structure_of_population_2012 .
   
 ###### 6 a 7
 
@@ -90,7 +108,8 @@ dc-penze:vyplacene-duchody-v-cr a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:vyplacene-duchody-v-cr .
+  qb:structure def-dc-penze:vyplacene-duchody-v-cr ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_paid-out_pensions_2008, ybs:S_Number_of_paid-out_pensions_2009, ybs:S_Number_of_paid-out_pensions_2010 .
 
 dc-penze:duchodci-v-cr a qb:DataSet ;
   dcterms:title "Numbers of pensioners in the Czech Republic"@en, "Počet důchodců v České republice"@cs ;
@@ -102,7 +121,8 @@ dc-penze:duchodci-v-cr a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchodci-v-cr .
+  qb:structure def-dc-penze:duchodci-v-cr ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensioners_2008, ybs:S_Number_of_pensioners_2009, ybs:S_Number_of_pensioners_2010 .
   
 dc-penze:nove-priznane-duchody-v-cr a qb:DataSet ;
   dcterms:title "Number of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
@@ -114,7 +134,8 @@ dc-penze:nove-priznane-duchody-v-cr a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:nove-priznane-duchody-v-cr .
+  qb:structure def-dc-penze:nove-priznane-duchody-v-cr ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_newly_awarded_pensions_2008, ybs:S_Number_of_newly_awarded_pensions_2009, ybs:S_Number_of_newly_awarded_pensions_2010 .
 
 dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataSet ;
   dcterms:title "Costs on pensions since 1996 in the Czech Republic"@en, "Výdaje na důchody od roku 1996"@cs ;
@@ -126,7 +147,8 @@ dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:vydaje-na-duchody-od-roku-1996 .
+  qb:structure def-dc-penze:vydaje-na-duchody-od-roku-1996 ;
+  metadata-dc-penze:yearbookSection ybs:S_Development_of_pension_costs_since_1996_2008, ybs:S_Development_of_pension_costs_since_1996_2009, ybs:S_Development_of_pension_costs_since_1996_2010 .
   
 dc-penze:vydaje-na-duchody-v-cr a qb:DataSet ;
   dcterms:title "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
@@ -138,7 +160,12 @@ dc-penze:vydaje-na-duchody-v-cr a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:vydaje-na-duchody-v-cr .
+  qb:structure def-dc-penze:vydaje-na-duchody-v-cr ;
+  metadata-dc-penze:yearbookSection ybs:S_Pension_benefit_costs_2008,
+                                    ybs:S_Pension_benefit_costs_2009,
+                                    ybs:S_Pension_benefit_costs_2010,
+                                    ybs:S_Pension_benefit_costs_2011,
+                                    ybs:S_Pension_benefit_costs_2012 .
   
 dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a qb:DataSet ;
   dcterms:title "Monthly pensions in the Czech Republic"@en, "Měsíční výše důchodů"@cs ;
@@ -150,7 +177,8 @@ dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni .
+  qb:structure def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni ;
+  metadata-dc-penze:yearbookSection ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2008, ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2010 
   
 dc-penze:prum-delka-pobirani-s-duchodu a qb:DataSet ;
   dcterms:title "Average length of the pension"@en, "Průměrná délka pobírání starobního důchodu"@cs ;
@@ -162,8 +190,8 @@ dc-penze:prum-delka-pobirani-s-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-delka-pobirani-s-duchodu .
-  
+  qb:structure def-dc-penze:prum-delka-pobirani-s-duchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Development_of_average_length_of_time_of_receiving_the_old-age_pension_2011 .
   
 #### 8.01  
 
@@ -178,7 +206,8 @@ dc-penze:duchodci-prehled-cr a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchodci-prehled-cr .
+  qb:structure def-dc-penze:duchodci-prehled-cr ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensioners_according_to_regions_2008, ybs:S_Number_of_pensioners_according_to_regions_2010 .
 
 dc-penze:duchodci-v-krajich a qb:DataSet ;
   dcterms:title "Total numbers of pensioners in regions of Czech Republic"@en, "Celkový počet důchodců v krajích České republiky"@cs ;
@@ -190,7 +219,8 @@ dc-penze:duchodci-v-krajich a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchodci-v-krajich .
+  qb:structure def-dc-penze:duchodci-v-krajich ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensioners_according_to_regions_2008, ybs:S_Number_of_pensioners_according_to_regions_2010 .
 
 ##### 8.02
 
@@ -205,7 +235,8 @@ dc-penze:duchody-dle-veku a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchody-dle-veku .
+  qb:structure def-dc-penze:duchody-dle-veku ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_age_2008, ybs:S_Number_of_pensions_according_to_age_2010 .
   
 dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataSet ;
   dcterms:title "Average age of pensioners in the Czech Republic"@en, "Průměrný věk důchodce v České republice"@cs ;
@@ -217,7 +248,8 @@ dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vek-duchodce-dle-druhu-duchodu .
+  qb:structure def-dc-penze:prum-vek-duchodce-dle-druhu-duchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_age_2008, ybs:S_Number_of_pensions_according_to_age_2010 .
 
 ##### 8.03
 
@@ -231,7 +263,8 @@ dc-penze:vyplacene-duchody-dle-vyse a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:vyplacene-duchody-dle-vyse .
+  qb:structure def-dc-penze:vyplacene-duchody-dle-vyse ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2008, ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2010 .
   
 dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataSet ;
   dcterms:title "Average amount of pensions in the Czech Republic"@en, "Průměrná výše důchodu v České republice"@cs ;
@@ -243,7 +276,8 @@ dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vyse-duchodu-podle-druhu-duchodu .
+  qb:structure def-dc-penze:prum-vyse-duchodu-podle-druhu-duchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2008, ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2010 .
 
 
 ##### 9.01
@@ -258,7 +292,8 @@ dc-penze:nove-priznane-duchody-dle-veku a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:nove-priznane-duchody-dle-veku .
+  qb:structure def-dc-penze:nove-priznane-duchody-dle-veku ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_age_2008, ybs:S_Number_of_new_pensions_according_to_age_2009, ybs:S_Number_of_new_pensions_according_to_age_2010 .
   
 dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
   dcterms:title "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
@@ -270,7 +305,8 @@ dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu .
+  qb:structure def-dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_age_2008, ybs:S_Number_of_new_pensions_according_to_age_2009, ybs:S_Number_of_new_pensions_according_to_age_2010 .
 
 ##### 9.02
 
@@ -285,8 +321,8 @@ dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:nove-priznane-duchody-dle-vyse-duchodu .
-  
+  qb:structure def-dc-penze:nove-priznane-duchody-dle-vyse-duchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
   
 dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
   dcterms:title "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznanáých důchodů v České republice"@cs ;
@@ -298,7 +334,8 @@ dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:Da
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu .  
+  qb:structure def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu .
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
   
 
 ##### 9.03
@@ -314,8 +351,8 @@ dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu .
-  
+  qb:structure def-dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_personal_assessments_base_2008, ybs:S_Number_of_pensions_according_to_personal_assessments_base_2010 .
   
 dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
   dcterms:title "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznanáých důchodů v České republice"@cs ;
@@ -327,8 +364,8 @@ dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu .  
-  
+  qb:structure def-dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_personal_assessments_base_2008, ybs:S_Number_of_pensions_according_to_personal_assessments_base_2010 .
 
 ###### 10
 
@@ -342,10 +379,10 @@ dc-penze:zanikle-duchody a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:zanikle-duchody .
-
-
-
+  qb:structure def-dc-penze:zanikle-duchody ;
+  metadata-dc-penze:yearbookSection ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2008,
+                                    ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2009,
+                                    ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2010 .
 
 ###### 11
 
@@ -359,11 +396,10 @@ dc-penze:invalidita a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:invalidita .
-
-
-
-
+  qb:structure def-dc-penze:invalidita ;
+  metadata-dc-penze:yearbookSection ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2008,
+                                    ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2009,
+                                    ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2010 .
 
 ###### 12
 
@@ -377,7 +413,8 @@ dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:zmeny-mezi-stupni-invalidního-důchodu .
+  qb:structure def-dc-penze:zmeny-mezi-stupni-invalidního-důchodu ;
+  metadata-dc-penze:yearbookSection ybs:S_Summary_of_changes_between_degrees_of_disability_pension_2010 .
 
 ###### Kraje a okresy
 
@@ -391,7 +428,8 @@ dc-penze:duchodci-v-cr-krajich-okresech a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchodci-v-cr-krajich-okresech .
+  qb:structure def-dc-penze:duchodci-v-cr-krajich-okresech ;
+  metadata-dc-penze:yearbookSection ybs:S_N .
 
 #### Grafy
 
@@ -405,7 +443,8 @@ dc-penze:casove-rady-grafy-1-6 a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:casove-rady-grafy-1-6 .
+  qb:structure def-dc-penze:casove-rady-grafy-1-6 ;
+  metadata-dc-penze:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
   
   
 dc-penze:casove-rady-grafy-7-8 a qb:DataSet ;
@@ -418,7 +457,8 @@ dc-penze:casove-rady-grafy-7-8 a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:casove-rady-grafy-7-8 .
+  qb:structure def-dc-penze:casove-rady-grafy-7-8 ;
+  metadata-dc-penze:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
   
 dc-penze:casove-rady-grafy-9 a qb:DataSet ;
   dcterms:title "Expenditure on pensions in the Czech Republic"@en, "Výdaje na starobní důchody v České republice"@cs ;
@@ -430,7 +470,8 @@ dc-penze:casove-rady-grafy-9 a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:casove-rady-grafy-9 .
+  qb:structure def-dc-penze:casove-rady-grafy-9 ;
+  metadata-dc-penze:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
   
   
 
