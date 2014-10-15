@@ -313,7 +313,7 @@ def-dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataStructureDefinition ;
 
 ### SECTION 7.5 AMOUNT OF MONEY SPENT NO PENSIONS IN THE CZECH REPUBLIC CLASSIFIED BY PENSION KINDS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:vydaje-na-duchody-cr a qb:DataStructureDefinition ;
+def-dc-penze:vydaje-na-duchody-v-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the total amount of money spent on pensions the Czech Republic classified by pension kinds."@en, "Definice struktury datové kostky s celkovými výdaji na důchody v České republice v členění dle druhů důchodu."@cs ;
   # Dimensions
   qb:component [
@@ -1123,7 +1123,7 @@ def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
                "Měření počtu vyplácených důchodů podle roku a druhu důchodu."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:def-dc-penze:vydaje-na-duchody-v-tis-kc ;
+    qb:measure def-dc-penze:vydaje-na-duchody-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions of the given pension kind in thousands of CZK."@en,
                "Měření výdajů na důchody daného typu v tisících Kč."@cs
   ] ;
