@@ -66,12 +66,12 @@ dc-penze:relat-rozlozeni-populace a qb:DataSet ;
   qb:structure def-dc-penze:relat-rozlozeni-populace .
 
 dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataSet ;
-  dcterms:title "Numbers of citizens based on age"@en, "Počet obyvatel ve věkových skupinách"@cs ;
-  rdfs:label "Numbers of citizens based on age"@en, "Počet obyvatel ve věkových skupinách"@cs ;
-  dcterms:description "Numbers of citizens based on age by year, age, and sex"@en,
-    "Počet obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
-  rdfs:comment "Numbers of citizens based on age by year, age, and sex"@en,
-    "Počet obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  dcterms:title "Comparison of numbers of citizens based on age"@en, "Srovnání počtu obyvatel ve věkových skupinách"@cs ;
+  rdfs:label "Comparison of numbers of citizens based on age"@en, "Srovnání počtu obyvatel ve věkových skupinách"@cs ;
+  dcterms:description "Comparison of numbers of citizens based on age by year, age, and sex"@en,
+    "Srovnání počtu obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  rdfs:comment "Comparison of numbers of citizens based on age by year, age, and sex"@en,
+    "Srovnání počtu obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
@@ -196,8 +196,8 @@ dc-penze:duchodci-v-krajich a qb:DataSet ;
 
 
 dc-penze:duchody-dle-veku a qb:DataSet ;
-  dcterms:title "Numbers of paid pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
-  rdfs:label "Numbers of paid pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
+  dcterms:title "Numbers of paid pensions in the Czech Republic according to age"@en, "Počet vyplacených důchodů v České republice dle věkové kategorie"@cs ;
+  rdfs:label "Numbers of paid pensions in the Czech Republic according to age"@en, "Počet vyplacených důchodů v České republice dle věkové kategorie"@cs ;
   dcterms:description "Numbers of paid pensions in the Czech Republic by year, age, kind of pension and sex"@en,
     "Počet vyplacených důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
   rdfs:comment "Numbers of paid pensions in the Czech Republic by year, age, kind of pension and sex"@en,
@@ -222,8 +222,8 @@ dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataSet ;
 ##### 8.03
 
 dc-penze:vyplacene-duchody-dle-vyse a qb:DataSet ;
-  dcterms:title "Numbers of paid pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
-  rdfs:label "Numbers of paid pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
+  dcterms:title "Numbers of paid pensions in the Czech Republic according to monthly pension"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+  rdfs:label "Numbers of paid pensions in the Czech Republic according to monthly pension"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
   dcterms:description "Numbers of paid pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
     "Počet vyplacených důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
   rdfs:comment "Numbers of paid pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
@@ -249,8 +249,8 @@ dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataSet ;
 ##### 9.01
 
 dc-penze:nove-priznane-duchody-dle-veku a qb:DataSet ;
-  dcterms:title "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
-  rdfs:label "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to age"@en, "Počet nově přiznaných důchodů v České republice dle věkové kategorie"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to age"@en, "Počet nově přiznaných důchodů v České republice dle věkové kategorie"@cs ;
   dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, age, kind of pension and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, age, kind of pension and sex"@en,
@@ -261,7 +261,7 @@ dc-penze:nove-priznane-duchody-dle-veku a qb:DataSet ;
   qb:structure def-dc-penze:nove-priznane-duchody-dle-veku .
   
 dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
-  dcterms:title "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznanáých důchodů v České republice"@cs ;
+  dcterms:title "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
   rdfs:label "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznanáých důchodů v České republice"@cs ;
   dcterms:description "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
     "Průměrný věk u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
@@ -276,8 +276,8 @@ dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
 
   
 dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataSet ;
-  dcterms:title "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
-  rdfs:label "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to monthly pension"@en, "Počet nově přiznaných důchodů v České republice dle měsíční výše důchodu"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to monthly pension"@en, "Počet nově přiznaných důchodů v České republice dle měsíční výše důchodu"@cs ;
   dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
@@ -305,8 +305,8 @@ dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:Da
 
   
 dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSet ;
-  dcterms:title "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice "@cs ;
-  rdfs:label "Numbers of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to personal assessment base"@en, "Počet nově přiznaných důchodů v České republice dle osobního vyměřovacího základu"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to personal assessment base"@en, "Počet nově přiznaných důchodů v České republice dle osobního vyměřovacího základu"@cs ;
   dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, personal assessment base and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, osobního vyměřovacího základu a pohlaví"@cs ;
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, personal assessment base and sex"@en,
