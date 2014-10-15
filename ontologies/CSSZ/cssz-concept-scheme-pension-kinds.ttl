@@ -447,7 +447,8 @@ pen:PK_old_age_total_S_SI_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
   skos:prefLabel "Starobní důchody S, SI, SRN, ST, SD celkem"@cs ;
   skos:definition "Celkem za starobní důchody typu S, SI, SRN, ST, SD. Nezahrnuje důchody typu SR."@cs ;
   skos:notation "PK_OLDAGE_S1" ;
-  skos:inScheme pen-onto:PensionKindScheme . PK_Starobní-důchody-S,-SI,-SRN,-ST,-SD-celkem
+  skos:inScheme pen-onto:PensionKindScheme . 
+  
 
 pen:PK_old_age_total_S_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Starobní důchody S, SRN, ST, SD celkem"@cs ;
@@ -966,7 +967,7 @@ pen:PK_IT_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:prefLabel "invalidní důchod třetího stupně"@cs ;
   skos:notation "PK_IT" ;
   skos:exactMatch pen:PK_IT ;
-  skos:narrower: pen:PK_IM_2010 ;
+  skos:narrower pen:PK_IM_2010 ;
   skos:inScheme pen-onto:PensionKindScheme_2010 .
   
 pen:PK_ID_2010 a skos:Concept, pen-onto:PensionKind ;
