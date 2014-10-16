@@ -147,7 +147,7 @@ ybs:S_T_2012 a skos:Concept, ybs-onto:YearbookSection ;
 
 ### Hlavní kolekce sdružující kapitoly na nejvyšší úrovni hierarchie
 
-ybs:C_Sections_2008 a OrderedCollection ;
+ybs:C_Sections_2008 a skos:OrderedCollection ;
   skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění za rok 2008"@cs,
                  "Sections of the 2008 pension statistics yearbook"@en ;
   skos:memberList (
@@ -169,7 +169,7 @@ ybs:C_Sections_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Sections_2009 a OrderedCollection ;
+ybs:C_Sections_2009 a skos:OrderedCollection ;
   skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění za rok 2008"@cs,
                  "Sections of the 2008 pension statistics yearbook"@en ;
   skos:memberList (
@@ -192,7 +192,7 @@ ybs:C_Sections_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Sections_2010 a OrderedCollection ;
+ybs:C_Sections_2010 a skos:OrderedCollection ;
   skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění za rok 2010"@cs,
                  "Sections of the 2010 pension statistics yearbook"@en ;
   skos:memberList (
@@ -212,7 +212,7 @@ ybs:C_Sections_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Sections_2011 a OrderedCollection ;
+ybs:C_Sections_2011 a skos:OrderedCollection ;
   skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění za rok 2011"@cs,
                  "Sections of the 2011 pension statistics yearbook"@en ;
   skos:memberList (
@@ -232,7 +232,7 @@ ybs:C_Sections_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Sections_2012 a OrderedCollection ;
+ybs:C_Sections_2012 a skos:OrderedCollection ;
   skos:prefLabel "Kapitoly ročenky z oblasti důchodového pojištění za rok 2012"@cs,
                  "Sections of the 2012 pension statistics yearbook"@en ;
   skos:memberList (
@@ -254,7 +254,7 @@ ybs:C_Sections_2012 a OrderedCollection ;
 
 ### Dílčí kolekce 2008 - kolekce kapitol na nižší úrovni hierarchie
 
-ybs:C_Demography_2008 a OrderedCollection ;
+ybs:C_Demography_2008 a skos:OrderedCollection ;
   skos:prefLabel "05 Demografie"@cs,
                  "05 Demography"@en ;
   skos:altLabel  "Demografie"@cs,
@@ -268,7 +268,7 @@ ybs:C_Demography_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2008 a OrderedCollection ;
+ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2008 a skos:OrderedCollection ;
   skos:prefLabel "06 Přehled o počtu některých výkonů souvisejících s důchodovou agendou"@cs,
                  "06 Summary of administration dealing with the pension system"@en ;
   skos:altLabel "Přehled o počtu některých výkonů souvisejících s důchodovou agendou"@cs,
@@ -281,7 +281,7 @@ ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2008 a OrderedCo
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Basic_summary_2008 a OrderedCollection ;
+ybs:C_Basic_summary_2008 a skos:OrderedCollection ;
   skos:prefLabel "07 Základní přehled"@cs, "07 Basic summary"@en ;
   skos:altLabel "Základní přehled"@cs, "Basic summary"@en ;
   skos:altLabel "7"@cs, "7"@en ;
@@ -295,7 +295,7 @@ ybs:C_Basic_summary_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Paid-out_pensions_2008 a OrderedCollection ;
+ybs:C_Paid-out_pensions_2008 a skos:OrderedCollection ;
   skos:prefLabel "08 Vyplácené důchody k 31. 12. 2008"@cs, "08 Paid-out pensions on 31. 12. 2008"@en ;
   skos:altLabel "Vyplácené důchody k 31. 12. 2008"@cs, "Paid-out pensions on 31. 12. 2008"@en ;
   skos:altLabel "8"@cs, "8"@en ;
@@ -306,10 +306,10 @@ ybs:C_Paid-out_pensions_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Newly_awarded_pensions_2008 a OrderedCollection ;
+ybs:C_Newly_awarded_pensions_2008 a skos:OrderedCollection ;
   skos:prefLabel "9 Přiznané důchody v roce 2008"@cs, "9 Newly awarded pensions 2008"@en ;
   skos:altLabel "Přiznané důchody v roce 2008"@cs, "Newly awarded pensions 2008"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:memberList (
                     ybs:S_Number_of_new_pensions_according_to_age_2008
                     ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008
@@ -317,7 +317,7 @@ ybs:C_Newly_awarded_pensions_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Number_of_expired_pensions_2008 a OrderedCollection ;
+ybs:C_Number_of_expired_pensions_2008 a skos:OrderedCollection ;
   skos:prefLabel "10 Počet zaniklých důchodů v roce 2008"@cs, "10 Number of expired pensions in 2008"@en ;
   skos:altLabel "Počet zaniklých důchodů v roce 2008"@cs, "Number of expired pensions in 2008"@en ;
   skos:altLabel "10"@cs, "10"@en ;
@@ -326,7 +326,7 @@ ybs:C_Number_of_expired_pensions_2008 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Disability_2008 a OrderedCollection ;
+ybs:C_Disability_2008 a skos:OrderedCollection ;
   skos:prefLabel "11 Vybraná data o invaliditě v roce 2008 - WHO (ICD - 10)"@cs, "11 Selected data on disability in 2008 - WHO (ICD - 10)"@en ;
   skos:altLabel "Vybraná data o invaliditě v roce 2008 - WHO (ICD - 10)"@cs, "Selected data on disability in 2008 - WHO (ICD - 10)"@en ;
   skos:altLabel "11"@cs, "11"@en ;
@@ -337,7 +337,7 @@ ybs:C_Disability_2008 a OrderedCollection ;
 
 ### Dílčí kolekce 2009 - kolekce kapitol na nižší úrovni hierarchie
 
-ybs:C_Demography_2009 a OrderedCollection ;
+ybs:C_Demography_2009 a skos:OrderedCollection ;
   skos:prefLabel "05 Demografie"@cs,
                  "05 Demography"@en ;
   skos:altLabel  "Demografie"@cs,
@@ -351,7 +351,7 @@ ybs:C_Demography_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2009 a OrderedCollection ;
+ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2009 a skos:OrderedCollection ;
   skos:prefLabel "06 Přehled o počtu některých výkonů souvisejících s důchodovou agendou"@cs,
                  "06 Summary of administration dealing with the pension system"@en ;
   skos:altLabel "Přehled o počtu některých výkonů souvisejících s důchodovou agendou"@cs,
@@ -365,7 +365,7 @@ ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2009 a OrderedCo
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Basic_summary_2009 a OrderedCollection ;
+ybs:C_Basic_summary_2009 a skos:OrderedCollection ;
   skos:prefLabel "07 Základní přehled"@cs, "07 Basic summary"@en ;
   skos:altLabel "Základní přehled"@cs, "Basic summary"@en ;
   skos:altLabel "7"@cs, "7"@en ;
@@ -379,7 +379,7 @@ ybs:C_Basic_summary_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Paid-out_pensions_2009 a OrderedCollection ;
+ybs:C_Paid-out_pensions_2009 a skos:OrderedCollection ;
   skos:prefLabel "08 Vyplácené důchody k 31. 12. 2009"@cs, "08 Paid-out pensions on 31. 12. 2009"@en ;
   skos:altLabel "Vyplácené důchody k 31. 12. 2009"@cs, "Paid-out pensions on 31. 12. 2009"@en ;
   skos:altLabel "8"@cs, "8"@en ;
@@ -390,10 +390,10 @@ ybs:C_Paid-out_pensions_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Newly_awarded_pensions_2009 a OrderedCollection ;
+ybs:C_Newly_awarded_pensions_2009 a skos:OrderedCollection ;
   skos:prefLabel "9 Přiznané důchody v roce 2009"@cs, "9 Newly awarded pensions 2009"@en ;
   skos:altLabel "Přiznané důchody v roce 2009"@cs, "Newly awarded pensions 2009"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:memberList (
                     ybs:S_Number_of_new_pensions_according_to_age_2009
                     ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008
@@ -401,7 +401,7 @@ ybs:C_Newly_awarded_pensions_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Number_of_expired_pensions_2009 a OrderedCollection ;
+ybs:C_Number_of_expired_pensions_2009 a skos:OrderedCollection ;
   skos:prefLabel "10 Počet zaniklých důchodů v roce 2009"@cs, "10 Number of expired pensions in 2009"@en ;
   skos:altLabel "Počet zaniklých důchodů v roce 2009"@cs, "Number of expired pensions in 2009"@en ;
   skos:altLabel "10"@cs, "10"@en ;
@@ -410,7 +410,7 @@ ybs:C_Number_of_expired_pensions_2009 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Disability_2009 a OrderedCollection ;
+ybs:C_Disability_2009 a skos:OrderedCollection ;
   skos:prefLabel "11 Vybraná data o invaliditě v roce 2009 - WHO (ICD - 10)"@cs, "11 Selected data on disability in 2009 - WHO (ICD - 10)"@en ;
   skos:altLabel "Vybraná data o invaliditě v roce 2009 - WHO (ICD - 10)"@cs, "Selected data on disability in 2098 - WHO (ICD - 10)"@en ;
   skos:altLabel "11"@cs, "11"@en ;
@@ -421,7 +421,7 @@ ybs:C_Disability_2009 a OrderedCollection ;
 
 ### Dílčí kolekce 2010 - kolekce kapitol na nižší úrovni hierarchie
 
-ybs:C_Annotations_2010 a OrderedCollection ;
+ybs:C_Annotations_2010 a skos:OrderedCollection ;
   skos:prefLabel "3 Vysvětlivky"@cs, "3 Annotations"@en ;
   skos:altLabel "Vysvětlivky"@cs, "Annotations"@en ;
   skos:altLabel "3"@cs, "3"@en ;
@@ -434,7 +434,7 @@ ybs:C_Annotations_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Demography_2010 a OrderedCollection ;
+ybs:C_Demography_2010 a skos:OrderedCollection ;
   skos:prefLabel "5 Demografie"@cs,
                  "5 Demographics"@en ;
   skos:altLabel "Demografie"@cs,
@@ -448,7 +448,7 @@ ybs:C_Demography_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2010 a OrderedCollection ;
+ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2010 a skos:OrderedCollection ;
   skos:prefLabel "6 Přehled o počtu výkonů souvisejících s důchodovou agendou"@cs,
                  "6 Summary of administration dealing with the pension agenda"@en ;
   skos:altLabel "Přehled o počtu výkonů souvisejících s důchodovou agendou"@cs,
@@ -461,7 +461,7 @@ ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2010 a OrderedCo
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Basic_summary_2010 a OrderedCollection ;
+ybs:C_Basic_summary_2010 a skos:OrderedCollection ;
   skos:prefLabel "7 Základní přehled"@cs, "7 Basic summary"@en ;
   skos:altLabel "Základní přehled"@cs, "Basic summary"@en ;
   skos:altLabel "7"@cs, "7"@en ;
@@ -475,7 +475,7 @@ ybs:C_Basic_summary_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Paid-out_pensions_2010 a OrderedCollection ;
+ybs:C_Paid-out_pensions_2010 a skos:OrderedCollection ;
   skos:prefLabel "8 Vyplácené důchody k 31. 12. 2010"@cs, "8 Paid-out pensions on 31. 12. 2010"@en ;
   skos:altLabel "Vyplácené důchody k 31. 12. 2010"@cs, "Paid-out pensions on 31. 12. 2010"@en ;
   skos:altLabel "8"@cs, "8"@en ;
@@ -486,10 +486,10 @@ ybs:C_Paid-out_pensions_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Newly_awarded_pensions_2010 a OrderedCollection ;
+ybs:C_Newly_awarded_pensions_2010 a skos:OrderedCollection ;
   skos:prefLabel "9 Přiznané důchody v roce 2010"@cs, "9 Newly awarded pensions in 2010"@en ;
   skos:altLabel "Přiznané důchody v roce 2010"@cs, "Newly awarded pensions in 2010"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:memberList (
                     ybs:S_Number_of_new_pensions_according_to_age_2010
                     ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010
@@ -497,7 +497,7 @@ ybs:C_Newly_awarded_pensions_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Number_of_expired_pensions_2010 a OrderedCollection ;
+ybs:C_Number_of_expired_pensions_2010 a skos:OrderedCollection ;
   skos:prefLabel "10 Zaniklé důchody v roce 2010"@cs, "10 Number of expired pensions in 2010"@en ;
   skos:altLabel "Zaniklé důchody v roce 2010"@cs, "Number of expired pensions in 2010"@en ;
   skos:altLabel "10"@cs, "10"@en ;
@@ -506,7 +506,7 @@ ybs:C_Number_of_expired_pensions_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Disability_2010 a OrderedCollection ;
+ybs:C_Disability_2010 a skos:OrderedCollection ;
   skos:prefLabel "11 Invalidita"@cs, "11 Disability"@en ;
   skos:altLabel "Invalidita"@cs, "Disability"@en ;
   skos:altLabel "11"@cs, "11"@en ;
@@ -515,7 +515,7 @@ ybs:C_Disability_2010 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Changes_between_degrees_of_disability_pension_2010 a OrderedCollection ;
+ybs:C_Changes_between_degrees_of_disability_pension_2010 a skos:OrderedCollection ;
   skos:prefLabel "12 Změny mezi stupni invalidního důchodu v roce 2010"@cs,
                  "12 Changes between degrees of disability pension in 2010"@en ;
   skos:altLabel "Změny mezi stupni invalidního důchodu v roce 2010"@cs,
@@ -528,7 +528,7 @@ ybs:C_Changes_between_degrees_of_disability_pension_2010 a OrderedCollection ;
 
 ### Dílčí kolekce 2011 - kolekce kapitol na nižší úrovni hierarchie
 
-ybs:C_Demography_2011 a OrderedCollection ;
+ybs:C_Demography_2011 a skos:OrderedCollection ;
   skos:prefLabel "5 Demografie"@cs,
                  "5 Demographics"@en ;
   skos:altLabel "Demografie"@cs,
@@ -542,7 +542,7 @@ ybs:C_Demography_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2011 a OrderedCollection ;
+ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2011 a skos:OrderedCollection ;
   skos:prefLabel "6 Přehled o počtu výkonů souvisejících s důchodovou agendou"@cs,
                  "6 Summary of administration dealing with the pension agenda"@en ;
   skos:altLabel "Přehled o počtu výkonů souvisejících s důchodovou agendou"@cs,
@@ -555,7 +555,7 @@ ybs:C_Summary_of_administration_dealing_with_the_pension_agenda_2011 a OrderedCo
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Basic_summary_2011 a OrderedCollection ;
+ybs:C_Basic_summary_2011 a skos:OrderedCollection ;
   skos:prefLabel "7 Základní přehled"@cs, "7 Basic summary"@en ;
   skos:altLabel "Základní přehled"@cs, "Basic summary"@en ;
   skos:altLabel "7"@cs, "7"@en ;
@@ -570,7 +570,7 @@ ybs:C_Basic_summary_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Paid-out_pensions_2011 a OrderedCollection ;
+ybs:C_Paid-out_pensions_2011 a skos:OrderedCollection ;
   skos:prefLabel "8 Vyplácené důchody k 31. 12. 2011"@cs, "8 Paid-out pensions on 31. 12. 2011"@en ;
   skos:altLabel "Vyplácené důchody k 31. 12. 2011"@cs, "Paid-out pensions on 31. 12. 2011"@en ;
   skos:altLabel "8"@cs, "8"@en ;
@@ -581,10 +581,10 @@ ybs:C_Paid-out_pensions_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Newly_awarded_pensions_2011 a OrderedCollection ;
+ybs:C_Newly_awarded_pensions_2011 a skos:OrderedCollection ;
   skos:prefLabel "9 Přiznané důchody v roce 2011"@cs, "9 Newly awarded pensions in 2011"@en ;
   skos:altLabel "Přiznané důchody v roce 2011"@cs, "Newly awarded pensions in 2011"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:memberList (
                     ybs:S_Number_of_new_pensions_according_to_age_2010
                     ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010
@@ -592,7 +592,7 @@ ybs:C_Newly_awarded_pensions_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Number_of_expired_pensions_2011 a OrderedCollection ;
+ybs:C_Number_of_expired_pensions_2011 a skos:OrderedCollection ;
   skos:prefLabel "10 Zaniklé důchody v roce 2011"@cs, "10 Number of expired pensions in 2011"@en ;
   skos:altLabel "Zaniklé důchody v roce 2011"@cs, "Number of expired pensions in 2011"@en ;
   skos:altLabel "10"@cs, "10"@en ;
@@ -601,7 +601,7 @@ ybs:C_Number_of_expired_pensions_2011 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Changes_between_degrees_of_disability_pension_2011 a OrderedCollection ;
+ybs:C_Changes_between_degrees_of_disability_pension_2011 a skos:OrderedCollection ;
   skos:prefLabel "12 Změny mezi stupni invalidního důchodu v roce 2011"@cs,
                  "12 Changes between degrees of disability pension in 2011"@en ;
   skos:altLabel "Změny mezi stupni invalidního důchodu v roce 2011"@cs,
@@ -614,7 +614,7 @@ ybs:C_Changes_between_degrees_of_disability_pension_2011 a OrderedCollection ;
 
 ### Dílčí kolekce 2012 - kolekce kapitol na nižší úrovni hierarchie
 
-ybs:C_Demography_2012 a OrderedCollection ;
+ybs:C_Demography_2012 a skos:OrderedCollection ;
   skos:prefLabel "5 Demografie"@cs,
                  "5 Demographics"@en ;
   skos:altLabel "Demografie"@cs,
@@ -628,7 +628,7 @@ ybs:C_Demography_2012 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Basic_summary_2012 a OrderedCollection ;
+ybs:C_Basic_summary_2012 a skos:OrderedCollection ;
   skos:prefLabel "7 Základní přehled"@cs, "7 Basic summary"@en ;
   skos:altLabel "Základní přehled"@cs, "Basic summary"@en ;
   skos:altLabel "7"@cs, "7"@en ;
@@ -643,7 +643,7 @@ ybs:C_Basic_summary_2012 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Paid-out_pensions_2012 a OrderedCollection ;
+ybs:C_Paid-out_pensions_2012 a skos:OrderedCollection ;
   skos:prefLabel "8 Vyplácené důchody k 31. 12. 2012"@cs, "8 Paid-out pensions on 31. 12. 2012"@en ;
   skos:altLabel "Vyplácené důchody k 31. 12. 2012"@cs, "Paid-out pensions on 31. 12. 2012"@en ;
   skos:altLabel "8"@cs, "8"@en ;
@@ -654,10 +654,10 @@ ybs:C_Paid-out_pensions_2012 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Newly_awarded_pensions_2012 a OrderedCollection ;
+ybs:C_Newly_awarded_pensions_2012 a skos:OrderedCollection ;
   skos:prefLabel "9 Přiznané důchody v roce 2012"@cs, "9 Newly awarded pensions in 2012"@en ;
   skos:altLabel "Přiznané důchody v roce 2012"@cs, "Newly awarded pensions in 2012"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:memberList (
                     ybs:S_Number_of_new_pensions_according_to_age_2010
                     ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010
@@ -665,7 +665,7 @@ ybs:C_Newly_awarded_pensions_2012 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Number_of_expired_pensions_2012 a OrderedCollection ;
+ybs:C_Number_of_expired_pensions_2012 a skos:OrderedCollection ;
   skos:prefLabel "10 Zaniklé důchody v roce 2012"@cs, "10 Number of expired pensions in 2012"@en ;
   skos:altLabel "Zaniklé důchody v roce 2012"@cs, "Number of expired pensions in 2012"@en ;
   skos:altLabel "10"@cs, "10"@en ;
@@ -674,7 +674,7 @@ ybs:C_Number_of_expired_pensions_2012 a OrderedCollection ;
                   ) ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
-ybs:C_Changes_between_degrees_of_disability_pension_2012 a OrderedCollection ;
+ybs:C_Changes_between_degrees_of_disability_pension_2012 a skos:OrderedCollection ;
   skos:prefLabel "12 Změny mezi stupni invalidního důchodu v roce 2012"@cs,
                  "12 Changes between degrees of disability pension in 2012"@en ;
   skos:altLabel "Změny mezi stupni invalidního důchodu v roce 2012"@cs,
@@ -768,7 +768,7 @@ ybs:S_Summary_of_administration_dealing_with_the_pension_agenda a skos:Concept, 
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_agenda a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "Důchodová agenda"@cs "Pension agenda"@en ;
+  skos:prefLabel "Důchodová agenda"@cs, "Pension agenda"@en ;
   skos:notation "S_Pension_agenda" ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
@@ -899,7 +899,7 @@ ybs:S_Summary_of_changes_between_degrees_of_disability_pension a skos:Concept, y
 ybs:S_Annexes a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "Přílohy"@cs, "Annexes"@en ;
   skos:notation "S_Annexes" ;
-  skos:inScheme ybs-onto:YearbookSectionScheme 
+  skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ### Kapitoly 2008
 
@@ -1023,8 +1023,8 @@ ybs:S_Summary_of_administration_dealing_with_the_pension_agenda_2008 a skos:Conc
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_agenda_2008 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "06.01 Důchodová agenda"@cs "06.01 Pension agenda"@en ;
-  skos:altLabel "Důchodová agenda"@cs "Pension agenda"@en ;
+  skos:prefLabel "06.01 Důchodová agenda"@cs, "06.01 Pension agenda"@en ;
+  skos:altLabel "Důchodová agenda"@cs, "Pension agenda"@en ;
   skos:altLabel "6.1"@cs, "6.1"@en ;
   skos:notation "S_Pension_agenda" ;
   skos:exactMatch ybs:S_Pension_agenda ;
@@ -1148,7 +1148,7 @@ ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2008 a skos:Conc
 ybs:S_Newly_awarded_pensions_2008 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "9 Přiznané důchody v roce 2008"@cs, "9 Newly awarded pensions 2008"@en ;
   skos:altLabel "Přiznané důchody v roce 2008"@cs, "Newly awarded pensions 2008"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:notation "S_Newly_awarded_pensions" ;
   skos:narrower ybs:S_Number_of_new_pensions_according_to_age_2008,
                 ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008,
@@ -1308,16 +1308,16 @@ ybs:S_Summary_of_administration_dealing_with_the_pension_agenda_2009 a skos:Conc
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_agenda_Czech_2009 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "06.01 Důchodová agenda - česká verze"@cs "06.01 Pension agenda - Czech"@en ;
-  skos:altLabel "Důchodová agenda - česká verze"@cs "Pension agenda - Czech"@en ;
+  skos:prefLabel "06.01 Důchodová agenda - česká verze"@cs, "06.01 Pension agenda - Czech"@en ;
+  skos:altLabel "Důchodová agenda - česká verze"@cs, "Pension agenda - Czech"@en ;
   skos:altLabel "6.1"@cs, "6.1"@en ;
   skos:notation "S_Pension_agenda" ;
   skos:exactMatch ybs:S_Pension_agenda ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_agenda_English_2009 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "06.01 Důchodová agenda - anglická verze"@cs "06.01 Pension agenda - English"@en ;
-  skos:altLabel "Důchodová agenda - anglická verze"@cs "Pension agenda - English"@en ;
+  skos:prefLabel "06.01 Důchodová agenda - anglická verze"@cs, "06.01 Pension agenda - English"@en ;
+  skos:altLabel "Důchodová agenda - anglická verze"@cs, "Pension agenda - English"@en ;
   skos:altLabel "6.1"@cs, "6.1"@en ;
   skos:notation "S_Pension_agenda" ;
   skos:exactMatch ybs:S_Pension_agenda ;
@@ -1391,7 +1391,7 @@ ybs:S_Paid-out_pensions_2009 a skos:Concept, ybs-onto:YearbookSection ;
 ybs:S_Newly_awarded_pensions_2009 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "9 Přiznané důchody v roce 2009"@cs, "9 Newly awarded pensions 2009"@en ;
   skos:altLabel "Přiznané důchody v roce 2009"@cs, "Newly awarded pensions 2009"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:notation "S_Newly_awarded_pensions" ;
   skos:narrower ybs:S_Number_of_new_pensions_according_to_age_2009,
                 ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008,
@@ -1592,8 +1592,8 @@ ybs:S_Summary_of_administration_dealing_with_the_pension_agenda_2010 a skos:Conc
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_agenda_2010 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "6.1 Důchodová agenda"@cs "6.1 Pension agenda"@en ;
-  skos:altLabel "Důchodová agenda"@cs "Pension agenda"@en ;
+  skos:prefLabel "6.1 Důchodová agenda"@cs, "6.1 Pension agenda"@en ;
+  skos:altLabel "Důchodová agenda"@cs, "Pension agenda"@en ;
   skos:altLabel "6.1"@cs, "6.1"@en ;
   skos:notation "S_Pension_agenda" ;
   skos:exactMatch ybs:S_Pension_agenda ;
@@ -1662,7 +1662,7 @@ ybs:S_Development_of_pension_costs_since_1996_2010 a skos:Concept, ybs-onto:Year
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_benefit_costs_2010 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "7.5 Výdaje na důchody" v roce 2010"@cs, "7.5 Pension benefit costs in 2010"@en ;
+  skos:prefLabel "7.5 Výdaje na důchody v roce 2010"@cs, "7.5 Pension benefit costs in 2010"@en ;
   skos:altLabel "Výdaje na důchody v roce 2010"@cs, "Pension benefit costs in 2010"@en ;
   skos:altLabel "7.5"@cs, "7.5"@en ;
   skos:notation "S_Pension_benefit_costs" ;
@@ -1727,7 +1727,7 @@ ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2010 a skos:Conc
 ybs:S_Newly_awarded_pensions_2010 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "9 Přiznané důchody v roce 2010"@cs, "9 Newly awarded pensions in 2010"@en ;
   skos:altLabel "Přiznané důchody v roce 2010"@cs, "Newly awarded pensions in 2010"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:notation "S_Newly_awarded_pensions" ;
   skos:narrower ybs:S_Number_of_new_pensions_according_to_age_2010,
                 ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010,
@@ -1893,7 +1893,7 @@ ybs:S_Basic_summary_2011 a skos:Concept, ybs-onto:YearbookSection ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_benefit_costs_2011 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "7.5 Výdaje na důchody" v roce 2011"@cs, "7.5 Pension benefit costs in 2011"@en ;
+  skos:prefLabel "7.5 Výdaje na důchody v roce 2011"@cs, "7.5 Pension benefit costs in 2011"@en ;
   skos:altLabel "Výdaje na důchody v roce 2011"@cs, "Pension benefit costs in 2011"@en ;
   skos:altLabel "7.5"@cs, "7.5"@en ;
   skos:notation "S_Pension_benefit_costs" ;
@@ -1924,7 +1924,7 @@ ybs:S_Paid-out_pensions_2011 a skos:Concept, ybs-onto:YearbookSection ;
 ybs:S_Newly_awarded_pensions_2011 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "9 Přiznané důchody v roce 2011"@cs, "9 Newly awarded pensions in 2011"@en ;
   skos:altLabel "Přiznané důchody v roce 2011"@cs, "Newly awarded pensions in 2011"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:notation "S_Newly_awarded_pensions" ;
   skos:narrower ybs:S_Number_of_new_pensions_according_to_age_2010,
                 ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010,
@@ -1974,7 +1974,7 @@ ybs:S_Comparison_of_age_structure_of_population_2012 a skos:Concept, ybs-onto:Ye
   skos:altLabel "5.4"@cs, "5.4"@en ;
   skos:notation "S_Comparison_of_age_structure_of_population" ;
   skos:exactMatch ybs:S_Comparison_of_age_structure_of_population ;
-  skos:inScheme ybs-onto:YearbookSectionScheme ;
+  skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Basic_summary_2012 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "7 Základní přehled"@cs, "7 Basic summary"@en ;
@@ -1992,7 +1992,7 @@ ybs:S_Basic_summary_2012 a skos:Concept, ybs-onto:YearbookSection ;
   skos:inScheme ybs-onto:YearbookSectionScheme .
 
 ybs:S_Pension_benefit_costs_2012 a skos:Concept, ybs-onto:YearbookSection ;
-  skos:prefLabel "7.5 Výdaje na důchody" v roce 2012"@cs, "7.5 Pension benefit costs in 2012"@en ;
+  skos:prefLabel "7.5 Výdaje na důchody v roce 2012"@cs, "7.5 Pension benefit costs in 2012"@en ;
   skos:altLabel "Výdaje na důchody v roce 2012"@cs, "Pension benefit costs in 2012"@en ;
   skos:altLabel "7.5"@cs, "7.5"@en ;
   skos:notation "S_Pension_benefit_costs" ;
@@ -2013,7 +2013,7 @@ ybs:S_Paid-out_pensions_2012 a skos:Concept, ybs-onto:YearbookSection ;
 ybs:S_Newly_awarded_pensions_2012 a skos:Concept, ybs-onto:YearbookSection ;
   skos:prefLabel "9 Přiznané důchody v roce 2012"@cs, "9 Newly awarded pensions in 2012"@en ;
   skos:altLabel "Přiznané důchody v roce 2012"@cs, "Newly awarded pensions in 2012"@en ;
-  skos_altLabel "9"@cs, "9"@en ;
+  skos:altLabel "9"@cs, "9"@en ;
   skos:notation "S_Newly_awarded_pensions" ;
   skos:narrower ybs:S_Number_of_new_pensions_according_to_age_2010,
                 ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010,

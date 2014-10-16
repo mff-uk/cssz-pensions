@@ -35,7 +35,7 @@ metadata-dc-penze:yearbookSection a rdf:Property ;
   rdfs:domain qb:DataSet ;
   rdfs:range ybs-onto:YearbookSection ;
   rdfs:comment "Kapitola ročenky z oblasti důchodového pojištění ČSSZ, ve které jsou obsažena zdrojová data datové kostky."@cs,
-               "Section of the pension statistics yearbook published by the Czech Social Security Administration which contains tje source data of the data cube." ;
+               "Section of the pension statistics yearbook published by the Czech Social Security Administration which contains tje source data of the data cube." .
   
 ####### 5
 
