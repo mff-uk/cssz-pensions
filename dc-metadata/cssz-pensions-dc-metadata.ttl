@@ -413,7 +413,7 @@ dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:zmeny-mezi-stupni-invalidního-důchodu ;
+  qb:structure def-dc-penze:zmeny-mezi-stupni-invalidniho-duchodu ;
   metadata-dc-penze:yearbookSection ybs:S_Summary_of_changes_between_degrees_of_disability_pension_2010 .
 
 ###### Kraje a okresy
