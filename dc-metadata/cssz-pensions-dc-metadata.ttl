@@ -178,7 +178,7 @@ dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni ;
-  metadata-dc-penze:yearbookSection ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2008, ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2010 
+  metadata-dc-penze:yearbookSection ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2008, ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2010 .
   
 dc-penze:prum-delka-pobirani-s-duchodu a qb:DataSet ;
   dcterms:title "Average length of the pension"@en, "Průměrná délka pobírání starobního důchodu"@cs ;
@@ -334,7 +334,7 @@ dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:Da
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu .
+  qb:structure def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu ;
   metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
   
 
