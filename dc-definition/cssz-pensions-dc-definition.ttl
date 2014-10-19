@@ -1153,11 +1153,6 @@ def-dc-penze:casove-rady-grafy-9 a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
-    rdfs:label "The measure of the number of paid-out pensions in the given year and with the give type of pension."@en,
-               "Měření počtu vyplácených důchodů podle roku a druhu důchodu."@cs
-  ] ;
-  qb:component [
     qb:measure def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions of the given pension kind in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en,
                "Měření výdajů na důchody daného druhu důchodu v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs
