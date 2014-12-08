@@ -337,10 +337,6 @@ ran:I14500T14999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "14500-14999" ;
   skos:notation "I14500T14999" ;
   skos:inScheme ran-onto:RangeScheme .
-ran:I_GE14500  a skos:Concept, ran-onto:Range ;
-  skos:prefLabel "14500+" ;
-  skos:notation "I_GE14500 " ;
-  skos:inScheme ran-onto:RangeScheme .
 ran:I15000T15999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "15000-15999" ;
   skos:notation "I15000T15999" ;
@@ -380,10 +376,6 @@ ran:I17500T17999  a skos:Concept, ran-onto:Range ;
 ran:I18000T18999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "18000-18999" ;
   skos:notation "I18000T18999" ;
-  skos:inScheme ran-onto:RangeScheme .
-ran:I_GE18000  a skos:Concept, ran-onto:Range ;
-  skos:prefLabel "18000+" ;
-  skos:notation "I_GE18000 " ;
   skos:inScheme ran-onto:RangeScheme .
 ran:I19000T19999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "19000-19999" ;
@@ -1269,4 +1261,12 @@ ran:I_GE118000 a skos:Concept, ran-onto:Range ;
 ran:I_GE119000 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "119000+" ;
   skos:notation "I_GE119000" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I_GE14500  a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "14500+" ;
+  skos:notation "I_GE14500" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I_GE18000  a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "18000+" ;
+  skos:notation "I_GE18000" ;
   skos:inScheme ran-onto:RangeScheme .
