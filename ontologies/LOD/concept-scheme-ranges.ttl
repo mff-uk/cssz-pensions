@@ -842,6 +842,10 @@ ran:I_GE14000 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "14000+" ;
   skos:notation "I_GE14000" ;
   skos:inScheme ran-onto:RangeScheme .
+ran:I_GE14500  a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "14500+" ;
+  skos:notation "I_GE14500" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I_GE15000 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "15000+" ;
   skos:notation "I_GE15000" ;
@@ -1261,12 +1265,4 @@ ran:I_GE118000 a skos:Concept, ran-onto:Range ;
 ran:I_GE119000 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "119000+" ;
   skos:notation "I_GE119000" ;
-  skos:inScheme ran-onto:RangeScheme .
-ran:I_GE14500  a skos:Concept, ran-onto:Range ;
-  skos:prefLabel "14500+" ;
-  skos:notation "I_GE14500" ;
-  skos:inScheme ran-onto:RangeScheme .
-ran:I_GE18000  a skos:Concept, ran-onto:Range ;
-  skos:prefLabel "18000+" ;
-  skos:notation "I_GE18000" ;
   skos:inScheme ran-onto:RangeScheme .
