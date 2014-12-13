@@ -1,4 +1,4 @@
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+Ôªø@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
@@ -9,9 +9,9 @@
 @prefix czgop-onto:   <http://linked.cssz.cz/ontology/groups-of-persons/> .
 
 czgop-onto:CzechGroupsOfPersonsScheme a skos:ConceptScheme, sdmx:CodeList ;
-  skos:prefLabel "Code list of the groups of the Czech population."@en, "»ÌselnÌk skupin osob ËeskÈ populace."@cs ;
-  rdfs:label "Code list of the groups of the Czech population."@en, "»ÌselnÌk skupin osob ËeskÈ populace."@cs ;
-  skos:note "Code list of groups of persons used to classify the population in the Czech pension statistics."@en, "»ÌselnÌk skupin osob pouûit˝ch pro klasifikaci relativnÌho rozloûenÌ populace v datech d˘chodovÈ statistiky »R."@cs ;
+  skos:prefLabel "Code list of the groups of the Czech population."@en, "ƒå√≠seln√≠k skupin osob ƒçesk√© populace."@cs ;
+  rdfs:label "Code list of the groups of the Czech population."@en, "ƒå√≠seln√≠k skupin osob ƒçesk√© populace."@cs ;
+  skos:note "Code list of groups of persons used to classify the population in the Czech pension statistics."@en, "ƒå√≠seln√≠k skupin osob pou≈æit√Ωch pro klasifikaci relativn√≠ho rozlo≈æen√≠ populace v datech d≈Øchodov√© statistiky ƒåR."@cs ;
   skos:hasTopConcept czgop:G_T ;
   rdfs:seeAlso czgop-onto:Group .
 
@@ -26,22 +26,22 @@ czgop:G_T a skos:Concept, czgop-onto:Group ;
   skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
 
 czgop:G_Insured a skos:Concept, czgop-onto:Group ;
-  skos:prefLabel "PojitÏnci"@cs, "Insured"@en ;
+  skos:prefLabel "Pojitƒõnci"@cs, "Insured"@en ;
   skos:notation "G_Insured" ;
   skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
 
-### Je to vhodnÏ pojmenov·no?
+### Je to vhodnƒõ pojmenov√°no?
 czgop:G_PensionersNonOrphans a skos:Concept, czgop-onto:Group ;
-  skos:prefLabel "PoËet d˘chodc˘ bez sirotk˘"@cs, "Number of pensioners without orphans"@en ;
+  skos:prefLabel "Poƒçet d≈Øchodc≈Ø bez sirotk≈Ø"@cs, "Number of pensioners without orphans"@en ;
   skos:notation "G_PensionersNonOrphans" ;
   skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
 
 czgop:G_Y_LE19 a skos:Concept, czgop-onto:Group ;
-  skos:prefLabel "PoËet obyvatel mladöÌch 19 let"@cs, "Number of persons of age less than 19"@en ;
+  skos:prefLabel "Poƒçet obyvatel mlad≈°√≠ch 19 let"@cs, "Number of persons of age less than 19"@en ;
   skos:notation "G_Y_LE19" ;
   skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .
 
 czgop:G_O a skos:Concept, czgop-onto:Group ;
-  skos:prefLabel "OstatnÌ"@cs, "Other"@en ;
+  skos:prefLabel "Ostatn√≠"@cs, "Other"@en ;
   skos:notation "G_O" ;
   skos:inScheme czgop-onto:CzechGroupsOfPersonsScheme .

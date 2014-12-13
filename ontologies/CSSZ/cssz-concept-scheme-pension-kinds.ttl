@@ -1061,21 +1061,21 @@ pen:PK_ITV_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:prefLabel "vdovský důchod s invalidním důchodem třetího stupně"@cs ;
   skos:notation "PK_ITV" ;
   skos:exactMatch pen:PK_ITV ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_IDV_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "IDV"@cs ;
   skos:prefLabel "Vdovský důchod s invalidním důchodem druhého stupně"@cs ;
   skos:notation "PK_IDV" ;
   skos:exactMatch pen:PK_IDV ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_IPV_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "IPV"@cs ;
   skos:prefLabel "Vdovský důchod s invalidním důchodem prvního stupně"@cs ;
   skos:notation "PK_IPV" ;
   skos:exactMatch pen:PK_IPV ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_SVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "SVM"@cs ;
@@ -1089,7 +1089,7 @@ pen:PK_SIVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:prefLabel "Vdovecký důchod se starobním důchodem SI"@cs ;
   skos:notation "PK_SIVM" ;
   skos:exactMatch pen:PK_SIVM ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_SRNVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "SRNVM"@cs ;
@@ -1124,21 +1124,21 @@ pen:PK_ITVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:prefLabel "Vdovecký důchod s invalidním důchodem třetího stupně"@cs ;
   skos:notation "PK_ITVM" ;
   skos:exactMatch pen:PK_ITVM ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_IDVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "IDVM"@cs ;
   skos:prefLabel "Vdovecký důchod s invalidním důchodem druhého stupně"@cs ;
   skos:notation "PK_IDVM" ;
   skos:exactMatch pen:PK_IDVM ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 pen:PK_IPVM_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "IPVM"@cs ;
   skos:prefLabel "Vdovecký důchod s invalidním důchodem prvního stupně"@cs ;
   skos:notation "PK_IPVM" ;
   skos:exactMatch pen:PK_IPVM ;
-  skos:inScheme_2010 pen-onto:PensionKindScheme_2010 .
+  skos:inScheme pen-onto:PensionKindScheme_2010 .
 
 ### Součtové a agregované druhy důchodů
 
