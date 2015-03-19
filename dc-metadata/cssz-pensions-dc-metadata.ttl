@@ -297,11 +297,11 @@ dc-penze:nove-priznane-duchody-dle-veku a qb:DataSet ;
   
 dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
   dcterms:title "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
-  rdfs:label "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznanáých důchodů v České republice"@cs ;
+  rdfs:label "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
   dcterms:description "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrný věk u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrný věk u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   rdfs:comment "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrný věk u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrný věk u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
@@ -325,12 +325,12 @@ dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataSet ;
   metadata-dc-penze:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
   
 dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
-  dcterms:title "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznanáých důchodů v České republice"@cs ;
-  rdfs:label "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznanáých důchodů v České republice"@cs ;
+  dcterms:title "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice"@cs ;
   dcterms:description "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrná výše důchodů v Kč u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   rdfs:comment "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrná výše důchodů v Kč u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
@@ -355,12 +355,12 @@ dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSet ;
   metadata-dc-penze:yearbookSection ybs:S_Number_of_pensions_according_to_personal_assessments_base_2008, ybs:S_Number_of_pensions_according_to_personal_assessments_base_2010 .
   
 dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
-  dcterms:title "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznanáých důchodů v České republice"@cs ;
-  rdfs:label "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznanáých důchodů v České republice"@cs ;
+  dcterms:title "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice"@cs ;
   dcterms:description "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrná výše osobního vyměřovacího základu u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   rdfs:comment "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
-    "Průměrná výše osobního vyměřovacího základu u nově přiznanáých důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+    "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
