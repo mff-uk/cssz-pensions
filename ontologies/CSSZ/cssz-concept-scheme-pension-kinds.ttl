@@ -473,14 +473,14 @@ pen:PK_solo_I_IC a skos:Concept, pen-onto:PensionKind ;
 
 pen:PK_old_age_total_S_SI_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Starobní důchody S, SI, SRN, ST, SD sólo celkem"@cs ;
-  skos:prefLabel "Starobní důchody S, SI, SRN, ST, SD sólo celkem"@cs ;
+  skos:prefLabel "Starobní důchody vyplácené sólo bez SR"@cs ;
   skos:definition "Celkem za sólo vyplácené starobní důchody typu S, SI, SRN, ST, SD. Nezahrnuje důchody typu SR."@cs ;
   skos:notation "PK_OLDAGE_S1" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_old_age_total_S_SRN_ST_SD a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Starobní důchody S, SRN, ST, SD sólo celkem"@cs ;
-  skos:prefLabel "Starobní důchody S, SRN, ST, SD sólo celkem"@cs ;
+  skos:prefLabel "Starobní důchody vyplácené sólo bez SR"@cs ;
   skos:definition "Celkem za sólo vyplácené starobní důchody typu S, SRN, ST, SD. Nezahrnuje důchůdy typu SR."@cs ;
   skos:notation "PK_OLDAGE_S2" ;
   skos:inScheme pen-onto:PensionKindScheme .
