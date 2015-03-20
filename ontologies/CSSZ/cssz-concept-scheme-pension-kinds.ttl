@@ -616,69 +616,63 @@ pen:PK_V_VM_total a skos:Concept, pen-onto:PensionKind ;
 
 pen:PK_total_without_D_and_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:altLabel "Důchody celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat a sirotčích důchodů"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat a sirotčích důchodů"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB."@cs ;
   skos:notation "PK_PENSIONS_T5" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:altLabel "Důchody celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D."@cs ;
   skos:notation "PK_PENSIONS_T1" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_D_and_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez bez sirotčích důchodů a netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:altLabel "Důchody celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat a sirotčích důchodů"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat a sirotčích důchodů"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB."@cs ;
   skos:notation "PK_PENSIONS_T6" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:altLabel "Důchody celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat"@cs ;
   skos:definition "Celkem bez netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D."@cs ;
   skos:notation "PK_PENSIONS_T2" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_with_special_pensions_including_SI_IP_ID_IT a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:altLabel "Důchody celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:prefLabel "Důchody celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat"@cs ;
   skos:definition "Celkem včetně netypických výplat. Zahrnuje důchody: S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D a netypické výplaty."@cs ;
   skos:notation "PK_PENSIONS_T3" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_with_special_pensions_including_I_IC a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem včetně netypických výplat (zahrbuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:altLabel "Důchody celkem včetně netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:prefLabel "Důchody celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat"@cs ;
   skos:definition "Celkem včetně netypických výplat. Zahrnuje důchody: S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D a netypické výplaty."@cs ;
   skos:notation "PK_PENSIONS_T4" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_D_and_special_pensions a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat a sirotčích důchodů"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat a sirotčích důchodů"@cs ;
   skos:definition "Celkem za všechny druhy důchodů mimo netypických výplat a sirotčích důchodů."@cs ;
   skos:notation "PK_PENSIONS_T5" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_without_special_pensions a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez netypických výplat"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat"@cs ;
   skos:definition "Celkem za všechny druhy důchodů mimo netypických výplat."@cs ;
   skos:notation "PK_PENSIONS_T1" ;
   skos:inScheme pen-onto:PensionKindScheme .
 
 pen:PK_total_with_special_pensions a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem včetně netypických výplat"@cs ;
-  skos:prefLabel "Důchody celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat"@cs ;
   skos:definition "Celkem za všechny druhy důchodů včetně netypických výplat."@cs ;
   skos:notation "PK_PENSIONS_T3" ;
   skos:inScheme pen-onto:PensionKindScheme .
@@ -1073,7 +1067,7 @@ pen:PK_V_VM_total_2008 a skos:Concept, pen-onto:PensionKind ;
 pen:PK_total_without_D_and_special_pensions_2008 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat"@cs ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat a sirotčích důchodů"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat a sirotčích důchodů"@cs ;
   skos:notation "PK_PENSIONS_T6" ;
   skos:exactMatch pen:PK_total_without_D_and_special_pensions_including_I_IC, pen:PK_total_without_D_and_special_pensions ;
   skos:narrower pen:PK_V_total_2008, pen:PK_VM_total_2008, pen:PK_solo_I_IC_2008, pen:PK_old_age_total_S_SRN_ST_SD_SR_2008 ;
@@ -1082,7 +1076,7 @@ pen:PK_total_without_D_and_special_pensions_2008 a skos:Concept, pen-onto:Pensio
 pen:PK_total_without_special_pensions_2008 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez netypických výplat"@cs ;
   skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat"@cs ;
   skos:notation "PK_PENSIONS_T2" ;
   skos:exactMatch pen:PK_total_without_special_pensions_including_I_IC, pen:PK_total_without_special_pensions ;
   skos:narrower pen:PK_D_2008, pen:PK_total_without_D_and_special_pensions_2008 ;
@@ -1091,7 +1085,7 @@ pen:PK_total_without_special_pensions_2008 a skos:Concept, pen-onto:PensionKind 
 pen:PK_total_with_special_pensions_2008 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem včetně netypických výplat"@cs ;
   skos:altLabel "Celkem včetně netypických výplat (zahrnuje S, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:prefLabel "Důchody celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat"@cs ;
   skos:notation "PK_PENSIONS_T4" ;
   skos:exactMatch pen:PK_total_with_special_pensions_including_I_IC, pen:PK_total_with_special_pensions ;
   skos:narrower pen:PK_total_without_special_pensions_2008, pen:PK_O_2008 ;
@@ -1485,7 +1479,7 @@ pen:PK_V_VM_total_2010 a skos:Concept, pen-onto:PensionKind ;
 pen:PK_total_without_D_and_special_pensions_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat"@cs ;
   skos:altLabel "Celkem bez sirotčích důchodů a netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat a sirotčích důchodů"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat a sirotčích důchodů"@cs ;
   skos:notation "PK_PENSIONS_T5" ;
   skos:exactMatch pen:PK_total_without_D_and_special_pensions_including_SI_IP_ID_IT, pen:PK_total_without_D_and_special_pensions ;
   skos:narrower pen:PK_V_total_2010, pen:PK_VM_total_2010, pen:PK_solo_IP_ID_IT_2010, pen:PK_old_age_total_S_SI_SRN_ST_SD_SR_2010 ;
@@ -1494,7 +1488,7 @@ pen:PK_total_without_D_and_special_pensions_2010 a skos:Concept, pen-onto:Pensio
 pen:PK_total_without_special_pensions_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem bez netypických výplat"@cs ;
   skos:altLabel "Celkem bez netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, IT, ID, IP, V, V-KOMB, VM, VM-KOMB, D)"@cs ;
-  skos:prefLabel "Důchody celkem bez netypických výplat"@cs ;
+  skos:prefLabel "Celkem bez netypických výplat"@cs ;
   skos:notation "PK_PENSIONS_T1" ;
   skos:exactMatch pen:PK_total_without_special_pensions_including_SI_IP_ID_IT, pen:PK_total_without_special_pensions ;
   skos:narrower pen:PK_D_2010, pen:PK_total_without_D_and_special_pensions_2010 ;
@@ -1503,7 +1497,7 @@ pen:PK_total_without_special_pensions_2010 a skos:Concept, pen-onto:PensionKind 
 pen:PK_total_with_special_pensions_2010 a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "Celkem včetně netypických výplat"@cs ;
   skos:altLabel "Celkem včetně netypických výplat (zahrnuje S, SI, SRN, ST, SD, SR, I, IČ, V, V-KOMB, VM, VM-KOMB, D, netypické výplaty)"@cs ;
-  skos:prefLabel "Důchody celkem včetně netypických výplat"@cs ;
+  skos:prefLabel "Celkem včetně netypických výplat"@cs ;
   skos:notation "PK_PENSIONS_T3" ;
   skos:exactMatch pen:PK_total_with_special_pensions_including_SI_IP_ID_IT, pen:PK_total_with_special_pensions ;
   skos:narrower pen:PK_total_without_special_pensions_2010, pen:PK_O_2010 ;
