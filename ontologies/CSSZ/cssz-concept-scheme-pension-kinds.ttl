@@ -1,4 +1,4 @@
-﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
@@ -24,6 +24,68 @@ pen-onto:PensionKindScheme a skos:ConceptScheme, sdmx:CodeList ;
 pen-onto:PensionKind a rdfs:Class, owl:Class ;
   rdfs:subClassOf skos:Concept ;
   rdfs:seeAlso pen-onto:PensionKindScheme, pen-onto:PensionKindScheme_2008, pen-onto:PensionKindScheme_2010 .
+
+pen-onto:PensionKindOrderedCollection a skos:OrderedCollection ;
+  skos:memberList ( 
+                    pen:PK_old_age_total
+                    pen:PK_old_age_total_with_SR
+                    pen:PK_old_age_total_without_SR
+                    pen:PK_old_age_solo_without_SR_SRN
+                    pen:PK_S
+                    pen:PK_SI
+                    pen:PK_SRN
+                    pen:PK_ST
+                    pen:PK_SD
+                    pen:PK_SR
+                    pen:PK_old_age_combinations
+                    pen:PK_disability_total
+                    pen:PK_disability_solo
+                    pen:PK_IT
+                    pen:PK_IM
+                    pen:PK_ID
+                    pen:PK_IP
+                    pen:PK_I
+                    pen:PK_IC
+                    pen:PK_disability_combinations
+                    pen:PK_V_VM_total
+                    pen:PK_V_VM_solo_total
+                    pen:PK_V_VM_combinations_total
+                    pen:PK_V_total
+                    pen:PK_V
+                    pen:PK_V-KOMB
+                    pen:PK_SV
+                    pen:PK_SIV
+                    pen:PK_SRNV
+                    pen:PK_STV
+                    pen:PK_SDV
+                    pen:PK_SRV
+                    pen:PK_ITV
+                    pen:PK_IDV
+                    pen:PK_IPV
+                    pen:PK_IV
+                    pen:PK_ICV
+                    pen:PK_VM_total
+                    pen:PK_VM
+                    pen:PK_VM-KOMB
+                    pen:PK_SVM
+                    pen:PK_SIVM
+                    pen:PK_SRNVM
+                    pen:PK_STVM
+                    pen:PK_SDVM
+                    pen:PK_SRVM
+                    pen:PK_ITVM
+                    pen:PK_IDVM
+                    pen:PK_IPVM
+                    pen:PK_IVM
+                    pen:PK_ICVM
+                    pen:PK_total_without_D_and_special_pensions
+                    pen:PK_D
+                    pen:PK_D-KMENY
+                    pen:PK_total_without_special_pensions
+                    pen:PK_X
+                    pen:PK_O
+                    pen:PK_total_with_special_pensions
+                  ) .
 
 ### Neudáno a netypické výplaty
 
