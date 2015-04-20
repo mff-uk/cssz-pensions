@@ -1326,7 +1326,7 @@ def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb
   rdfs:range xsd:nonNegativeInteger .
   
 def-dc-penze:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of pensions"@en, "počet duchodů"@cs ;
+  rdfs:label "number of pensions"@en, "počet důchodů"@cs ;
   rdfs:comment "The size of a defined class of pensions."@en, "Velikost definované třídy důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
