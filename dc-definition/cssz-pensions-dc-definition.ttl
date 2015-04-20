@@ -1332,7 +1332,7 @@ def-dc-penze:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:range xsd:nonNegativeInteger .
 
 def-dc-penze:pocet-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of newly awared pensions"@en, "počet nově přiznaných duchodů"@cs ;
+  rdfs:label "number of newly awared pensions"@en, "počet nově přiznaných důchodů"@cs ;
   rdfs:comment "The number of newly awarded pensions."@en, "Počet nově přiznaných důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
