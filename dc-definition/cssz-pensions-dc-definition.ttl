@@ -1,4 +1,4 @@
-﻿@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
@@ -433,6 +433,12 @@ def-dc-penze:duchodci-prehled-cr a qb:DataStructureDefinition ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodců uveden."@cs
   ] ;
+  # Measure dimension
+  qb:component [
+    qb:dimension  qb:measureType ;
+    qb:order 5 ;
+    rdfs:label "Measure type"@en, "Typ měření"@cs
+  ] ;
   # Measures
   qb:component [
     qb:measure def-dc-penze:pocet-duchodcu ;
@@ -481,6 +487,12 @@ def-dc-penze:duchodci-v-krajich a qb:DataStructureDefinition ;
     qb:dimension def-dc-penze:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za který je počet důchodců uveden."@cs
+  ] ;
+  # Measure dimension
+  qb:component [
+    qb:dimension  qb:measureType ;
+    qb:order 5 ;
+    rdfs:label "Measure type"@en, "Typ měření"@cs
   ] ;
   # Measures
   qb:component [
@@ -532,6 +544,12 @@ def-dc-penze:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
     qb:dimension def-dc-penze:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující kraj České republiky, za který je počet důchodců uveden."@cs
+  ] ;
+  # Measure dimension
+  qb:component [
+    qb:dimension  qb:measureType ;
+    qb:order 5 ;
+    rdfs:label "Measure type"@en, "Typ měření"@cs
   ] ;
   # Measures
   qb:component [
@@ -1061,6 +1079,12 @@ def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
     qb:order 2 ;
     rdfs:label "The dimension representing a sex for which the measures was measured."@en, "Dimenze reprezentující pohlaví, za které je uváděna hodnota pozorování."@cs
   ] ;
+  # Measure dimension
+  qb:component [
+    qb:dimension  qb:measureType ;
+    qb:order 3 ;
+    rdfs:label "Measure type"@en, "Typ měření"@cs
+  ] ;
   # Measures
   qb:component [
     qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
@@ -1115,6 +1139,12 @@ def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
     qb:dimension def-dc-penze:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the measure was measured."@en, "Dimenze reprezentující druh důchodu, pro který je hodnota pozorování uvedena."@cs
+  ] ;
+  # Measure dimension
+  qb:component [
+    qb:dimension  qb:measureType ;
+    qb:order 3 ;
+    rdfs:label "Measure type"@en, "Typ měření"@cs
   ] ;
   # Measures
   qb:component [
@@ -1191,13 +1221,7 @@ def-dc-penze:druh-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "kind of pension"@en, "druh důchodu"@cs ;
   rdfs:comment "Distribution of entities according to the kind of pension."@en, "Rozdělení entit podle druhu důchodu."@cs ;
   rdfs:range pen-onto:PensionKind ;
-  qb:concept dbpedia:Pension .
-  
-def-dc-penze:druh-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "kind of pension"@en, "druh důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the kind of pension."@en, "Rozdělení entit podle druhu důchodu."@cs ;
-  rdfs:range pen-onto:PensionKind ;
-  qb:concept dbpedia:Pension, dbpedia:Natural_kind .  
+  qb:concept dbpedia:Pension, dbpedia:Natural_kind .
 
 def-dc-penze:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "pension cancellation reason"@en, "důvod zániku důchodu"@cs ;
@@ -1237,27 +1261,6 @@ def-dc-penze:refArea a rdf:Property, qb:DimensionProperty ;
   rdfs:subPropertyOf sdmx-dimension:refArea ;
   qb:concept sdmx-concept:refArea .
 
-def-dc-penze:stat a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "area of the Czech Republic"@en, "území České republiky"@cs ;
-  rdfs:comment "The area of the Czech Republic. It is used for measured statistical phenomenon that are related to the Czech Republic as a whole."@en, "Území České republiky. Používá se u měření, které vypovídají za ČR jako celek."@cs ;
-  rdfs:subPropertyOf def-dc-penze:refArea ;
-  rdfs:range ruian:Stat ;
-  qb:concept sdmx-concept:refArea .
-  
-def-dc-penze:kraj a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "czech region (county)"@en, "území vyššího územně samosprávného celku (kraje)"@cs ;
-  rdfs:comment "The czech region (county) to which the measured statistical phenomenon relates."@en, "Území vyššího územně samosprávného celku (kraje), pro který je hodnota měřena."@cs ;
-  rdfs:subPropertyOf def-dc-penze:refArea ;
-  rdfs:range ruian:Vusc ;
-  qb:concept sdmx-concept:refArea .
-  
-def-dc-penze:okres a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "czech district"@en, "území okresu"@cs ;
-  rdfs:comment "The czech district to which the measured statistical phenomenon relates."@en, "Území okresu, pro který je hodnota měřena."@cs ;
-  rdfs:subPropertyOf def-dc-penze:refArea ;
-  rdfs:range ruian:Okres ;
-  qb:concept sdmx-concept:refArea .
-    
 def-dc-penze:pohlavi a rdf:Property, qb:DimensionProperty ;
   rdfs:label "sex"@en, "pohlaví"@cs ;
   rdfs:comment "The state of being male or female."@en, "Hodnota, která udává, zda je osoba mužem či ženou."@cs ;
@@ -1292,13 +1295,6 @@ def-dc-penze:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
   rdfs:range icd10-onto:Chapter ;
   qb:concept dbpedia:Natural_kind .
   
-def-dc-penze:populace a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "population"@en, "populace"@cs ;
-  rdfs:comment "The total population of a defined class of people."@en, "Celková populace definované třídy osob."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept sdmx-concept:statPop .
-
 def-dc-penze:pocet-osob a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of persons"@en, "počet osob"@cs ;
   rdfs:comment "The total number of a defined group of people."@en, "Celkový počet osob určité skupiny."@cs ;
@@ -1394,14 +1390,6 @@ def-dc-penze:prumerna-doba-pobirani-radneho-starobniho-duchodu a rdf:Property, q
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept sdmx-concept:refPeriod .
-
-# Použije se někde?
-def-dc-penze:prumerny-osobni-vymerovaci-zaklad a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of the personal assessment base"@en, "průměrná výše osobního vyměřovacího základu"@cs ;
-  rdfs:comment "Average amount of the personal assessment base."@en, "Průměrná výše osobního vyměřovacího základu."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
 
 def-dc-penze:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of the personal assessment base of pensioners with the newly avarded pension"@en, "průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů"@cs ;
