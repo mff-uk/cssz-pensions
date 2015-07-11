@@ -972,7 +972,7 @@ pen-onto:PensionKindScheme_2010 a skos:ConceptScheme, sdmx:CodeList ;
 ### Netypické výplaty
 
 pen:PK_O_2010 a skos:Concept, pen-onto:PensionKind ;
-  skos:altLabel "Netypické výplaty"@cs, "Special pensions"@en ;
+  skos:prefLabel "Netypické výplaty"@cs, "Special pensions"@en ;
   skos:notation "PK_O" ;
   skos:exactMatch pen:PK_O ;
   skos:inScheme pen-onto:PensionKindScheme_2010 .
