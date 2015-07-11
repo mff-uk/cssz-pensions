@@ -404,12 +404,12 @@ dc-penze:invalidita a qb:DataSet ;
 ###### 12
 
 dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
-  dcterms:title "Numbers of granted disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice "@cs ;
-  rdfs:label "Numbers of granted disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice"@cs ;
-  dcterms:description "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
-    "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, statistického důvodu změny invalidního důchodu a pohlaví"@cs ;
-  rdfs:comment "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
-    "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, statistického důvodu změny invalidního důchodu a pohlaví"@cs ;
+  dcterms:title "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
+  rdfs:label "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
+  dcterms:description "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
+    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
+  rdfs:comment "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
+    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
