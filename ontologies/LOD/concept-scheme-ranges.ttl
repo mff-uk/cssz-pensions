@@ -105,6 +105,14 @@ ran:I4500T4999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "4500-4999" ;
   skos:notation "I4500T4999" ;
   skos:inScheme ran-onto:RangeScheme .
+ran:I5000T5499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "5000-5499" ;
+  skos:notation "I5000T5499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I5500T5999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "5500-5999" ;
+  skos:notation "I5500T5999" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I5000T5999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "5000-5999" ;
   skos:notation "I5000T5999" ;
@@ -128,6 +136,14 @@ ran:I5600T5799  a skos:Concept, ran-onto:Range ;
 ran:I5800T5999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "5800-5999" ;
   skos:notation "I5800T5999" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I6000T6499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "6000-6499" ;
+  skos:notation "I6000T6499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I6500T6999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "6500-6999" ;
+  skos:notation "I6500T6999" ;
   skos:inScheme ran-onto:RangeScheme .
 ran:I6000T6999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "6000-6999" ;
@@ -153,6 +169,14 @@ ran:I6800T6999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "6800-6999" ;
   skos:notation "I6800T6999" ;
   skos:inScheme ran-onto:RangeScheme .
+ran:I7000T7499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "7000-7499" ;
+  skos:notation "I7000T7499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I7500T7999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "7500-7999" ;
+  skos:notation "I7500T7999" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I7000T7999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "7000-7999" ;
   skos:notation "I7000T7999" ;
@@ -176,6 +200,14 @@ ran:I7600T7799  a skos:Concept, ran-onto:Range ;
 ran:I7800T7999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "7800-7999" ;
   skos:notation "I7800T7999" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I8000T8499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "8000-8499" ;
+  skos:notation "I8000T8499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I8500T8999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "8500-8999" ;
+  skos:notation "I8500T8999" ;
   skos:inScheme ran-onto:RangeScheme .
 ran:I8000T8999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "8000-8999" ;
@@ -201,6 +233,14 @@ ran:I8800T8999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "8800-8999" ;
   skos:notation "I8800T8999" ;
   skos:inScheme ran-onto:RangeScheme .
+ran:I9000T9499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "9000-9499" ;
+  skos:notation "I9000T9499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I9500T9999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "9500-9999" ;
+  skos:notation "I9500T9999" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I9000T9999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "9000-9999" ;
   skos:notation "I9000T9999" ;
@@ -224,6 +264,14 @@ ran:I9600T9799  a skos:Concept, ran-onto:Range ;
 ran:I9800T9999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "9800-9999" ;
   skos:notation "I9800T9999" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I10000T10499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "10000-10499" ;
+  skos:notation "I10000T10499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I10500T10999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "10500-10999" ;
+  skos:notation "I10500T10999" ;
   skos:inScheme ran-onto:RangeScheme .
 ran:I10000T10999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "10000-10999" ;
@@ -373,9 +421,25 @@ ran:I17500T17999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "17500-17999" ;
   skos:notation "I17500T17999" ;
   skos:inScheme ran-onto:RangeScheme .
+ran:I18000T18499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "18000-18499" ;
+  skos:notation "I18000T18499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I18500T18999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "18500-18999" ;
+  skos:notation "I18500T18999" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I18000T18999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "18000-18999" ;
   skos:notation "I18000T18999" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I19000T19499 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "19000-19499" ;
+  skos:notation "I19000T19499" ;
+  skos:inScheme ran-onto:RangeScheme .
+ran:I19500T19999 a skos:Concept, ran-onto:Range ;
+  skos:prefLabel "19500-19999" ;
+  skos:notation "I19500T19999" ;
   skos:inScheme ran-onto:RangeScheme .
 ran:I19000T19999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "19000-19999" ;
