@@ -33,6 +33,14 @@ age:Y_GE0 a skos:Concept, age:Age ;
   skos:notation "0+"@cs ;
   skos:inScheme age-onto:AgeScheme .
 
+age:Y0T4 a skos:Concept, age:Age ;
+  time:intervalDuring age:Y_GT0, age:Y0T14, age:Y0T19 ;
+  time:intervalMeets age:Y5T9 ;
+  skos:prefLabel "0-4 let"@cs ;
+  skos:notation "0-4"@cs ;
+  skos:narrower age:Y_GE0 ;
+  skos:inScheme age-onto:AgeScheme .
+
 age:Y0T14 a skos:Concept, age:Age ;
   time:intervalDuring age:Y_GT0, age:Y0T19 ;
   time:intervalMeets age:Y15T64 ;
