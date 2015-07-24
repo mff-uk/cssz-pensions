@@ -264,7 +264,7 @@ pen:PK_SIV a skos:Concept, pen-onto:PensionKind ;
 
 pen:PK_SRNV a skos:Concept, pen-onto:PensionKind ;
   skos:altLabel "SRNV"@cs ;
-  skos:prefLabel "Starobním důchod SRN vyplácený v souběhu s vdovským důchodem"@cs ;
+  skos:prefLabel "Starobní důchod SRN vyplácený v souběhu s vdovským důchodem"@cs ;
   skos:definition "SRNV označuje současnou výplatu vdovského důchodu a starobního důchodu typu SRN."@cs ;
   skos:notation "PK_SRNV" ;
   rdfs:seeAlso pen:PK_V ;
