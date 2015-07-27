@@ -1,0 +1,3 @@
+The repository contains codelists, structure of published data cubes, and metadata of the published datasets about pensions managed by Czech Social Security Administration.
+
+Codelists, data cube definitions and metadata is licenced under the [Creative Commons Attribution 4.0 International (CC BY 4.0) licence](http://creativecommons.org/licenses/by/4.0/), except for the [SDMX vocabulary](https://code.google.com/p/cssz-pensions/source/browse/ontologies/LOD/sdmx-code-cs-labels.ttl) where this licence applies only to the labels in Czech.
