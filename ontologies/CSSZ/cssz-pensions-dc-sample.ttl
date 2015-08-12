@@ -1,20 +1,27 @@
-@prefix dc-penze:       <http://linked.cssz.cz/dataset/penze/> .
-@prefix def-dc-penze:   <http://linked.cssz.cz/ontology/dataset-definitions/penze#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix cssz-dataset:       <http://data.cssz.cz/resource/dataset/> .
+@prefix cssz-dimension:		<http://data.cssz.cz/ontology/dimension/> .
+@prefix cssz-dimension:		<http://data.cssz.cz/ontology/measure/> .
+@prefix cssz-dsd:			<http://data.cssz.cz/resource/data-structure-definition/> .
+@prefix qb:              	<http://purl.org/linked-data/cube#> .
+@prefix dcterms:			<http://purl.org/dc/terms/> .
 
 @prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
 @prefix qua:   <http://linked.opendata.cz/generated/resource/quantile/> .
 @prefix ran:   <http://linked.opendata.cz/generated/resource/range/> .
 
-@prefix pen:   <http://linked.cssz.cz/resource/pension-kind/> .
-@prefix pencan:   <http://linked.cssz.cz/resource/pension-cancellation-reason/> .
-@prefix dis:   <http://linked.cssz.cz/resource/disability-level/> .
-@prefix dischange:   <http://linked.cssz.cz/resource/disability-change-reason/> .
+@prefix pen:   <http://data.cssz.cz/resource/pension-kind/> .
+@prefix pencan:   <http://data.cssz.cz/resource/pension-cancellation-reason/> .
+@prefix dis:   <http://data.cssz.cz/resource/disability-level/> .
+@prefix dischange:   <http://data.cssz.cz/resource/disability-change-reason/> .
 
 @prefix sdmx-code:         <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
 @prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> . 
 
-dc-penze:duchodci-v-krajich a qb:DataSet ;
+cssz-dataset:duchodci-v-krajich a qb:DataSet ;
   dcterms:title "Total numbers of pensioners in regions of Czech Republic"@en, "Celkový počet důchodců v krajích České republiky"@cs ;
   rdfs:label "Total numbers of pensioners in regions of Czech Republic"@en, "Celkový počet důchodců v krajích České republiky"@cs ;
   dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region of Czech Republic and sex"@en,
@@ -24,15 +31,15 @@ dc-penze:duchodci-v-krajich a qb:DataSet ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-03-21"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
-  qb:structure def-dc-penze:duchodci-v-krajich ;
+  qb:structure cssz-dsd:duchodci-v-krajich .
 
-<http://linked.cssz.cz/dataset/penze/duchodci-v-krajich/observation/2012-12-31/S/CZ020/M> a qb:Observation ;
-  qb:dataset dc-penze:duchodci-v-krajich ;
-  def-dc-penze:refPeriod <http://reference.data.gov.uk/id/gregorian-day/2012-12-31> ;
-  def-dc-penze:druh-duchodu pen:PK_S ;
-  def-dc-penze:kraj <http://ruian.linked.opendata.cz/resource/vusc/27> ;
-  def-dc-penze:pohlavi sdmx-code:sex-M ;
-  def-dc-penze:populace "66500"^^xsd:nonNegativeInteger ;
-  def-dc-penze:prumerna-vyse-duchodu "12511"^^xsd:nonNegativeInteger ;
-  def-dc-penze:prumerny-vek "71"^^xsd:nonNegativeInteger .
+<http://data.cssz.cz/resource/observation/duchodci-v-krajich/2012-12-31/S/CZ020/M> a qb:Observation ;
+  qb:dataset cssz-dataset:duchodci-v-krajich ;
+  cssz-dimension:refPeriod <http://reference.data.gov.uk/id/gregorian-day/2012-12-31> ;
+  cssz-dimension:druh-duchodu pen:PK_S ;
+  cssz-dimension:refArea <http://ruian.linked.opendata.cz/resource/vusc/27> ;
+  cssz-dimension:pohlavi sdmx-code:sex-M ;
+  cssz-dimension:populace "66500"^^xsd:nonNegativeInteger ;
+  cssz-dimension:prumerna-vyse-duchodu "12511"^^xsd:nonNegativeInteger ;
+  cssz-dimension:prumerny-vek "71"^^xsd:nonNegativeInteger .
   

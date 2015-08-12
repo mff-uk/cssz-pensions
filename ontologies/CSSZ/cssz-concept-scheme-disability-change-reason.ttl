@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix dis:   <http://linked.cssz.cz/resource/disability-change-reason/> .
-@prefix dischange-onto:   <http://linked.cssz.cz/ontology/disability-change-reasons/> .
+@prefix dis:   <http://data.cssz.cz/resource/disability-change-reason/> .
+@prefix dischange-onto:   <http://data.cssz.cz/ontology/disability-change-reasons/> .
 
 dischange-onto:DisabilityChangeReasonScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of disability change reason"@en, "Číselník důvodů změny invalidního důchodu"@cs ;

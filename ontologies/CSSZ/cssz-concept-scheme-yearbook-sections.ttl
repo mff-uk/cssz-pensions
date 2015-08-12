@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix ybs:   <http://linked.cssz.cz/resource/yearbook-section/> .
-@prefix ybs-onto:   <http://linked.cssz.cz/ontology/yearbook-sections/> .
+@prefix ybs:   <http://data.cssz.cz/resource/yearbook-section/> .
+@prefix ybs-onto:   <http://data.cssz.cz/ontology/yearbook-sections/> .
 
 ###
 ### Schéma kapitol ročenky důchodové statistiky ČSSZ v letech 2008-2012.

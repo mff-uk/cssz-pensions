@@ -6,8 +6,8 @@
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 @prefix lex:        <http://purl.org/lex#> .
 
-@prefix pen:   <http://linked.cssz.cz/resource/pension-kind/> .
-@prefix pen-onto:   <http://linked.cssz.cz/ontology/pension-kinds/> .
+@prefix pen:   <http://data.cssz.cz/resource/pension-kind/> .
+@prefix pen-onto:   <http://data.cssz.cz/ontology/pension-kinds/> .
 
 ###
 ### Referenční schéma obsahující definice druhů důchodů nezávisle na roku. Schéma neobsahuje hierarchii, tj. nejsou uvedeny vazby nadřazenosti a podřazenosti jednotlivých druhů důchodu.

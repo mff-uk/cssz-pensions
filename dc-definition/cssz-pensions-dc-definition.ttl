@@ -1,18 +1,9 @@
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
-@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
-@prefix scovo:    <http://purl.org/NET/scovo#> .
-@prefix void:     <http://rdfs.org/ns/void#> .
-@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms:  <http://purl.org/dc/terms/>.
-
 @prefix interval:	<http://reference.data.gov.uk/def/intervals/> .
 
-@prefix ruian:   <http://ruian.linked.opendata.cz/ontology/> .
-@prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
+@prefix age:  	 	<http://linked.opendata.cz/generated/resource/age/> .
 
 @prefix qb:              <http://purl.org/linked-data/cube#> .
 @prefix sdmx:            <http://purl.org/linked-data/sdmx#> .
@@ -24,53 +15,46 @@
 @prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
 
-@prefix dbpedia:  <http://dbpedia.org/resource/> .
+@prefix dbpedia:  		<http://dbpedia.org/resource/> .
 
-@prefix def-dc-penze:   <http://linked.cssz.cz/ontology/dataset-definitions/penze#> .
+@prefix cssz-dimension:		<http://data.cssz.cz/ontology/dimension/> .
+@prefix cssz-measure:		<http://data.cssz.cz/ontology/measure/> .
+@prefix cssz-dsd:			<http://data.cssz.cz/resource/data-structure-definition/> .
 
-@prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
-@prefix age-onto:   <http://linked.opendata.cz/ontology/age/> .
-@prefix qua:   <http://linked.opendata.cz/generated/resource/quantile/> .
-@prefix qua-onto:   <http://linked.opendata.cz/ontology/quantiles/> .
-@prefix ran:   <http://linked.opendata.cz/generated/resource/range/> .
-@prefix ran-onto:   <http://linked.opendata.cz/ontology/ranges/> .
+@prefix age:   			<http://linked.opendata.cz/generated/resource/age/> .
+@prefix age-onto:  		<http://linked.opendata.cz/ontology/age/> .
+@prefix qua-onto:   	<http://linked.opendata.cz/ontology/quantiles/> .
+@prefix ran-onto:   	<http://linked.opendata.cz/ontology/ranges/> .
 
-@prefix pen:   <http://linked.cssz.cz/resource/pension-kind/> .
-@prefix pen-onto:   <http://linked.cssz.cz/ontology/pension-kinds/> .
-@prefix pencan:   <http://linked.cssz.cz/resource/pension-cancellation-reason/> .
-@prefix pencan-onto:   <http://linked.cssz.cz/ontology/pension-cancellation-reasons/> .
-@prefix dis:   <http://linked.cssz.cz/resource/disability-level/> .
-@prefix dis-onto:   <http://linked.cssz.cz/ontology/disability-levels/> .
-@prefix dischange:   <http://linked.cssz.cz/resource/disability-change-reason/> .
-@prefix dischange-onto:   <http://linked.cssz.cz/ontology/disability-change-reasons/> .
-@prefix czgop:   <http://linked.cssz.cz/resource/group/> .
-@prefix czgop-onto:   <http://linked.cssz.cz/ontology/groups-of-persons/> .
-@prefix icd10:   <http://linked.cssz.cz/resource/icd-10/chapter> .
-@prefix icd10-onto:   <http://linked.cssz.cz/ontology/icd-10/> .
+@prefix pen-onto:   	<http://data.cssz.cz/ontology/pension-kinds/> .
+@prefix pencan-onto:   	<http://data.cssz.cz/ontology/pension-cancellation-reasons/> .
+@prefix dis-onto:   	<http://data.cssz.cz/ontology/disability-levels/> .
+@prefix czgop-onto:   	<http://data.cssz.cz/ontology/groups-of-persons/> .
+@prefix icd10-onto:   	<http://data.cssz.cz/ontology/icd-10/> .
 
 ### SECTION 5.1 - NUMBER OF INHABITANTS BY REGIONS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:obyvatelstvo-podle-kraju a qb:DataStructureDefinition ;
+cssz-dsd:obyvatelstvo-podle-kraju a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of inhabitants of the Czech Republic classified by regions."@en, "Definice struktury datové kostky obyvatelstva České republiky v členění dle krajů."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of inhabitants was measured."@en, "Dimenze reprezentující rok, za který je počet obyvatel uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:refArea ;
+    qb:dimension cssz-dimension:refArea ;
     qb:order 2 ;
     rdfs:label "The dimension representing the state or a region of the Czech Republic in which the number inhabitants was measured."@en, "Dimenze reprezentující stát nebo kraj České republiky, za který je počet obyvatel uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number inhabitants was measured."@en, "Dimenze reprezentující pohlaví, za které je počet obyvatel uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-obyvatel ;
+    qb:measure cssz-measure:pocet-obyvatel ;
     rdfs:label "The measure of the the number of inhabitants of some area."@en,
                "Měření počtu obyvatel určitého území."@cs
   ] ;
@@ -84,27 +68,27 @@ def-dc-penze:obyvatelstvo-podle-kraju a qb:DataStructureDefinition ;
 
 ### SECTION 5.2 - NUMBER OF INHABITANTS BY AGE
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:obyvatelstvo-podle-veku a qb:DataStructureDefinition ;
+cssz-dsd:obyvatelstvo-podle-veku a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of inhabitants of the Czech Republic classified by age."@en, "Definice struktury datové kostky obyvatelstva České republiky v členění dle věku."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of inhabitants was measured."@en, "Dimenze reprezentující rok, za který je počet obyvatel uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vekova-kategorie ;
+    qb:dimension cssz-dimension:vekova-kategorie ;
     qb:order 2 ;
     rdfs:label "The dimension representing an age for which the number of inhabitants was measured."@en, "Dimenze reprezentující věkové pásmo, za které je počet obyvatel uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number inhabitants was measured."@en, "Dimenze reprezentující pohlaví, za které je počet obyvatel uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-obyvatel ;
+    qb:measure cssz-measure:pocet-obyvatel ;
     rdfs:label "The measure of the the number of inhabitants of the given age."@en,
                "Měření počtu obyvatel určité věkové kategorie."@cs
   ] ;
@@ -118,22 +102,22 @@ def-dc-penze:obyvatelstvo-podle-veku a qb:DataStructureDefinition ;
 
 ### SECTION 5.3 - DISTRIBUTION OF POPULATION
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:relat-rozlozeni-populace a qb:DataStructureDefinition ;
+cssz-dsd:relat-rozlozeni-populace a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube describing distribution of population of the Czech Republic into defined groups."@en, "Definice struktury datové kostky popisující rozložení populace České republiky mezi definované skupiny."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of persons was measured."@en, "Dimenze reprezentující rok, za který je počet osob uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:skupina-osob ;
+    qb:dimension cssz-dimension:skupina-osob ;
     qb:order 2 ;
     rdfs:label "The dimension representing a defined group of persons."@en, "Dimenze reprezentující vymezenou skupinu osob."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-osob ;
+    qb:measure cssz-measure:pocet-osob ;
     rdfs:label "The measure of the the number of persons in the given group."@en,
                "Měření počtu osob určité skupiny."@cs
   ] ;
@@ -147,27 +131,27 @@ def-dc-penze:relat-rozlozeni-populace a qb:DataStructureDefinition ;
 
 ### SECTION 5.4 - COMPARION OF THE NUMBER OF INHABITANTS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataStructureDefinition ;
+cssz-dsd:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube comparing the number of inhabitants of the Czech Republic of different age with the expected number of inhabitabitants in 2030."@en, "Definice struktury datové kostky porovnávající počet obyvate České republiky v jednotlivých věkových skupinách s predikcí pro rok 2030."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year for which the number of inhabitants is reported."@en, "Dimenze reprezentující rok, za který je počet obyvatel uváděn."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 2 ;
     rdfs:label "The dimension representing a sex for which the number inhabitants is reported."@en, "Dimenze reprezentující pohlaví, za které je počet obyvatel uváděn."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vekova-kategorie ;
+    qb:dimension cssz-dimension:vekova-kategorie ;
     qb:order 3 ;
     rdfs:label "The dimension representing an age for which the number of inhabitants was measured."@en, "Dimenze reprezentující věkové pásmo, za které je počet obyvatel uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-obyvatel ;
+    qb:measure cssz-measure:pocet-obyvatel ;
     rdfs:label "The measure of the the number of inhabitants of the given age."@en,
                "Měření počtu obyvatel určité věkové kategorie."@cs
   ] ;
@@ -181,27 +165,27 @@ def-dc-penze:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataStructureDefin
 
 ### SECTION 7.1 NUMBER OF PENSIONS IN THE CZECH REPUBLIC
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:vyplacene-duchody-v-cr a qb:DataStructureDefinition ;
+cssz-dsd:vyplacene-duchody-v-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of paid-out pensions in the Czech Republic."@en, "Definice struktury datové kostky s počty vyplácených důchodů v České republice."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of paid-out pensions was measured."@en, "Dimenze reprezentující rok, za který je počet vyplácených důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of paid-out pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet vyplácených důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of paid-out pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet vyplácených důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the the number of paid-out pensions in a given year, with a given kind, to persons of a given sex."@en,
                "Měření počtu vyplácených důchodů podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -216,27 +200,27 @@ def-dc-penze:vyplacene-duchody-v-cr a qb:DataStructureDefinition ;
 
 ### SECTION 7.2 NUMBER OF PENSIONERS IN THE CZECH REPUBLIC
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:duchodci-v-cr a qb:DataStructureDefinition ;
+cssz-dsd:duchodci-v-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of pensioners in the Czech Republic."@en, "Definice struktury datové kostky s počty důchodců v České republice."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of pensioners was measured."@en, "Dimenze reprezentující rok, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of pensioners was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodců uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
+    qb:measure cssz-measure:pocet-duchodcu ;
     rdfs:label "The measure of the the number of pensioners in a given year, for a given sex and kind of pension."@en,
                "Měření počtu důchodců podle roku, pohlaví a druhu důchodu."@cs
   ] ;
@@ -250,27 +234,27 @@ def-dc-penze:duchodci-v-cr a qb:DataStructureDefinition ;
 
 ### SECTION 7.3 NUMBER OF NEWLY AWARDED PENSIONS IN THE CZECH REPUBLIC
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:nove-priznane-duchody-v-cr a qb:DataStructureDefinition ;
+cssz-dsd:nove-priznane-duchody-v-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of newly awarded pensions in the Czech Republic."@en, "Definice struktury datové kostky s počty nově přiznaných důchodů v České republice."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově přiznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the the number of newly awarded pensions in a given year, for a given sex and kind of pension."@en,
                "Měření počtu nově přiznaných důchodů podle roku, pohlaví a druhu důchodu."@cs
   ] ;
@@ -284,22 +268,22 @@ def-dc-penze:nove-priznane-duchody-v-cr a qb:DataStructureDefinition ;
 
 ### SECTION 7.4 AMOUNT OF MONEY SPENT NO PENSIONS IN THE CZECH REPUBLIC
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataStructureDefinition ;
+cssz-dsd:vydaje-na-duchody-od-roku-1996 a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the total amount of money spent on pensions the Czech Republic classified by years."@en, "Definice struktury datové kostky s celkovými výdaji na důchody v České republice v členění dle let."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the spendings on pensions were measured."@en, "Dimenze reprezentující rok, za který výdaje uvedeny."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the spendings on pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který jsou výděje na důchody uvedeny."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
+    qb:measure cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en,
                "Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs
   ] ;
@@ -313,22 +297,22 @@ def-dc-penze:vydaje-na-duchody-od-roku-1996 a qb:DataStructureDefinition ;
 
 ### SECTION 7.5 AMOUNT OF MONEY SPENT NO PENSIONS IN THE CZECH REPUBLIC CLASSIFIED BY PENSION KINDS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:vydaje-na-duchody-v-cr a qb:DataStructureDefinition ;
+cssz-dsd:vydaje-na-duchody-v-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the total amount of money spent on pensions the Czech Republic classified by pension kinds."@en, "Definice struktury datové kostky s celkovými výdaji na důchody v České republice v členění dle druhů důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the spendings on pensions were measured."@en, "Dimenze reprezentující rok, za který výdaje uvedeny."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the spendings on pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který jsou výděje na důchody uvedeny."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
+    qb:measure cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en,
                "Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs
   ] ;
@@ -342,27 +326,27 @@ def-dc-penze:vydaje-na-duchody-v-cr a qb:DataStructureDefinition ;
 
 ### SECTION 7.6 MONTHLY AMOUNT OF PENSION BY QUANTILES
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a qb:DataStructureDefinition ;
+cssz-dsd:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube showing the distribution of pensions by their monthly amound by quantiles."@en, "Definice struktury datové kostky přehledu o rozložení souboru důchodců podle výše důchodů v kvantilovém vyjádření."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the spendings on pensions were measured."@en, "Dimenze reprezentující rok, za který výdaje uvedeny."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the spendings on pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který jsou výděje na důchody uvedeny."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:kvantily-relativni-vyse-duchodu ;
+    qb:dimension cssz-dimension:kvantily-relativni-vyse-duchodu ;
     qb:order 3 ;
     rdfs:label "The dimension representing the quantile for which the monthly amount of pensions was measured."@en, "Dimenze reprezentující kvantil, za který je údaj o výši měsíční výše důchodu sledován."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:mesicni-vyse-duchodu ;
+    qb:measure cssz-measure:mesicni-vyse-duchodu ;
     rdfs:label "The measure of the monthly amount of pension in CZK."@en,
                "Měření měsíční výše důchodu v Kč."@cs
   ] ;
@@ -376,27 +360,27 @@ def-dc-penze:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadre
 
 ### SECTION 7.7 AVERAGE NUMBER OF YEARS OLD-AGE PENSION IS BEING PAID-OUT TO A PENSIONER
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-delka-pobirani-s-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:prum-delka-pobirani-s-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube with data about average number of years some old-age pension is being paid-out to a pensioner."@en, "Definice struktury datové kostky s daty o průměrné délce vyplácení starobního důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:rok-zaniku-duchodu ;
+    qb:dimension cssz-dimension:rok-zaniku-duchodu ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the old-age pension expired."@en, "Dimenze reprezentující rok, ve kterém došlo k zániku starobního důchodu."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 2 ;
     rdfs:label "The dimension representing a sex for which the average year of paying-out old-age pension was measured."@en, "Dimenze reprezentující pohlaví, za které průměrná doba pobírání důchodu měřena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 3 ;
     rdfs:label "The dimension representing a kind of pension for which the average number of years some old-age pension is being paid-out to a pensioner was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrná délka vyplácení řádného starobního důchodu uvedena."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerna-doba-pobirani-radneho-starobniho-duchodu ;
+    qb:measure cssz-measure:prumerna-doba-pobirani-radneho-starobniho-duchodu ;
     rdfs:label "The measure of the average number of years an old-age pensions is being paid-out to a pensioner."@en,
                "Měření představující průměrnou dobu pobírání řádného starobního důchodu."@cs
   ] ;
@@ -410,26 +394,26 @@ def-dc-penze:prum-delka-pobirani-s-duchodu a qb:DataStructureDefinition ;
   
 ### SECTION 8.1 - CZECH REPUBLIC TOTAL
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:duchodci-prehled-cr a qb:DataStructureDefinition ;
+cssz-dsd:duchodci-prehled-cr a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of pensioners in the Czech Republic."@en, "Definice struktury datové kostky s počty důchodců v ČR."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of pensioners was measured."@en, "Dimenze reprezentující rok, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of pensioners was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:refArea ;
+    qb:dimension cssz-dimension:refArea ;
     qb:order 3 ;
     rdfs:label "The dimension representing the state in which the number of pensioners was measured."@en, "Dimenze reprezentující stát, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodců uveden."@cs
   ] ;
@@ -441,17 +425,17 @@ def-dc-penze:duchodci-prehled-cr a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
+    qb:measure cssz-measure:pocet-duchodcu ;
     rdfs:label "The measure of the number of pensioners in a given year, with a given kind, to persons of a given sex, and in the given state."@en,
                "Měření počtu důchodců podle roku, druhu důchodu, pohlaví a státu."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-v-kc ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-v-kc ;
     rdfs:label "The measure of the average pension in a given year, with a given kind, to persons of a given sex, and in the given state."@en,
                "Měření průměrné výše důchodu podle roku, druhu důchodu, pohlaví a státu."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerny-vek ;
+    qb:measure cssz-measure:prumerny-vek ;
     rdfs:label "The measure of the average age of a pensioner in a given year, with a given kind of pension, to persons of a given sex, and in the given state."@en,
                "Měření průměrného věku důchodce podle roku, druhu důchodu, pohlaví a státu."@cs
   ] ;
@@ -465,26 +449,26 @@ def-dc-penze:duchodci-prehled-cr a qb:DataStructureDefinition ;
 
 ### SECTION 8.1 - BY REGIONS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:duchodci-v-krajich a qb:DataStructureDefinition ;
+cssz-dsd:duchodci-v-krajich a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of pensioners in regions of the Czech Republic."@en, "Definice struktury datové kostky s počty důchodců v krajích ČR."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of pensioners was measured."@en, "Dimenze reprezentující rok, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of pensioners was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:refArea ;
+    qb:dimension cssz-dimension:refArea ;
     qb:order 3 ;
     rdfs:label "The dimension representing country or geographic area of Czech Republic in which the number of pensioners was measured."@en, "Dimenze reprezentující Českou republiku nebo region České republiky, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za který je počet důchodců uveden."@cs
   ] ;
@@ -496,17 +480,17 @@ def-dc-penze:duchodci-v-krajich a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
+    qb:measure cssz-measure:pocet-duchodcu ;
     rdfs:label "The measure of the number of pensioners in a given year, with a given kind, to persons of a given sex, and in a given region of Czech Republic."@en,
                "Měření počtu důchodců podle roku, druhu důchodu, pohlaví a kraje."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-v-kc ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-v-kc ;
     rdfs:label "The measure of the average pension in a given year, with a given kind, to persons of a given sex, and in a given region of Czech Republic."@en,
                "Měření průměrné výše důchodu podle roku, druhu důchodu, pohlaví a kraje."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerny-vek ;
+    qb:measure cssz-measure:prumerny-vek ;
     rdfs:label "The measure of the average age of a pensioner in a given year, with a given kind of pension, to persons of a given sex, and in a given region of Czech Republic."@en,
                "Měření průměrného věku důchodce podle roku, druhu důchodu, pohlaví a kraje."@cs
   ] ;
@@ -522,26 +506,26 @@ def-dc-penze:duchodci-v-krajich a qb:DataStructureDefinition ;
 ### NUMBER OF PENSIONERS, AVERAGE PENSION AND AVERAGE AGE OF THE PENSIONER IN THE CZECH REPUBLIC, BY REGION AND DISTRICTS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009
 ### Data is not available for 2008
-def-dc-penze:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
+cssz-dsd:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of pensioners in the Czech Republic, by regions and districts."@en, "Definice struktury datové kostky s počty důchodců v ČR, krajích a okresech."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of pensioners was measured."@en, "Dimenze reprezentující rok, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of pensioners was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:refArea ;
+    qb:dimension cssz-dimension:refArea ;
     qb:order 3 ;
     rdfs:label "The dimension representing a the state, region or district of the Czech Republic in which the number of pensioners was measured."@en, "Dimenze reprezentující stát, kraje nebo okres České republiky, za který je počet důchodců uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující kraj České republiky, za který je počet důchodců uveden."@cs
   ] ;
@@ -553,17 +537,17 @@ def-dc-penze:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
+    qb:measure cssz-measure:pocet-duchodcu ;
     rdfs:label "The measure of the number of pensioners in a given year, with a given kind, to persons of a given sex, and in the given area."@en,
                "Měření počtu důchodců podle roku, druhu důchodu, pohlaví a území."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-v-kc ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-v-kc ;
     rdfs:label "The measure of the average pension in a given year, with a given kind, to persons of a given sex, and in the given area."@en,
                "Měření průměrné výše důchodu podle roku, druhu důchodu, pohlaví a území."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerny-vek ;
+    qb:measure cssz-measure:prumerny-vek ;
     rdfs:label "The measure of the average age of a pensioner in the given year, with the given kind of pension, with the given sex, and in the given area."@en,
                "Měření průměrného věku důchodce podle roku, druhu důchodu, pohlaví a území."@cs
   ] ;
@@ -577,32 +561,32 @@ def-dc-penze:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
   
 ### SECTION 8.2 - NUMBER OF PAID-OUT PENSIONS BY AGE
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:duchody-dle-veku a qb:DataStructureDefinition ;
+cssz-dsd:duchody-dle-veku a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of paid-out pensions by age of the pensioner."@en, "Definice struktury datové kostky s počty důchodů podle věku důchodce."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of paid-out pensions was measured."@en, "Dimenze reprezentující rok, za který je počet důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of paid-out pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of pai-out pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vekova-kategorie ;
+    qb:dimension cssz-dimension:vekova-kategorie ;
     qb:order 4 ;
     rdfs:label "The dimension representing an age for which the number of pensioners was measured."@en, "Dimenze reprezentující věk, za který je počet důchodců uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the the number of pensions in a given year, with a given kind, to persons of a given sex and age."@en,
                "Měření počtu důchodů podle roku, druhu důchodu, pohlaví a věku."@cs
   ] ;
@@ -616,27 +600,27 @@ def-dc-penze:duchody-dle-veku a qb:DataStructureDefinition ;
 
 ### SECTION 8.2 - AVERAGE AGE OF PENSIONER BY PENSION KIND
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:prum-vek-duchodce-dle-druhu-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the average age of the pensioner by pension kind."@en, "Definice struktury datové kostky s průměrným věkem důchodců dle druhu důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the average age of pensioner was measured."@en, "Dimenze reprezentující rok, za který je průměrý věk důchodce uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the average age of pensioner was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrný věk důchodce uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the average age of pensioner was measured."@en, "Dimenze reprezentující pohlaví, za které je půrměrný věk důchodce uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerny-vek ;
+    qb:measure cssz-measure:prumerny-vek ;
     rdfs:label "The measure of the average age of a pensioner in a given year, with a given kind of pension and of the given sex."@en,
                "Měření průměrného věku důchodce podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -650,32 +634,32 @@ def-dc-penze:prum-vek-duchodce-dle-druhu-duchodu a qb:DataStructureDefinition ;
   
 ### SECTION 8.3 NUMBER OF PAID OUT PENSIONS BY MONTHLY AMOUNT
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:vyplacene-duchody-dle-vyse a qb:DataStructureDefinition ;
+cssz-dsd:vyplacene-duchody-dle-vyse a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of paid-out pensions in the Czech Republic by age the monthly amount of pension."@en, "Definice struktury datové kostky s počty vypláceých důchodů v ČR dle měsíční výše důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of paid-out pensions was measured."@en, "Dimenze reprezentující rok, za který je počet vyplácených důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of paid-out pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet vyplácených důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of paid-out pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet vyplácených důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:mesicni-vyse-duchodu ;
+    qb:dimension cssz-dimension:mesicni-vyse-duchodu ;
     qb:order 4 ;
     rdfs:label "The dimension representing the scalce of the monthly amount of the pension."@en, "Dimenze reprezentující škálu výše měsíční výše důchod pro měření počtu vyplácených důchodů dle této výše."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the the number of paid-out pensions in the given year, with the given kind of pension and the given monthly amount, to persons of a given sex."@en,
                "Měření počtu vyplácených důchodů podle roku, druhu důchodu, jeho měsíční výše a pohlaví."@cs
   ] ;
@@ -689,27 +673,27 @@ def-dc-penze:vyplacene-duchody-dle-vyse a qb:DataStructureDefinition ;
 
 ### SECTION 8.3 AVERAGE MONTHLY AMOUNT OF PENSION BY PENSION KIND
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the average amount of the monthly pension in the Czech Republic by the pension kind."@en, "Definice struktury datové kostky udávající průměrnou měsíční výši důchodu dle druhu důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the average pension was measured."@en, "Dimenze reprezentující rok, za který je průměrná výše důchodu uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for the average pension was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrná výše důchodu uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the average pension was measured."@en, "Dimenze reprezentující pohlaví, za které je průměrná výše důchodu uvedena."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-v-kc ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-v-kc ;
     rdfs:label "The measure of the average pension in a given year, with a given kind of pension to persons of a given sex."@en,
                "Měření průměrné výše důchodu podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -723,32 +707,32 @@ def-dc-penze:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition 
 
 ### SECTION 9.1 - NEWLY AVARDED PENSIONS BY AGE
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:nove-priznane-duchody-dle-veku a qb:DataStructureDefinition ;
+cssz-dsd:nove-priznane-duchody-dle-veku a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of the newly awarded pensions the Czech Republic by the age of the pensioner."@en, "Definice struktury datové kostky s počty nově příznaných důchodů v ČR dle věku důchodce."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vekova-kategorie ;
+    qb:dimension cssz-dimension:vekova-kategorie ;
     qb:order 4 ;
     rdfs:label "The dimension representing an age for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující věk, za který je počet nově příznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the number of newly awarded pensions in the given year, with the given kind of pension, to persons of the given sex and age."@en,
                "Měření počtu nově příznaných důchodů podle roku, druhu důchodu, pohlaví, věku a kraje."@cs
   ] ;
@@ -762,27 +746,27 @@ def-dc-penze:nove-priznane-duchody-dle-veku a qb:DataStructureDefinition ;
   
 ### SECTION 9.1 - AVERAGE AGE OF A PENSIONER WITH THE NEWLY AVARDED PENSION BY THE PENSION KIND
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataStructureDefinition ;
+cssz-dsd:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the average age of a pensioner with the newly avarded pension classified by the pension kind."@en, "Definice struktury datové kostky pro průměrný věku důchodce u nově přiznaných důchodů podle druhu důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the average age of a pensioner with the newly avarded pension was measured."@en, "Dimenze reprezentující rok, za který je průměrný věku důchodce u nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the average age of a pensioner with the newly avarded pension was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrný věku důchodce u nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the average age of a pensioner with the newly avarded pension was measured."@en, "Dimenze reprezentující pohlaví, za které je průměrný věku důchodce u nově přiznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerny-vek-u-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:prumerny-vek-u-nove-priznanych-duchodu ;
     rdfs:label "The measure of the the average age of a pensioner with the newly avarded pension in the given year, with the given kind of pension and with the given sex."@en,
                "Měření průměrného věku důchodce u nově přiznaných důchodů podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -796,32 +780,32 @@ def-dc-penze:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataStructureDefi
   
 ### SECTION 9.2 - NEWLY AVARDED PENSIONS BY THE MONTHLY AMOUNT OF PENSION
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:nove-priznane-duchody-dle-vyse-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of newly awarded pensions the Czech Republic by monthly amount of the pension."@en, "Definice struktury datové kostky s počty nově příznaných důchodů v ČR dle měsíční výše důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:mesicni-vyse-duchodu ;
+    qb:dimension cssz-dimension:mesicni-vyse-duchodu ;
     qb:order 4 ;
     rdfs:label "The dimension representing a monthly amount of the pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující měsíční výši důchodu, za kterou je počet nově příznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the number of newly awarded pensions in the given year, with the given kind of pension and monthly amount, to persons of the given sex."@en,
                "Měření počtu nově příznaných důchodů podle roku, druhu důchodu, pohlaví."@cs
   ] ;
@@ -835,27 +819,27 @@ def-dc-penze:nove-priznane-duchody-dle-vyse-duchodu a qb:DataStructureDefinition
   
 ### SECTION 9.2 - AVERAGE AMOUNT OF PENSION OF THE PENSIONERS WITH THE NEWLY AVARDED PENSION BY THE PENSION KIND
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the average amount of pension of pensioners with the newly awarded pension the Czech Republic by the pension kind."@en, "Definice struktury datové kostky s daty o průměrné výši důchodu u nově přiznaných důchodů dle druhu důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the average amount of pension of pensioners with the newly awarded pension was measured."@en, "Dimenze reprezentující rok, za který je průměrná výše důchodu u nově přiznaných důchodů uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the average amount of pension of pensioners with the newly awarded pension was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrná výše důchodu u nově přiznaných důchodů uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the average amount of pension of pensioners with the newly awarded pension was measured."@en, "Dimenze reprezentující pohlaví, za které je průměrná výše důchodu u nově přiznaných důchodů uvedena."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-u-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-u-nove-priznanych-duchodu ;
     rdfs:label "The measure of the the average amount of pension of pensioners with the newly awarded pension in the given year, with the given kind of pension, to persons of the given sex."@en,
                "Měření průměrné výše důchodu u nově přiznaných důchodů podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -869,32 +853,32 @@ def-dc-penze:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a q
 
 ### SECTION 9.3 - NUMBERS OF NEWLY AVARDED PENSIONS BY THE PERSONAL ASSESSMENT BASE
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataStructureDefinition ;
+cssz-dsd:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the numbers of newly awarded pensions in the Czech Republic by the personal assessment base."@en, "Definice struktury datové kostky s počty nově příznaných důchodů v ČR dle osobního vyměřovacího základu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vyse-osobniho-vymerovaciho-zakladu ;
+    qb:dimension cssz-dimension:vyse-osobniho-vymerovaciho-zakladu ;
     qb:order 4 ;
     rdfs:label "The dimension representing a personal assessment base for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující výši osobního vyměřovacího základu (pásmo), pro který je počet nově příznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the number of the newly awarded pensions in the given year, with the given kind of pension, to persons of the given sex and with the given personal assessment base."@en,
                "Měření počtu nově příznaných důchodů podle roku, druhu důchodu, pohlaví a osobního vyměřovacího základu."@cs
   ] ;
@@ -908,27 +892,27 @@ def-dc-penze:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSt
   
 ### SECTION 9.3 - AVERAGE PERSONAL ASSESSMENT BASE OF THE PENSIONERS WITH THE NEWLY AVARDED PESION BY THE PENSION KIND
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the average amount of the personal assessment base of pensioners with the newly avarded pension by the pension kind."@en, "Definice struktury datové kostky průměrné výše osobního vyměřovacího základu u nově přiznaných důchodů dle druhu důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the average amount of the personal assessment base of pensioners with the newly avarded pension was measured."@en, "Dimenze reprezentující rok, za který je průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the average amount of the personal assessment base of pensioners with the newly avarded pension was measured."@en, "Dimenze reprezentující druh důchodu, pro který je průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů uvedena."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 3 ;
     rdfs:label "The dimension representing a sex for which the average amount of the personal assessment base of pensioners with the newly avarded pension was measured."@en, "Dimenze reprezentující pohlaví, za které je průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů uvedena."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu ; 
+    qb:measure cssz-measure:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu ; 
     rdfs:label "The measure of the average amount of the personal assessment base of pensioners with the newly avarded pension in the given year, with the given kind of pension and to persons of the given sex."@en,
                "Měření počtu průměrné výše osobního vyměřovacího základu u nově přiznaných důchodů podle roku, druhu důchodu a pohlaví."@cs
   ] ;
@@ -942,32 +926,32 @@ def-dc-penze:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-p
 
 ### SECTION 10 - EXPIRED PENSIONS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:zanikle-duchody a qb:DataStructureDefinition ;
+cssz-dsd:zanikle-duchody a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of expired pensions by the reason for expiration."@en, "Definice struktury datové kostky počtu zaniklých důchodů dle důvodu zániku důchodu."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of expired pensions was measured."@en, "Dimenze reprezentující rok, za který je počet zaniklých důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of expired pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet zaniklých důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:duvod-zaniku-duchodu ;
+    qb:dimension cssz-dimension:duvod-zaniku-duchodu ;
     qb:order 3 ;
     rdfs:label "The dimension representing the reason for expiration for which the number of expired pensions was measured."@en, "Dimenze reprezentující důvod zániku důchodu, pro který je počet zaniklých důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 4 ;
     rdfs:label "The dimension representing a sex for which the number of expired pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet zaniklých důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-zaniklych-duchodu ;
+    qb:measure cssz-measure:pocet-zaniklych-duchodu ;
     rdfs:label "The measure of the number of expired pensions in the given year, with the given kind of pension, to persons of the given sex and with the given expiration reason."@en,
                "Měření počtu zaniklých důchodů podle roku, druhu důchodu, pohlaví a důvodu zánik důchodu."@cs
   ] ;
@@ -981,37 +965,37 @@ def-dc-penze:zanikle-duchody a qb:DataStructureDefinition ;
 
 ### SECTION 11 - EXPIRED PENSIONS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:invalidita a qb:DataStructureDefinition ;
+cssz-dsd:invalidita a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of the newly awarded pensions by ICD-10 groups of diagnoses."@en, "Definice struktury datové kostky počtu nově přiznaných důchodů podle skupin diagnóz definovaných v MKN-10."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:skupina-diagnoz-dle-who ;
+    qb:dimension cssz-dimension:skupina-diagnoz-dle-who ;
     qb:order 3 ;
     rdfs:label "The dimension representing the group of diagnoses defined by WHO in ICD-10 for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující skupinu diagnóz dle MKD-10 definované WHO, pro kterou je počet nově přiznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:vekova-kategorie ;
+    qb:dimension cssz-dimension:vekova-kategorie ;
     qb:order 4 ;
     rdfs:label "The dimension representing an age for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující věk, za který je počet nově příznaných důchodů uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 5 ;
     rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově přiznaných důchodů uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-nove-priznanych-duchodu ;
+    qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the number of newly awarded pensions in the given year, with the given kind of pension, to persons of the given age and sex and with the given ICD-10 group of diagnoses."@en,
                "Měření počtu nově přiznaných důchodů podle roku, druhu důchodu, pohlaví, věku a skupiny diagnóz dle MKN-10."@cs
   ] ;
@@ -1026,32 +1010,32 @@ def-dc-penze:invalidita a qb:DataStructureDefinition ;
 ### SECTION 12 - CHANGES BETWEEN DEGREES OF DISABILITY PENSIONS
 ### APPLICABLE FOR 2012, 2011, 2010
 ### No data available for years 2008 and 2009
-def-dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataStructureDefinition ;
+cssz-dsd:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the number of disability pensions after the change in the disability degree."@en, "Definice struktury datové kostky počtu invalidních důchodů po změně stupně invalidity."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the number pensions after the change of the disability degree was measured."@en, "Dimenze reprezentující rok, za který je počet důchodů po změně invalidního stupně uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the number pensions after the change of the disability degree was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet důchodů po změně invalidního stupně uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:duvod-zmeny-invalidniho-duchodu ;
+    qb:dimension cssz-dimension:duvod-zmeny-invalidniho-duchodu ;
     qb:order 3 ;
     rdfs:label "The dimension representing the statistical reason for grade change for which the number pensions after the change of the disability degree was measured."@en, "Dimenze reprezentující statistický důvod změny stupně invalidity, pro který je počet důchodů po změně invalidního stupně uveden."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 5 ;
     rdfs:label "The dimension representing a sex for which the number pensions after the change of the disability degree was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodů po změně invalidního stupně uveden."@cs
   ] ;
   # Measure
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the number pensions after the change of the disability degree in the given year, with the given kind of pension, to persons of the given sex and with the given statistical reason for grade change. This measure represents the number of paid-out pensions after the change in the disability degree."@en,
                "Měření počtu důchodů po změně invalidního stupně podle roku, druhu důchodu, pohlaví a statistického důvodu změny stupně invalidity. Je udáván počet důchodů po změně stupně invalidity."@cs
   ] ;
@@ -1065,17 +1049,17 @@ def-dc-penze:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataStructureDefinition 
 
 ### ANNEXES - GRAPHS 1-6
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
+cssz-dsd:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the time series data presented in the annexes of the pension statistics yearbooks (graphs 1-6)."@en,
              "Definice struktury datové kostky pro data časových řad obsažená v přílohách statistické ročenky (grafy 1-6)."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the measures ware measured."@en, "Dimenze reprezentující rok, za který je uváděna hodnota pozorování."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:pohlavi ;
+    qb:dimension cssz-dimension:pohlavi ;
     qb:order 2 ;
     rdfs:label "The dimension representing a sex for which the measures was measured."@en, "Dimenze reprezentující pohlaví, za které je uváděna hodnota pozorování."@cs
   ] ;
@@ -1087,32 +1071,32 @@ def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the number of paid-out pensions in the given year and to persons of the given sex."@en,
                "Měření počtu vyplácených důchodů podle roku a pohlaví."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-v-kc ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-v-kc ;
     rdfs:label "The measure of the average pension in the given year and to persons of a given sex."@en,
                "Měření průměrné výše důchodu podle roku a pohlaví."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu ;
+    qb:measure cssz-measure:pocet-duchodcu ;
     rdfs:label "The measure of the number of pensioners in a given year and with a given sex."@en,
                "Měření počtu důchodců podle roku a pohlaví."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-duchodu-vyplacena-duchodcum ;
+    qb:measure cssz-measure:prumerna-vyse-duchodu-vyplacena-duchodcum ;
     rdfs:label "The measure of the average pension paid-out to pensioners in the given year and to persons of a given sex."@en,
                "Měření průměrné výše důchodu vyplácená důchodcům podle roku a pohlaví."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobni-duchod ;
+    qb:measure cssz-measure:pocet-duchodcu-pobirajicich-solo-starobni-duchod ;
     rdfs:label "The measure of the number of pensioners with the solo old-age pension in a given year and with a given sex. It is a sum of different types of old pensions. These types are not the same in every of the reported years. Old-age pensions of the SI type are included since 2010."@en,
                "Měření počtu důchodců pobírajících sólo starobní důchod podle roku a pohlaví. Jedná se o sumu za různé druhy starobních důchodů. Typy starobních důchodů se mezi roky liší. Od roku 2010 jsou zahrnuty starobní důchody typu SI."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:prumerna-vyse-solo-starobnich-duchodu ;
+    qb:measure cssz-measure:prumerna-vyse-solo-starobnich-duchodu ;
     rdfs:label "The measure of the average old-age pension in the given year and to persons of a given sex. Types of the old-age pensions might be different in the measured years. Old-age pensions of the SI type are included since 2010."@en,
                "Měření průměrné výše sólo vyplácených starobních důchodů podle roku a pohlaví. Zahrnuté druhy starobních důchodů se mezi roky mohou lišit. Od roku 2010 jsou zahrnuty starobní důchody typu SI."@cs
   ] ;
@@ -1126,17 +1110,17 @@ def-dc-penze:casove-rady-grafy-1-6 a qb:DataStructureDefinition ;
 
 ### ANNEXES - GRAPHS 7-8
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
+cssz-dsd:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the time series data presented in the annexes of the pension statistics yearbooks (graphs 7-8)."@en,
              "Definice struktury datové kostky pro data časových řad obsažená v přílohách statistické ročenky (grafy 7-8)."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the measures ware measured."@en, "Dimenze reprezentující rok, za který je uváděna hodnota pozorování."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the measure was measured."@en, "Dimenze reprezentující druh důchodu, pro který je hodnota pozorování uvedena."@cs
   ] ;
@@ -1148,12 +1132,12 @@ def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:pocet-vyplacenych-duchodu ;
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
     rdfs:label "The measure of the number of paid-out pensions in the given year and with the give type of pension."@en,
                "Měření počtu vyplácených důchodů podle roku a druhu důchodu."@cs
   ] ;
   qb:component [
-    qb:measure def-dc-penze:vydaje-na-duchody-v-tis-kc ;
+    qb:measure cssz-measure:vydaje-na-duchody-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions of the given pension kind in thousands of CZK."@en,
                "Měření výdajů na důchody daného typu v tisících Kč."@cs
   ] ;
@@ -1167,23 +1151,23 @@ def-dc-penze:casove-rady-grafy-7-8 a qb:DataStructureDefinition ;
 
 ### ANNEXES - GRAPH 9
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
-def-dc-penze:casove-rady-grafy-9 a qb:DataStructureDefinition ;
+cssz-dsd:casove-rady-grafy-9 a qb:DataStructureDefinition ;
   rdfs:label "The definition of the structure of the data cube of the time series data presented in the annexes of the pension statistics yearbooks (graph 9)."@en,
              "Definice struktury datové kostky pro data časových řad obsažená v přílohách statistické ročenky (graf 9)."@cs ;
   # Dimensions
   qb:component [
-    qb:dimension def-dc-penze:refPeriod ;
+    qb:dimension cssz-dimension:refPeriod ;
     qb:order 1 ;
     rdfs:label "The dimension representing a year in which the measures ware measured."@en, "Dimenze reprezentující rok, za který je uváděna hodnota pozorování."@cs
   ] ;
   qb:component [
-    qb:dimension def-dc-penze:druh-duchodu ;
+    qb:dimension cssz-dimension:druh-duchodu ;
     qb:order 2 ;
     rdfs:label "The dimension representing a kind of pension for which the measure was measured."@en, "Dimenze reprezentující druh důchodu, pro který je hodnota pozorování uvedena."@cs
   ] ;
   # Measures
   qb:component [
-    qb:measure def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
+    qb:measure cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc ;
     rdfs:label "The measure of the spendings on pensions of the given pension kind in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en,
                "Měření výdajů na důchody daného druhu důchodu v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs
   ] ;
@@ -1199,206 +1183,205 @@ def-dc-penze:casove-rady-grafy-9 a qb:DataStructureDefinition ;
 ### Definition of measures and properties
 
 
-def-dc-penze:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "quantile of the relative amount of pension"@en, "kvantil relativní výše důchodu"@cs ;
   rdfs:comment "Distribution of pensions according to their quantile of their relative amount."@en, "Rozdělení důchodů podle kvantilu jejich relativní výše."@cs ;
   rdfs:range qua-onto:Quantile ;
   qb:concept dbpedia:Quantile .
 
-def-dc-penze:vyse-osobniho-vymerovaciho-zakladu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:vyse-osobniho-vymerovaciho-zakladu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "amount of the personal assessment base"@en, "výše osobního vyměřovacího základu"@cs ;
   rdfs:comment "Distribution of persons according to the amount of their personal assessment base."@en, "Rozdělení osob podle výše jejich osobního vyměřovacího základu."@cs ;
   rdfs:range ran-onto:Range ;
   qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
 
-def-dc-penze:mesicni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:mesicni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "amount of the pension"@en, "výše důchodu"@cs ;
   rdfs:comment "Distribution of entities according to the amount of their monthly pension."@en, "Rozdělení entit podle výše jejich měsíčního důchodu."@cs ;
   rdfs:range ran-onto:Range ;
   qb:concept dbpedia:Pension .
   
-def-dc-penze:druh-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:druh-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "kind of pension"@en, "druh důchodu"@cs ;
   rdfs:comment "Distribution of entities according to the kind of pension."@en, "Rozdělení entit podle druhu důchodu."@cs ;
   rdfs:range pen-onto:PensionKind ;
   qb:concept dbpedia:Pension, dbpedia:Natural_kind .
 
-def-dc-penze:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "pension cancellation reason"@en, "důvod zániku důchodu"@cs ;
   rdfs:comment "Distribution of entities according to the reason of pension cancellation."@en, "Rozdělení entit podle důvodu zániku důchodu."@cs ;
   rdfs:range pencan-onto:PensionCancellationReason ;
   qb:concept dbpedia:Pension, dbpedia:Natural_kind .
   
-def-dc-penze:stupen-invalidity a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:stupen-invalidity a rdf:Property, qb:DimensionProperty ;
   rdfs:label "disability level"@en, "stupeň invalidity"@cs ;
   rdfs:comment "Distribution of entities according to the disability level."@en, "Rozdělení entit podle stupně invalidity."@cs ;
   rdfs:range dis-onto:DisabilityLevel ;
   qb:concept dbpedia:Disability, dbpedia:Natural_kind .
 
-def-dc-penze:duvod-zmeny-invalidniho-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:duvod-zmeny-invalidniho-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "disability change reason"@en, "důvod změny invalidního důchodu"@cs ;
   rdfs:comment "Distribution of entities according to the disability change reason."@en, "Rozdělení entit podle důvodu změny invalidního důchodu."@cs ;
   rdfs:range pencan-onto:PensionCancellationReason ;
   qb:concept dbpedia:Disability, dbpedia:Natural_kind .
 
-def-dc-penze:refPeriod a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:refPeriod a rdf:Property, qb:DimensionProperty ;
   rdfs:label "reference period"@en, "referenční období"@cs ;
   rdfs:comment "The period of time or point in time to which the measured observation is intended to refer."@en, "Časové období nebo místo v čase, pro které platí měřená hodnota."@cs ;
   rdfs:subPropertyOf sdmx-dimension:refPeriod ;
   rdfs:range interval:Interval ;
   qb:concept sdmx-concept:refPeriod .
 
-def-dc-penze:rok-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:rok-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "year of expiration of the pension"@en, "rok zániku důchodu"@cs ;
   rdfs:comment "A year in which some pension expired."@en, "Rok, ve kterém došlo k zániku důvodu pro pobírání určitého důchodu."@cs ;
   rdfs:subPropertyOf sdmx-dimension:refPeriod ;
   rdfs:range interval:Interval ;
   qb:concept sdmx-concept:refPeriod .
   
-def-dc-penze:refArea a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:refArea a rdf:Property, qb:DimensionProperty ;
   rdfs:label "reference area"@en, "referenční oblast"@cs ;
   rdfs:comment "The country or geographic area to which the measured statistical phenomenon relates."@en, "Geografická oblast, pro kterou je hodnota měřena."@cs ;
   rdfs:subPropertyOf sdmx-dimension:refArea ;
   qb:concept sdmx-concept:refArea .
 
-def-dc-penze:pohlavi a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:pohlavi a rdf:Property, qb:DimensionProperty ;
   rdfs:label "sex"@en, "pohlaví"@cs ;
   rdfs:comment "The state of being male or female."@en, "Hodnota, která udává, zda je osoba mužem či ženou."@cs ;
   rdfs:subPropertyOf sdmx-dimension:sex ;
   qb:concept sdmx-concept:sex .
   
-def-dc-penze:vekova-kategorie a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:vekova-kategorie a rdf:Property, qb:DimensionProperty ;
   rdfs:label "age"@en, "věk"@cs ;
   rdfs:comment "Distribution of people according to their age."@en, "Rozdělení osob podle jejich věku."@cs ;
   rdfs:subPropertyOf sdmx-dimension:age ;
   rdfs:range age:Age ;
   qb:concept sdmx-concept:age .
 
-def-dc-penze:skupina-osob a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:skupina-osob a rdf:Property, qb:DimensionProperty ;
   rdfs:label "group of persons"@en, "skupina osob"@cs ;
   rdfs:comment "Defined group of persons."@en, "Vymezená skupina osob."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range czgop-onto:Group ;
   qb:concept dbpedia:Natural_kind .
 
-def-dc-penze:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "reason for expiration"@en, "důvod zániku důchodu"@cs ;
   rdfs:comment "Reason why some pension expired."@en, "Důvod, proč určitý důchod zanikl."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range pencan-onto:PensionCancellationReason ;
   qb:concept dbpedia:Natural_kind .
 
-def-dc-penze:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
   rdfs:label "group of diagnoses defined by WHO"@en, "skupina diagnóz dle WHO"@cs ;
   rdfs:comment "Group of diagnoses defined by WHO in ICD-10."@en, "Skupina diagnóz definovaná WHO v MKN-10."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range icd10-onto:Chapter ;
   qb:concept dbpedia:Natural_kind .
   
-def-dc-penze:pocet-osob a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-osob a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of persons"@en, "počet osob"@cs ;
   rdfs:comment "The total number of a defined group of people."@en, "Celkový počet osob určité skupiny."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept sdmx-concept:statPop .
 
-def-dc-penze:pocet-obyvatel a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-obyvatel a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of inhabitants"@en, "počet obyvatel"@cs ;
   rdfs:comment "The number of people living in some area."@en, "Počet osob žijicích v určité oblasti."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept sdmx-concept:statPop .
 
-def-dc-penze:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of pensioners"@en, "počet důchodců"@cs ;
   rdfs:comment "Number of persons with some kind of pension."@en, "Počet osob pobírajících nějaký druh důchodu."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of pensioners with solo old-age pension"@en, "počet důchodců pobírajících sólo starobní důchod"@cs ;
   rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out. Pensions of the SR type are included starting from 2004, in the previous years this type of pension si not included."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí. Důchody typu SR nejsou zahrnuty do roku 2003 včetně."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
   
-def-dc-penze:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of pensions"@en, "počet důchodů"@cs ;
   rdfs:comment "The size of a defined class of pensions."@en, "Velikost definované třídy důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:pocet-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of newly awared pensions"@en, "počet nově přiznaných důchodů"@cs ;
   rdfs:comment "The number of newly awarded pensions."@en, "Počet nově přiznaných důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
   
-def-dc-penze:prumerna-vyse-duchodu-v-kc a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerna-vyse-duchodu-v-kc a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of pension"@en, "průměrná výše důchodu"@cs ;
   rdfs:comment "The average amount of pension of a defined class of entities."@en, "Průměrná výše důchodu definované třídy entit."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:prumerna-vyse-duchodu-vyplacena-duchodcum a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerna-vyse-duchodu-vyplacena-duchodcum a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of pension paid-out to pensioners"@en, "průměrná výše důchodu vyplácená důchodcům"@cs ;
   rdfs:comment "The average amount of pension that is paid-out to pensioners."@en, "Průměrná výše důchodu, která je vyplácená důchodcům."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:prumerna-vyse-solo-starobnich-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerna-vyse-solo-starobnich-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of solo old-age pension"@en, "průměrná výše sólo vyplácených starobních důchodů"@cs ;
   rdfs:comment "The average amount of the solo old-age pension in CZK."@en, "Průměrná výše sólo vyplácených starobních důchodů v Kč."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of pension of the pensioner with the newly avarded pension"@en, "průměrná výše důchodu u nově přiznaných důchodů"@cs ;
   rdfs:comment "The average amount of pension of a pensioner who was newly avarder with a pension in some year."@en, "Průměrná výše důchodu důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+cssz-measure:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
   rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v tis. Kč"@cs ;
   rdfs:comment "The amount of money spent on pensions in thousands of CZK."@en, "Výše výdajů na důchody v tisících Kč."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
 
-def-dc-penze:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
   rdfs:label "pensions spendings adjusted for cash advandes in thousands of CZK"@en, "výdaje na důchody opravené o zálohy v tisících Kč"@cs ;
   rdfs:comment "The amount of money spent on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en, "Výše výdajů na důchody v tisících Kč. Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
   
-def-dc-penze:prumerny-vek a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerny-vek a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average age"@en, "průměrný věk"@cs ;
   rdfs:comment "The average age of a defined class of persons."@en, "Průměrný věk definované třídy osob."@cs ;
   rdfs:subPropertyOf sdmx-measure:age ;
   rdfs:range age:Age ;
   qb:concept sdmx-concept:age .
 
-def-dc-penze:prumerny-vek-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerny-vek-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average age of a pensioner with the newly avarded pension"@en, "průměrný věk u nově přiznaných důchodů"@cs ;
   rdfs:comment "The average age of a pensioner who was newly avarder with a pension in some year."@en, "Průměrný věk důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
   rdfs:subPropertyOf sdmx-measure:age ;
   rdfs:range age:Age ;
   qb:concept sdmx-concept:age .
 
-# Je to správně? Má to být navázáno na qb:concept sdmx-concept:refPeriod?
-def-dc-penze:prumerna-doba-pobirani-radneho-starobniho-duchodu a rdf:Property, qb:DimensionProperty ;
+cssz-dimension:prumerna-doba-pobirani-radneho-starobniho-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "average number of years an old-age pension is being paid-out to a pensiner"@en, "průměrná doba pobírání starobního důchodu"@cs ;
   rdfs:comment "Average number of years an old-age pension is being paid-out to a pensiner."@en, "Průměrná doba pobírání starobního důchodu."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept sdmx-concept:refPeriod .
 
-def-dc-penze:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "average amount of the personal assessment base of pensioners with the newly avarded pension"@en, "průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů"@cs ;
   rdfs:comment "Average amount of the personal assessment base of pensioners with the newly avarded pension."@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger ;
   qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
 
-def-dc-penze:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
+cssz-measure:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of expired pensions"@en, "počet zaniklých důchodů"@cs ;
   rdfs:comment "Number of pensions that expired for some of the defined reasons for expiration."@en, "Počet důchodů, které zanikly z některého z definovaných důvodů zaniku důchodu."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
