@@ -73,6 +73,7 @@ ran:I3000T3499  a skos:Concept, ran-onto:Range ;
 ran:I3500T3999  a skos:Concept, ran-onto:Range ;
   skos:prefLabel "3500-3999" ;
   skos:notation "I3500T3999" ;
+  skos:inScheme ran-onto:RangeScheme .
 ran:I4000T4999 a skos:Concept, ran-onto:Range ;
   skos:prefLabel "4000-4999" ;
   skos:notation "I4000T4999" ;
