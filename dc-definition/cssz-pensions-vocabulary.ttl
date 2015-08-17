@@ -1,0 +1,250 @@
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix interval:	<http://reference.data.gov.uk/def/intervals/> .
+@prefix dcterms:  <http://purl.org/dc/terms/>.
+
+@prefix age:  	 	<http://linked.opendata.cz/generated/resource/age/> .
+
+@prefix qb:              <http://purl.org/linked-data/cube#> .
+@prefix sdmx:            <http://purl.org/linked-data/sdmx#> .
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+@prefix dbpedia:  		<http://dbpedia.org/resource/> .
+
+@prefix cssz-dimension:		<http://data.cssz.cz/ontology/dimension/> .
+@prefix cssz-measure:		<http://data.cssz.cz/ontology/measure/> .
+@prefix cssz-dsd:			<http://data.cssz.cz/resource/data-structure-definition/> .
+@prefix cssz:	 			<http://data.cssz.cz/ontology/> .
+
+@prefix age:   			<http://linked.opendata.cz/generated/resource/age/> .
+@prefix age-onto:  		<http://linked.opendata.cz/ontology/age/> .
+@prefix qua-onto:   	<http://linked.opendata.cz/ontology/quantiles/> .
+@prefix ran-onto:   	<http://linked.opendata.cz/ontology/ranges/> .
+
+@prefix ybs-onto: 	 	<http://data.cssz.cz/ontology/yearbook-sections/> .
+@prefix pen-onto:   	<http://data.cssz.cz/ontology/pension-kinds/> .
+@prefix pencan-onto:   	<http://data.cssz.cz/ontology/pension-cancellation-reasons/> .
+@prefix dis-onto:   	<http://data.cssz.cz/ontology/disability-levels/> .
+@prefix czgop-onto:   	<http://data.cssz.cz/ontology/groups-of-persons/> .
+@prefix icd10-onto:   	<http://data.cssz.cz/ontology/icd-10/> .
+
+
+cssz:yearbookSection a rdf:Property ;
+  rdfs:subPropertyOf dcterms:source ;
+  rdfs:domain qb:DataSet ;
+  rdfs:range ybs-onto:YearbookSection ;
+  rdfs:comment "Kapitola ročenky z oblasti důchodového pojištění ČSSZ, ve které jsou obsažena zdrojová data datové kostky."@cs,
+               "Section of the pension statistics yearbook published by the Czech Social Security Administration which contains tje source data of the data cube." .
+
+### Definition of measures and properties
+
+cssz-dimension:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "quantile of the relative amount of pension"@en, "kvantil relativní výše důchodu"@cs ;
+  rdfs:comment "Distribution of pensions according to their quantile of their relative amount."@en, "Rozdělení důchodů podle kvantilu jejich relativní výše."@cs ;
+  rdfs:range qua-onto:Quantile ;
+  qb:concept dbpedia:Quantile .
+
+cssz-dimension:vyse-osobniho-vymerovaciho-zakladu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "amount of the personal assessment base"@en, "výše osobního vyměřovacího základu"@cs ;
+  rdfs:comment "Distribution of persons according to the amount of their personal assessment base."@en, "Rozdělení osob podle výše jejich osobního vyměřovacího základu."@cs ;
+  rdfs:range ran-onto:Range ;
+  qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
+
+cssz-dimension:mesicni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "amount of the pension"@en, "výše důchodu"@cs ;
+  rdfs:comment "Distribution of entities according to the amount of their monthly pension."@en, "Rozdělení entit podle výše jejich měsíčního důchodu."@cs ;
+  rdfs:range ran-onto:Range ;
+  qb:concept dbpedia:Pension .
+  
+cssz-dimension:druh-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "kind of pension"@en, "druh důchodu"@cs ;
+  rdfs:comment "Distribution of entities according to the kind of pension."@en, "Rozdělení entit podle druhu důchodu."@cs ;
+  rdfs:range pen-onto:PensionKind ;
+  qb:concept dbpedia:Pension, dbpedia:Natural_kind .
+
+cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "pension cancellation reason"@en, "důvod zániku důchodu"@cs ;
+  rdfs:comment "Distribution of entities according to the reason of pension cancellation."@en, "Rozdělení entit podle důvodu zániku důchodu."@cs ;
+  rdfs:range pencan-onto:PensionCancellationReason ;
+  qb:concept dbpedia:Pension, dbpedia:Natural_kind .
+  
+cssz-dimension:stupen-invalidity a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "disability level"@en, "stupeň invalidity"@cs ;
+  rdfs:comment "Distribution of entities according to the disability level."@en, "Rozdělení entit podle stupně invalidity."@cs ;
+  rdfs:range dis-onto:DisabilityLevel ;
+  qb:concept dbpedia:Disability, dbpedia:Natural_kind .
+
+cssz-dimension:duvod-zmeny-invalidniho-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "disability change reason"@en, "důvod změny invalidního důchodu"@cs ;
+  rdfs:comment "Distribution of entities according to the disability change reason."@en, "Rozdělení entit podle důvodu změny invalidního důchodu."@cs ;
+  rdfs:range pencan-onto:PensionCancellationReason ;
+  qb:concept dbpedia:Disability, dbpedia:Natural_kind .
+
+cssz-dimension:refPeriod a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "reference period"@en, "referenční období"@cs ;
+  rdfs:comment "The period of time or point in time to which the measured observation is intended to refer."@en, "Časové období nebo místo v čase, pro které platí měřená hodnota."@cs ;
+  rdfs:subPropertyOf sdmx-dimension:refPeriod ;
+  rdfs:range interval:Interval ;
+  qb:concept sdmx-concept:refPeriod .
+
+cssz-dimension:rok-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "year of expiration of the pension"@en, "rok zániku důchodu"@cs ;
+  rdfs:comment "A year in which some pension expired."@en, "Rok, ve kterém došlo k zániku důvodu pro pobírání určitého důchodu."@cs ;
+  rdfs:subPropertyOf sdmx-dimension:refPeriod ;
+  rdfs:range interval:Interval ;
+  qb:concept sdmx-concept:refPeriod .
+  
+cssz-dimension:refArea a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "reference area"@en, "referenční oblast"@cs ;
+  rdfs:comment "The country or geographic area to which the measured statistical phenomenon relates."@en, "Geografická oblast, pro kterou je hodnota měřena."@cs ;
+  rdfs:subPropertyOf sdmx-dimension:refArea ;
+  qb:concept sdmx-concept:refArea .
+
+cssz-dimension:pohlavi a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "sex"@en, "pohlaví"@cs ;
+  rdfs:comment "The state of being male or female."@en, "Hodnota, která udává, zda je osoba mužem či ženou."@cs ;
+  rdfs:subPropertyOf sdmx-dimension:sex ;
+  qb:concept sdmx-concept:sex .
+  
+cssz-dimension:vekova-kategorie a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "age"@en, "věk"@cs ;
+  rdfs:comment "Distribution of people according to their age."@en, "Rozdělení osob podle jejich věku."@cs ;
+  rdfs:subPropertyOf sdmx-dimension:age ;
+  rdfs:range age:Age ;
+  qb:concept sdmx-concept:age .
+
+cssz-dimension:skupina-osob a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "group of persons"@en, "skupina osob"@cs ;
+  rdfs:comment "Defined group of persons."@en, "Vymezená skupina osob."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range czgop-onto:Group ;
+  qb:concept dbpedia:Natural_kind .
+
+cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "reason for expiration"@en, "důvod zániku důchodu"@cs ;
+  rdfs:comment "Reason why some pension expired."@en, "Důvod, proč určitý důchod zanikl."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range pencan-onto:PensionCancellationReason ;
+  qb:concept dbpedia:Natural_kind .
+
+cssz-dimension:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "group of diagnoses defined by WHO"@en, "skupina diagnóz dle WHO"@cs ;
+  rdfs:comment "Group of diagnoses defined by WHO in ICD-10."@en, "Skupina diagnóz definovaná WHO v MKN-10."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range icd10-onto:Chapter ;
+  qb:concept dbpedia:Natural_kind .
+  
+cssz-measure:pocet-osob a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of persons"@en, "počet osob"@cs ;
+  rdfs:comment "The total number of a defined group of people."@en, "Celkový počet osob určité skupiny."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger ;
+  qb:concept sdmx-concept:statPop .
+
+cssz-measure:pocet-obyvatel a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of inhabitants"@en, "počet obyvatel"@cs ;
+  rdfs:comment "The number of people living in some area."@en, "Počet osob žijicích v určité oblasti."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger ;
+  qb:concept sdmx-concept:statPop .
+
+cssz-measure:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of pensioners"@en, "počet důchodců"@cs ;
+  rdfs:comment "Number of persons with some kind of pension."@en, "Počet osob pobírajících nějaký druh důchodu."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of pensioners with solo old-age pension"@en, "počet důchodců pobírajících sólo starobní důchod"@cs ;
+  rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out. Pensions of the SR type are included starting from 2004, in the previous years this type of pension si not included."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí. Důchody typu SR nejsou zahrnuty do roku 2003 včetně."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+  
+cssz-measure:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of pensions"@en, "počet důchodů"@cs ;
+  rdfs:comment "The size of a defined class of pensions."@en, "Velikost definované třídy důchodů."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:pocet-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of newly awared pensions"@en, "počet nově přiznaných důchodů"@cs ;
+  rdfs:comment "The number of newly awarded pensions."@en, "Počet nově přiznaných důchodů."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+  
+cssz-measure:prumerna-vyse-duchodu-v-kc a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average amount of pension"@en, "průměrná výše důchodu"@cs ;
+  rdfs:comment "The average amount of pension of a defined class of entities."@en, "Průměrná výše důchodu definované třídy entit."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:prumerna-vyse-duchodu-vyplacena-duchodcum a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average amount of pension paid-out to pensioners"@en, "průměrná výše důchodu vyplácená důchodcům"@cs ;
+  rdfs:comment "The average amount of pension that is paid-out to pensioners."@en, "Průměrná výše důchodu, která je vyplácená důchodcům."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:prumerna-vyse-solo-starobnich-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average amount of solo old-age pension"@en, "průměrná výše sólo vyplácených starobních důchodů"@cs ;
+  rdfs:comment "The average amount of the solo old-age pension in CZK."@en, "Průměrná výše sólo vyplácených starobních důchodů v Kč."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average amount of pension of the pensioner with the newly avarded pension"@en, "průměrná výše důchodu u nově přiznaných důchodů"@cs ;
+  rdfs:comment "The average amount of pension of a pensioner who was newly avarder with a pension in some year."@en, "Průměrná výše důchodu důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v tis. Kč"@cs ;
+  rdfs:comment "The amount of money spent on pensions in thousands of CZK."@en, "Výše výdajů na důchody v tisících Kč."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+
+cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "pensions spendings adjusted for cash advandes in thousands of CZK"@en, "výdaje na důchody opravené o zálohy v tisících Kč"@cs ;
+  rdfs:comment "The amount of money spent on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en, "Výše výdajů na důchody v tisících Kč. Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .
+  
+cssz-measure:prumerny-vek a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average age"@en, "průměrný věk"@cs ;
+  rdfs:comment "The average age of a defined class of persons."@en, "Průměrný věk definované třídy osob."@cs ;
+  rdfs:subPropertyOf sdmx-measure:age ;
+  rdfs:range age:Age ;
+  qb:concept sdmx-concept:age .
+
+cssz-measure:prumerny-vek-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average age of a pensioner with the newly avarded pension"@en, "průměrný věk u nově přiznaných důchodů"@cs ;
+  rdfs:comment "The average age of a pensioner who was newly avarder with a pension in some year."@en, "Průměrný věk důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
+  rdfs:subPropertyOf sdmx-measure:age ;
+  rdfs:range age:Age ;
+  qb:concept sdmx-concept:age .
+
+cssz-dimension:prumerna-doba-pobirani-radneho-starobniho-duchodu a rdf:Property, qb:DimensionProperty ;
+  rdfs:label "average number of years an old-age pension is being paid-out to a pensiner"@en, "průměrná doba pobírání starobního důchodu"@cs ;
+  rdfs:comment "Average number of years an old-age pension is being paid-out to a pensiner."@en, "Průměrná doba pobírání starobního důchodu."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger ;
+  qb:concept sdmx-concept:refPeriod .
+
+cssz-measure:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "average amount of the personal assessment base of pensioners with the newly avarded pension"@en, "průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů"@cs ;
+  rdfs:comment "Average amount of the personal assessment base of pensioners with the newly avarded pension."@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger ;
+  qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
+
+cssz-measure:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "number of expired pensions"@en, "počet zaniklých důchodů"@cs ;
+  rdfs:comment "Number of pensions that expired for some of the defined reasons for expiration."@en, "Počet důchodů, které zanikly z některého z definovaných důvodů zaniku důchodu."@cs ;
+  rdfs:subPropertyOf sdmx-measure:obsValue ;
+  rdfs:range xsd:nonNegativeInteger .

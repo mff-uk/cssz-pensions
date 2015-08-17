@@ -2,10 +2,11 @@
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 @prefix interval:	<http://reference.data.gov.uk/def/intervals/> .
+@prefix dcterms:  <http://purl.org/dc/terms/>.
+@prefix qb:              <http://purl.org/linked-data/cube#> .
 
 @prefix age:  	 	<http://linked.opendata.cz/generated/resource/age/> .
 
-@prefix qb:              <http://purl.org/linked-data/cube#> .
 @prefix sdmx:            <http://purl.org/linked-data/sdmx#> .
 @prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
 @prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
@@ -17,9 +18,11 @@
 
 @prefix dbpedia:  		<http://dbpedia.org/resource/> .
 
+@prefix cssz: 			<http://data.cssz.cz/ontology/> .
 @prefix cssz-dimension:		<http://data.cssz.cz/ontology/dimension/> .
 @prefix cssz-measure:		<http://data.cssz.cz/ontology/measure/> .
 @prefix cssz-dsd:			<http://data.cssz.cz/resource/data-structure-definition/> .
+@prefix cssz-dataset:   <http://data.cssz.cz/resource/dataset/> .
 
 @prefix age:   			<http://linked.opendata.cz/generated/resource/age/> .
 @prefix age-onto:  		<http://linked.opendata.cz/ontology/age/> .
@@ -31,6 +34,446 @@
 @prefix dis-onto:   	<http://data.cssz.cz/ontology/disability-levels/> .
 @prefix czgop-onto:   	<http://data.cssz.cz/ontology/groups-of-persons/> .
 @prefix icd10-onto:   	<http://data.cssz.cz/ontology/icd-10/> .
+@prefix ybs:   			<http://data.cssz.cz/resource/yearbook-section/> .
+@prefix ybs-onto:   	<http://data.cssz.cz/ontology/yearbook-sections/> .
+
+### DataSets
+
+####### 5
+
+cssz-dataset:obyvatelstvo-podle-kraju a qb:DataSet ;
+  dcterms:title "Numbers of citizens in regions of Czech Republic"@en, "Počet obyvatel v krajích České republiky"@cs ;
+  rdfs:label "Numbers of citizens in regions of Czech Republic"@en, "Počet obyvatel v krajích České republiky"@cs ;
+  dcterms:description "Numbers of citizens by year, region of Czech Republic and sex"@en,
+    "Počet obyvatel podle roku, kraje České republiky a pohlaví"@cs ;
+  rdfs:comment "Numbers of citizens by year, region of Czech Republic and sex"@en,
+    "Počet obyvatel podle roku, kraje České republiky a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:obyvatelstvo-podle-kraju ;
+  cssz:yearbookSection ybs:S_Number_of_inhabitants_according_to_regions_2008, ybs:S_Number_of_inhabitants_according_to_regions_2009, ybs:S_Number_of_inhabitants_according_to_regions_2010 .
+
+cssz-dataset:obyvatelstvo-podle-veku a qb:DataSet ;
+  dcterms:title "Numbers of citizens based on age"@en, "Počet obyvatel ve věkových skupinách"@cs ;
+  rdfs:label "Numbers of citizens based on age"@en, "Počet obyvatel ve věkových skupinách"@cs ;
+  dcterms:description "Numbers of citizens based on age by year, age, and sex"@en,
+    "Počet obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  rdfs:comment "Numbers of citizens based on age by year, age, and sex"@en,
+    "Počet obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:obyvatelstvo-podle-veku ;
+  cssz:yearbookSection ybs:S_Age_structure_of_Czech_population_2008, ybs:S_Age_structure_of_Czech_population_2009, ybs:S_Age_structure_of_Czech_population_2010 .
+  
+cssz-dataset:relat-rozlozeni-populace a qb:DataSet ;
+  dcterms:title "Relative distribution of the population"@en, "Relativní rozložení populace"@cs ;
+  rdfs:label "Relative distribution of the population"@en, "Relativní rozložení populace"@cs ;
+  dcterms:description "Relative distribution of the population by year and group"@en,
+    "Relativní rozložení populace podle roku a skupiny"@cs ;
+  rdfs:comment "Relative distribution of the population by year and group"@en,
+    "Relativní rozložení populace podle roku a skupiny"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:relat-rozlozeni-populace ;
+  cssz:yearbookSection ybs:S_Relative_distribution_of_population_2008, ybs:S_Relative_distribution_of_population_2010 .
+
+cssz-dataset:srovnani-vekoveho-slozeni-obyvatel-v-letech a qb:DataSet ;
+  dcterms:title "Comparison of numbers of citizens based on age"@en, "Srovnání počtu obyvatel ve věkových skupinách"@cs ;
+  rdfs:label "Comparison of numbers of citizens based on age"@en, "Srovnání počtu obyvatel ve věkových skupinách"@cs ;
+  dcterms:description "Comparison of numbers of citizens based on age by year, age, and sex"@en,
+    "Srovnání počtu obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  rdfs:comment "Comparison of numbers of citizens based on age by year, age, and sex"@en,
+    "Srovnání počtu obyvatel ve věkových skupinách podle roku, věkové skupiny a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.1, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:srovnani-vekoveho-slozeni-obyvatel-v-letech ;
+  cssz:yearbookSection ybs:S_Comparison_of_age_structure_of_population_2008,
+                                    ybs:S_Comparison_of_age_structure_of_population_2009,
+                                    ybs:S_Comparison_of_age_structure_of_population_2010,
+                                    ybs:S_Comparison_of_age_structure_of_population_2011,
+                                    ybs:S_Comparison_of_age_structure_of_population_2012 .
+  
+###### 6 a 7
+
+
+cssz-dataset:vyplacene-duchody-v-cr a qb:DataSet ;
+  dcterms:title "Number of pensions paid in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
+  rdfs:label "Number of pensions paid in the Czech Republic"@en, "Počet vyplacených důchodů v České republice"@cs ;
+  dcterms:description "Number of pensions paid in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet vyplacených důchodů podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Number of pensions paid in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet vyplacených důchodů podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:vyplacene-duchody-v-cr ;
+  cssz:yearbookSection ybs:S_Number_of_paid-out_pensions_2008, ybs:S_Number_of_paid-out_pensions_2009, ybs:S_Number_of_paid-out_pensions_2010 .
+
+cssz-dataset:duchodci-v-cr a qb:DataSet ;
+  dcterms:title "Numbers of pensioners in the Czech Republic"@en, "Počet důchodců v České republice"@cs ;
+  rdfs:label "Numbers of pensioners in the Czech Republic"@en, "Počet důchodců v České republice"@cs ;
+  dcterms:description "Numbers of pensioners in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet důchodců v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Numbers of pensioners in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet důchodců v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:duchodci-v-cr ;
+  cssz:yearbookSection ybs:S_Number_of_pensioners_2008, ybs:S_Number_of_pensioners_2009, ybs:S_Number_of_pensioners_2010 .
+  
+cssz-dataset:nove-priznane-duchody-v-cr a qb:DataSet ;
+  dcterms:title "Number of newly granted pensions in the Czech Republic"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Number of newly granted pensions in the Czech Republic by year"@en, "Počet nově přiznaných důchodů v České republice"@cs ;
+  dcterms:description "Number of newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Number of newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:nove-priznane-duchody-v-cr ;
+  cssz:yearbookSection ybs:S_Number_of_newly_awarded_pensions_2008, ybs:S_Number_of_newly_awarded_pensions_2009, ybs:S_Number_of_newly_awarded_pensions_2010 .
+
+cssz-dataset:vydaje-na-duchody-od-roku-1996 a qb:DataSet ;
+  dcterms:title "Costs on pensions since 1996 in the Czech Republic"@en, "Výdaje na důchody od roku 1996"@cs ;
+  rdfs:label "Costs on pensions since 1996 in the Czech Republic"@en, "Výdaje na důchody od roku 1996"@cs ;
+  dcterms:description "Costs on pensions since 1996 in the Czech Republic by year and kind of pension"@en,
+    "Výdaje na důchody od roku 1996 podle roku a druhu penze"@cs ;
+  rdfs:comment "Costs on pensions since 1996 in the Czech Republic by year and kind of pension"@en,
+    "Výdaje na důchody od roku 1996 podle roku a druhu penze"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:vydaje-na-duchody-od-roku-1996 ;
+  cssz:yearbookSection ybs:S_Development_of_pension_costs_since_1996_2008, ybs:S_Development_of_pension_costs_since_1996_2009, ybs:S_Development_of_pension_costs_since_1996_2010 .
+  
+cssz-dataset:vydaje-na-duchody-v-cr a qb:DataSet ;
+  dcterms:title "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
+  rdfs:label "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
+  dcterms:description "Costs on pensions in the Czech Republic by year and kind of pension"@en,
+    "Výdaje na důchody podle roku a druhu penze"@cs ;
+  rdfs:comment "Costs on pensions in the Czech Republic by year and kind of pension"@en,
+    "Výdaje na důchody podle roku a druhu penze"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:vydaje-na-duchody-v-cr ;
+  cssz:yearbookSection ybs:S_Pension_benefit_costs_2008,
+                                    ybs:S_Pension_benefit_costs_2009,
+                                    ybs:S_Pension_benefit_costs_2010,
+                                    ybs:S_Pension_benefit_costs_2011,
+                                    ybs:S_Pension_benefit_costs_2012 .
+  
+cssz-dataset:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni a qb:DataSet ;
+  dcterms:title "Monthly pensions in the Czech Republic"@en, "Měsíční výše důchodů"@cs ;
+  rdfs:label "Monthly pensions in the Czech Republic"@en, "Měsíční výše důchodů"@cs ;
+  dcterms:description "Monthly pensions in the Czech Republic by year, quantil and kind of pension"@en,
+    "Měsíční výše důchodů podle roku, kvantilu a druhu penze"@cs ;
+  rdfs:comment "Monthly pensions in the Czech Republic by year, quantil and kind of pension"@en,
+    "Měsíční výše důchodů podle roku, kvantilu a druhu penze"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni ;
+  cssz:yearbookSection ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2008, ybs:S_Pension_amounts_expressed_in_terms_of_quantiles_2010 .
+  
+cssz-dataset:prum-delka-pobirani-s-duchodu a qb:DataSet ;
+  dcterms:title "Average length of the pension"@en, "Průměrná délka pobírání starobního důchodu"@cs ;
+  rdfs:label "Average length of the pension"@en, "Průměrná délka pobírání starobního důchodu"@cs ;
+  dcterms:description "Average length of the pension by year when it ended and sex"@en,
+    "Průměrná délka pobírání starobního důchodu podle roku zániku a pohlaví"@cs ;
+  rdfs:comment "Average length of the pension by year when it ended and sex"@en,
+    "Průměrná délka pobírání starobního důchodu podle roku zániku a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-delka-pobirani-s-duchodu ;
+  cssz:yearbookSection ybs:S_Development_of_average_length_of_time_of_receiving_the_old-age_pension_2011 .
+  
+#### 8.01  
+
+
+cssz-dataset:duchodci-prehled-cr a qb:DataSet ;
+  dcterms:title "Total numbers of pensioners, average amount of pensions and average age of pensioners in the Czech Republic"@en, "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců v České republice"@cs ;
+  rdfs:label "Total numbers of pensioners, average amount of pensions and average age of pensioners in the Czech Republic"@en, "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců v České republice"@cs ;
+  dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:duchodci-prehled-cr ;
+  cssz:yearbookSection ybs:S_Number_of_pensioners_according_to_regions_2008, ybs:S_Number_of_pensioners_according_to_regions_2010 .
+
+cssz-dataset:duchodci-v-krajich a qb:DataSet ;
+  dcterms:title "Total numbers of pensioners in regions of Czech Republic"@en, "Celkový počet důchodců v krajích České republiky"@cs ;
+  rdfs:label "Total numbers of pensioners in regions of Czech Republic"@en, "Celkový počet důchodců v krajích České republiky"@cs ;
+  dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region of Czech Republic and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje České republiky a pohlaví"@cs ;
+  rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region of Czech Republic and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje České republiky a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:duchodci-v-krajich ;
+  cssz:yearbookSection ybs:S_Number_of_pensioners_according_to_regions_2008, ybs:S_Number_of_pensioners_according_to_regions_2010 .
+
+##### 8.02
+
+
+cssz-dataset:duchody-dle-veku a qb:DataSet ;
+  dcterms:title "Numbers of paid pensions in the Czech Republic according to age"@en, "Počet vyplacených důchodů v České republice dle věkové kategorie"@cs ;
+  rdfs:label "Numbers of paid pensions in the Czech Republic according to age"@en, "Počet vyplacených důchodů v České republice dle věkové kategorie"@cs ;
+  dcterms:description "Numbers of paid pensions in the Czech Republic by year, age, kind of pension and sex"@en,
+    "Počet vyplacených důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
+  rdfs:comment "Numbers of paid pensions in the Czech Republic by year, age, kind of pension and sex"@en,
+    "Počet vyplacených důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:duchody-dle-veku ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_age_2008, ybs:S_Number_of_pensions_according_to_age_2010 .
+  
+cssz-dataset:prum-vek-duchodce-dle-druhu-duchodu a qb:DataSet ;
+  dcterms:title "Average age of pensioners in the Czech Republic"@en, "Průměrný věk důchodce v České republice"@cs ;
+  rdfs:label "Average age of pensioners in the Czech Republic"@en, "Průměrný věk důchodce v České republice"@cs ;
+  dcterms:description "Average age of pensioners in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrný věk důchodce v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Average age of pensioners in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrný věk důchodce v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-vek-duchodce-dle-druhu-duchodu ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_age_2008, ybs:S_Number_of_pensions_according_to_age_2010 .
+
+##### 8.03
+
+cssz-dataset:vyplacene-duchody-dle-vyse a qb:DataSet ;
+  dcterms:title "Numbers of paid pensions in the Czech Republic according to monthly pension"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+  rdfs:label "Numbers of paid pensions in the Czech Republic according to monthly pension"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+  dcterms:description "Numbers of paid pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
+    "Počet vyplacených důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
+  rdfs:comment "Numbers of paid pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
+    "Počet vyplacených důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:vyplacene-duchody-dle-vyse ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2008, ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2010 .
+  
+cssz-dataset:prum-vyse-duchodu-podle-druhu-duchodu a qb:DataSet ;
+  dcterms:title "Average amount of pensions in the Czech Republic"@en, "Průměrná výše důchodu v České republice"@cs ;
+  rdfs:label "Average amount of pensions in the Czech Republic"@en, "Průměrná výše důchodu v České republice"@cs ;
+  dcterms:description "Average amount of pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše důchodu v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Average amount of pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše důchodu v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-vyse-duchodu-podle-druhu-duchodu ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2008, ybs:S_Number_of_pensions_according_to_monthly_amount_of_pension_2010 .
+
+
+##### 9.01
+
+cssz-dataset:nove-priznane-duchody-dle-veku a qb:DataSet ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to age"@en, "Počet nově přiznaných důchodů v České republice dle věkové kategorie"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to age"@en, "Počet nově přiznaných důchodů v České republice dle věkové kategorie"@cs ;
+  dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, age, kind of pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
+  rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, age, kind of pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:nove-priznane-duchody-dle-veku ;
+  cssz:yearbookSection ybs:S_Number_of_new_pensions_according_to_age_2008, ybs:S_Number_of_new_pensions_according_to_age_2009, ybs:S_Number_of_new_pensions_according_to_age_2010 .
+  
+cssz-dataset:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
+  dcterms:title "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Average age of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrný věk u nově přiznaných důchodů v České republice"@cs ;
+  dcterms:description "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrný věk u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrný věk u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-vek-u-nove-priznanych-duchodu-dle-druhu ;
+  cssz:yearbookSection ybs:S_Number_of_new_pensions_according_to_age_2008, ybs:S_Number_of_new_pensions_according_to_age_2009, ybs:S_Number_of_new_pensions_according_to_age_2010 .
+
+##### 9.02
+
+  
+cssz-dataset:nove-priznane-duchody-dle-vyse-duchodu a qb:DataSet ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to monthly pension"@en, "Počet nově přiznaných důchodů v České republice dle měsíční výše důchodu"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to monthly pension"@en, "Počet nově přiznaných důchodů v České republice dle měsíční výše důchodu"@cs ;
+  dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
+  rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:nove-priznane-duchody-dle-vyse-duchodu ;
+  cssz:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
+  
+cssz-dataset:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
+  dcterms:title "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice"@cs ;
+  dcterms:description "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu ;
+  cssz:yearbookSection ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2008, ybs:S_Number_of_new_pensions_according_to_amount_of_pension_2010 .
+  
+
+##### 9.03
+
+  
+cssz-dataset:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSet ;
+  dcterms:title "Numbers of newly granted pensions in the Czech Republic according to personal assessment base"@en, "Počet nově přiznaných důchodů v České republice dle osobního vyměřovacího základu"@cs ;
+  rdfs:label "Numbers of newly granted pensions in the Czech Republic according to personal assessment base"@en, "Počet nově přiznaných důchodů v České republice dle osobního vyměřovacího základu"@cs ;
+  dcterms:description "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, personal assessment base and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, osobního vyměřovacího základu a pohlaví"@cs ;
+  rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, personal assessment base and sex"@en,
+    "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, osobního vyměřovacího základu a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_personal_assessments_base_2008, ybs:S_Number_of_pensions_according_to_personal_assessments_base_2010 .
+  
+cssz-dataset:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu a qb:DataSet ;
+  dcterms:title "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice"@cs ;
+  rdfs:label "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic"@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice"@cs ;
+  dcterms:description "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  rdfs:comment "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
+    "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu ;
+  cssz:yearbookSection ybs:S_Number_of_pensions_according_to_personal_assessments_base_2008, ybs:S_Number_of_pensions_according_to_personal_assessments_base_2010 .
+
+###### 10
+
+cssz-dataset:zanikle-duchody a qb:DataSet ;
+  dcterms:title "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice "@cs ;
+  rdfs:label "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
+  dcterms:description "Numbers of defuncted pensions in the Czech Republic by year, kind of pension, reason of defunct and sex"@en,
+    "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
+  rdfs:comment "Numbers of defuncted pensions in the Czech Republic by year, kind of pension, reason of defunct and sex"@en,
+    "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:zanikle-duchody ;
+  cssz:yearbookSection ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2008,
+                                    ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2009,
+                                    ybs:S_Summary_of_number_of_expired_pensions_according_to_kind_of_expiration_2010 .
+
+###### 11
+
+cssz-dataset:invalidita a qb:DataSet ;
+  dcterms:title "Numbers of newly granted disability pensions in the Czech Republic"@en, "Počet nově přiznaných invalidních důchodů v České republice "@cs ;
+  rdfs:label "Numbers of newly granted disability pensions in the Czech Republic"@en, "Počet nově přiznaných invalidních důchodů v České republice"@cs ;
+  dcterms:description "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
+    "Počet nově přiznaných invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
+  rdfs:comment "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
+    "Počet nově přiznaných invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:invalidita ;
+  cssz:yearbookSection ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2008,
+                                    ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2009,
+                                    ybs:S_Summary_of_newly_awarded_disability_pensions_according_to_age_and_WHO_diagnosis_group_2010 .
+
+###### 12
+
+cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
+  dcterms:title "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
+  rdfs:label "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
+  dcterms:description "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
+    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
+  rdfs:comment "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
+    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:zmeny-mezi-stupni-invalidniho-duchodu ;
+  cssz:yearbookSection ybs:S_Summary_of_changes_between_degrees_of_disability_pension_2010 .
+
+###### Kraje a okresy
+
+cssz-dataset:duchodci-v-cr-krajich-okresech a qb:DataSet ;
+  dcterms:title "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Celkový počet důchodců v krajích a okresech České republiky"@cs ;
+  rdfs:label "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Celkový počet důchodců v krajích a okresech České republiky"@cs ;
+  dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje nebo okresu České republiky a pohlaví"@cs ;
+  rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje nebo okresu České republiky a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:duchodci-v-cr-krajich-okresech ;
+  cssz:yearbookSection ybs:S_N .
+
+#### Grafy
+
+cssz-dataset:casove-rady-grafy-1-6 a qb:DataSet ;
+  dcterms:title "Pensions and pensioners in the Czech Republic - various statistics"@en, "Důchody a důchodci v České republice - různé statistiky"@cs ;
+  rdfs:label "Pensions and pensioners in the Czech Republic - various statistics"@en, "Důchody a důchodci v České republice - různé statistiky"@cs ;
+  dcterms:description "Numbers of granted pensions, average amount of pensions, number of pensioners, average amount of granted pensions, number of pensioners with solo pension, average amount of granted solo pensions by year and sex"@en,
+    "Počet vyplácených důchodů, průměrná výše důchodu v Kč, počet důchodců, průměrná výše důchodů vyplácená důchodcům v Kč, počet důchodců pobírajících sólo starobní důchod, průměrná výše vyplácených sólo starobních důchodů v Kč podle roku a pohlaví"@cs ;
+  rdfs:comment "Numbers of granted pensions, average amount of pensions, number of pensioners, average amount of granted pensions, number of pensioners with solo pension, average amount of granted solo pensions by year and sex"@en,
+    "Počet vyplácených důchodů, průměrná výše důchodu v Kč, počet důchodců, průměrná výše důchodů vyplácená důchodcům v Kč, počet důchodců pobírajících sólo starobní důchod, průměrná výše vyplácených sólo starobních důchodů v Kč podle roku a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:casove-rady-grafy-1-6 ;
+  cssz:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
+    
+cssz-dataset:casove-rady-grafy-7-8 a qb:DataSet ;
+  dcterms:title "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic"@en, "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody v České republice"@cs ;
+  rdfs:label "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic"@en, "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody v České republice"@cs ;
+  dcterms:description "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic by year and pension kind"@en,
+    "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody podle druhu důchodu a roku"@cs ;
+  rdfs:comment "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic by year and pension kind"@en,
+    "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody podle druhu důchodu a roku"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:casove-rady-grafy-7-8 ;
+  cssz:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
+  
+cssz-dataset:casove-rady-grafy-9 a qb:DataSet ;
+  dcterms:title "Expenditure on pensions in the Czech Republic"@en, "Výdaje na starobní důchody v České republice"@cs ;
+  rdfs:label "Expenditure on pensions in the Czech Republic"@en, "Výdaje na starobní důchody v České republice"@cs ;
+  dcterms:description "Expenditure on pensions in the Czech Republic by year and pension kind"@en,
+    "Výdaje na starobní důchody podle druhu důchodu a roku"@cs ;
+  rdfs:comment "Expenditure on pensions in the Czech Republic by year and pension kind"@en,
+    "Výdaje na starobní důchody podle druhu důchodu a roku"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:casove-rady-grafy-9 ;
+  cssz:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
+  
 
 ### SECTION 5.1 - NUMBER OF INHABITANTS BY REGIONS
 ### APPLICABLE FOR 2012, 2011, 2010, 2009, 2008
@@ -1178,211 +1621,3 @@ cssz-dsd:casove-rady-grafy-9 a qb:DataStructureDefinition ;
     qb:componentRequired "true"^^xsd:boolean ;
     qb:componentAttachment qb:DataSet
   ] .
-
-
-### Definition of measures and properties
-
-
-cssz-dimension:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "quantile of the relative amount of pension"@en, "kvantil relativní výše důchodu"@cs ;
-  rdfs:comment "Distribution of pensions according to their quantile of their relative amount."@en, "Rozdělení důchodů podle kvantilu jejich relativní výše."@cs ;
-  rdfs:range qua-onto:Quantile ;
-  qb:concept dbpedia:Quantile .
-
-cssz-dimension:vyse-osobniho-vymerovaciho-zakladu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "amount of the personal assessment base"@en, "výše osobního vyměřovacího základu"@cs ;
-  rdfs:comment "Distribution of persons according to the amount of their personal assessment base."@en, "Rozdělení osob podle výše jejich osobního vyměřovacího základu."@cs ;
-  rdfs:range ran-onto:Range ;
-  qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
-
-cssz-dimension:mesicni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "amount of the pension"@en, "výše důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the amount of their monthly pension."@en, "Rozdělení entit podle výše jejich měsíčního důchodu."@cs ;
-  rdfs:range ran-onto:Range ;
-  qb:concept dbpedia:Pension .
-  
-cssz-dimension:druh-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "kind of pension"@en, "druh důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the kind of pension."@en, "Rozdělení entit podle druhu důchodu."@cs ;
-  rdfs:range pen-onto:PensionKind ;
-  qb:concept dbpedia:Pension, dbpedia:Natural_kind .
-
-cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "pension cancellation reason"@en, "důvod zániku důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the reason of pension cancellation."@en, "Rozdělení entit podle důvodu zániku důchodu."@cs ;
-  rdfs:range pencan-onto:PensionCancellationReason ;
-  qb:concept dbpedia:Pension, dbpedia:Natural_kind .
-  
-cssz-dimension:stupen-invalidity a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "disability level"@en, "stupeň invalidity"@cs ;
-  rdfs:comment "Distribution of entities according to the disability level."@en, "Rozdělení entit podle stupně invalidity."@cs ;
-  rdfs:range dis-onto:DisabilityLevel ;
-  qb:concept dbpedia:Disability, dbpedia:Natural_kind .
-
-cssz-dimension:duvod-zmeny-invalidniho-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "disability change reason"@en, "důvod změny invalidního důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the disability change reason."@en, "Rozdělení entit podle důvodu změny invalidního důchodu."@cs ;
-  rdfs:range pencan-onto:PensionCancellationReason ;
-  qb:concept dbpedia:Disability, dbpedia:Natural_kind .
-
-cssz-dimension:refPeriod a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "reference period"@en, "referenční období"@cs ;
-  rdfs:comment "The period of time or point in time to which the measured observation is intended to refer."@en, "Časové období nebo místo v čase, pro které platí měřená hodnota."@cs ;
-  rdfs:subPropertyOf sdmx-dimension:refPeriod ;
-  rdfs:range interval:Interval ;
-  qb:concept sdmx-concept:refPeriod .
-
-cssz-dimension:rok-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "year of expiration of the pension"@en, "rok zániku důchodu"@cs ;
-  rdfs:comment "A year in which some pension expired."@en, "Rok, ve kterém došlo k zániku důvodu pro pobírání určitého důchodu."@cs ;
-  rdfs:subPropertyOf sdmx-dimension:refPeriod ;
-  rdfs:range interval:Interval ;
-  qb:concept sdmx-concept:refPeriod .
-  
-cssz-dimension:refArea a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "reference area"@en, "referenční oblast"@cs ;
-  rdfs:comment "The country or geographic area to which the measured statistical phenomenon relates."@en, "Geografická oblast, pro kterou je hodnota měřena."@cs ;
-  rdfs:subPropertyOf sdmx-dimension:refArea ;
-  qb:concept sdmx-concept:refArea .
-
-cssz-dimension:pohlavi a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "sex"@en, "pohlaví"@cs ;
-  rdfs:comment "The state of being male or female."@en, "Hodnota, která udává, zda je osoba mužem či ženou."@cs ;
-  rdfs:subPropertyOf sdmx-dimension:sex ;
-  qb:concept sdmx-concept:sex .
-  
-cssz-dimension:vekova-kategorie a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "age"@en, "věk"@cs ;
-  rdfs:comment "Distribution of people according to their age."@en, "Rozdělení osob podle jejich věku."@cs ;
-  rdfs:subPropertyOf sdmx-dimension:age ;
-  rdfs:range age:Age ;
-  qb:concept sdmx-concept:age .
-
-cssz-dimension:skupina-osob a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "group of persons"@en, "skupina osob"@cs ;
-  rdfs:comment "Defined group of persons."@en, "Vymezená skupina osob."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range czgop-onto:Group ;
-  qb:concept dbpedia:Natural_kind .
-
-cssz-dimension:duvod-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "reason for expiration"@en, "důvod zániku důchodu"@cs ;
-  rdfs:comment "Reason why some pension expired."@en, "Důvod, proč určitý důchod zanikl."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range pencan-onto:PensionCancellationReason ;
-  qb:concept dbpedia:Natural_kind .
-
-cssz-dimension:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "group of diagnoses defined by WHO"@en, "skupina diagnóz dle WHO"@cs ;
-  rdfs:comment "Group of diagnoses defined by WHO in ICD-10."@en, "Skupina diagnóz definovaná WHO v MKN-10."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range icd10-onto:Chapter ;
-  qb:concept dbpedia:Natural_kind .
-  
-cssz-measure:pocet-osob a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of persons"@en, "počet osob"@cs ;
-  rdfs:comment "The total number of a defined group of people."@en, "Celkový počet osob určité skupiny."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept sdmx-concept:statPop .
-
-cssz-measure:pocet-obyvatel a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of inhabitants"@en, "počet obyvatel"@cs ;
-  rdfs:comment "The number of people living in some area."@en, "Počet osob žijicích v určité oblasti."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept sdmx-concept:statPop .
-
-cssz-measure:pocet-duchodcu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of pensioners"@en, "počet důchodců"@cs ;
-  rdfs:comment "Number of persons with some kind of pension."@en, "Počet osob pobírajících nějaký druh důchodu."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:pocet-duchodcu-pobirajicich-solo-starobni-duchod a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of pensioners with solo old-age pension"@en, "počet důchodců pobírajících sólo starobní důchod"@cs ;
-  rdfs:comment "Number of persons with solo old-age pension. Note that in different years different types of old-age pensions were paid-out. Pensions of the SR type are included starting from 2004, in the previous years this type of pension si not included."@en, "Počet důchodců pobírajících sólo starobní penzi. Pozor, v různých letech byly vypláceny různé druhy starobních penzí. Důchody typu SR nejsou zahrnuty do roku 2003 včetně."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-  
-cssz-measure:pocet-vyplacenych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of pensions"@en, "počet důchodů"@cs ;
-  rdfs:comment "The size of a defined class of pensions."@en, "Velikost definované třídy důchodů."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:pocet-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of newly awared pensions"@en, "počet nově přiznaných důchodů"@cs ;
-  rdfs:comment "The number of newly awarded pensions."@en, "Počet nově přiznaných důchodů."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-  
-cssz-measure:prumerna-vyse-duchodu-v-kc a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of pension"@en, "průměrná výše důchodu"@cs ;
-  rdfs:comment "The average amount of pension of a defined class of entities."@en, "Průměrná výše důchodu definované třídy entit."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:prumerna-vyse-duchodu-vyplacena-duchodcum a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of pension paid-out to pensioners"@en, "průměrná výše důchodu vyplácená důchodcům"@cs ;
-  rdfs:comment "The average amount of pension that is paid-out to pensioners."@en, "Průměrná výše důchodu, která je vyplácená důchodcům."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:prumerna-vyse-solo-starobnich-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of solo old-age pension"@en, "průměrná výše sólo vyplácených starobních důchodů"@cs ;
-  rdfs:comment "The average amount of the solo old-age pension in CZK."@en, "Průměrná výše sólo vyplácených starobních důchodů v Kč."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:prumerna-vyse-duchodu-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of pension of the pensioner with the newly avarded pension"@en, "průměrná výše důchodu u nově přiznaných důchodů"@cs ;
-  rdfs:comment "The average amount of pension of a pensioner who was newly avarder with a pension in some year."@en, "Průměrná výše důchodu důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:vydaje-na-duchody-v-tis-kc a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "pensions spendings in CZK"@en, "výdaje na důchody v tis. Kč"@cs ;
-  rdfs:comment "The amount of money spent on pensions in thousands of CZK."@en, "Výše výdajů na důchody v tisících Kč."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-
-cssz-measure:vydaje-na-duchody-opravene-o-zalohy-v-tis-kc a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "pensions spendings adjusted for cash advandes in thousands of CZK"@en, "výdaje na důchody opravené o zálohy v tisících Kč"@cs ;
-  rdfs:comment "The amount of money spent on pensions in thousands of CZK. Spendigs are adjusted for cash advances. Spedings in the given year include the cash advance from December of the previous year, however it does not include the cash advandce of December of the current year allocated for the pensions that will be paid in January of the coming year."@en, "Výše výdajů na důchody v tisících Kč. Měření výdajů na důchody v tisících Kč. Výdaje jsou opraveny o zálohy. Do výdajů je zahrnuta záloha z prosince předcházejícího roku a není do nich zahrnuta záloha z prosince aktuálního roku určená na výplatu důchodů v roce následujícím."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
-  
-cssz-measure:prumerny-vek a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average age"@en, "průměrný věk"@cs ;
-  rdfs:comment "The average age of a defined class of persons."@en, "Průměrný věk definované třídy osob."@cs ;
-  rdfs:subPropertyOf sdmx-measure:age ;
-  rdfs:range age:Age ;
-  qb:concept sdmx-concept:age .
-
-cssz-measure:prumerny-vek-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average age of a pensioner with the newly avarded pension"@en, "průměrný věk u nově přiznaných důchodů"@cs ;
-  rdfs:comment "The average age of a pensioner who was newly avarder with a pension in some year."@en, "Průměrný věk důchodce, jemuž byl v určitém roce nově přiznán důchod."@cs ;
-  rdfs:subPropertyOf sdmx-measure:age ;
-  rdfs:range age:Age ;
-  qb:concept sdmx-concept:age .
-
-cssz-dimension:prumerna-doba-pobirani-radneho-starobniho-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "average number of years an old-age pension is being paid-out to a pensiner"@en, "průměrná doba pobírání starobního důchodu"@cs ;
-  rdfs:comment "Average number of years an old-age pension is being paid-out to a pensiner."@en, "Průměrná doba pobírání starobního důchodu."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept sdmx-concept:refPeriod .
-
-cssz-measure:prumerna-vyse-ovz-v-kc-u-nove-priznanych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "average amount of the personal assessment base of pensioners with the newly avarded pension"@en, "průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů"@cs ;
-  rdfs:comment "Average amount of the personal assessment base of pensioners with the newly avarded pension."@en, "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger ;
-  qb:concept dbpedia:Income, dbpedia:Salary, dbpedia:Social_support .
-
-cssz-measure:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
-  rdfs:label "number of expired pensions"@en, "počet zaniklých důchodů"@cs ;
-  rdfs:comment "Number of pensions that expired for some of the defined reasons for expiration."@en, "Počet důchodů, které zanikly z některého z definovaných důvodů zaniku důchodu."@cs ;
-  rdfs:subPropertyOf sdmx-measure:obsValue ;
-  rdfs:range xsd:nonNegativeInteger .
