@@ -140,8 +140,8 @@ cssz-dataset:nove-priznane-duchody-v-cr a qb:DataSet ;
   cssz:yearbookSection ybs:S_Number_of_newly_awarded_pensions_2008, ybs:S_Number_of_newly_awarded_pensions_2009, ybs:S_Number_of_newly_awarded_pensions_2010 .
 
 cssz-dataset:vydaje-na-duchody-od-roku-1996 a qb:DataSet ;
-  dcterms:title "Costs on pensions since 1996 in the Czech Republic"@en, "Výdaje na důchody od roku 1996"@cs ;
-  rdfs:label "Costs on pensions since 1996 in the Czech Republic"@en, "Výdaje na důchody od roku 1996"@cs ;
+  dcterms:title "Costs on pensions since 1996 in the Czech Republic - time series"@en, "Časová řada výdajů na důchody od roku 1996"@cs ;
+  rdfs:label "Costs on pensions since 1996 in the Czech Republic - time series"@en, "Časová řada výdajů na důchody od roku 1996"@cs ;
   dcterms:description "Costs on pensions since 1996 in the Czech Republic by year and kind of pension"@en,
     "Výdaje na důchody od roku 1996 podle roku a druhu penze"@cs ;
   rdfs:comment "Costs on pensions since 1996 in the Czech Republic by year and kind of pension"@en,
@@ -372,7 +372,7 @@ cssz-dataset:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-p
 ###### 10
 
 cssz-dataset:zanikle-duchody a qb:DataSet ;
-  dcterms:title "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice "@cs ;
+  dcterms:title "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
   rdfs:label "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
   dcterms:description "Numbers of defuncted pensions in the Czech Republic by year, kind of pension, reason of defunct and sex"@en,
     "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
@@ -389,7 +389,7 @@ cssz-dataset:zanikle-duchody a qb:DataSet ;
 ###### 11
 
 cssz-dataset:invalidita a qb:DataSet ;
-  dcterms:title "Numbers of newly granted disability pensions in the Czech Republic"@en, "Počet nově přiznaných invalidních důchodů v České republice "@cs ;
+  dcterms:title "Numbers of newly granted disability pensions in the Czech Republic"@en, "Počet nově přiznaných invalidních důchodů v České republice"@cs ;
   rdfs:label "Numbers of newly granted disability pensions in the Czech Republic"@en, "Počet nově přiznaných invalidních důchodů v České republice"@cs ;
   dcterms:description "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
     "Počet nově přiznaných invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
@@ -406,8 +406,8 @@ cssz-dataset:invalidita a qb:DataSet ;
 ###### 12
 
 cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
-  dcterms:title "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
-  rdfs:label "Changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu"@cs ;
+  dcterms:title "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
+  rdfs:label "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
   dcterms:description "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
     "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
   rdfs:comment "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
@@ -421,8 +421,8 @@ cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
 ###### Kraje a okresy
 
 cssz-dataset:duchodci-v-cr-krajich-okresech a qb:DataSet ;
-  dcterms:title "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Celkový počet důchodců v krajích a okresech České republiky"@cs ;
-  rdfs:label "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Celkový počet důchodců v krajích a okresech České republiky"@cs ;
+  dcterms:title "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Přehled o počtu důchodců podle území, pohlaví, průměrné výše důchodu, průměrného věku a podle druhu důchodu"@cs ;
+  rdfs:label "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Přehled o počtu důchodců podle území, pohlaví, průměrné výše důchodu, průměrného věku a podle druhu důchodu"@cs ;
   dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
     "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje nebo okresu České republiky a pohlaví"@cs ;
   rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
@@ -436,8 +436,8 @@ cssz-dataset:duchodci-v-cr-krajich-okresech a qb:DataSet ;
 #### Grafy
 
 cssz-dataset:casove-rady-grafy-1-6 a qb:DataSet ;
-  dcterms:title "Pensions and pensioners in the Czech Republic - various statistics"@en, "Důchody a důchodci v České republice - různé statistiky"@cs ;
-  rdfs:label "Pensions and pensioners in the Czech Republic - various statistics"@en, "Důchody a důchodci v České republice - různé statistiky"@cs ;
+  dcterms:title "Pensions and pensioners in the Czech Republic - time series"@en, "Časové řady statistik o důchodech a důchodcích v České republice"@cs ;
+  rdfs:label "Pensions and pensioners in the Czech Republic - time series"@en, "Časové řady statistik o důchodech a důchodcích v České republice"@cs ;
   dcterms:description "Numbers of granted pensions, average amount of pensions, number of pensioners, average amount of granted pensions, number of pensioners with solo pension, average amount of granted solo pensions by year and sex"@en,
     "Počet vyplácených důchodů, průměrná výše důchodu v Kč, počet důchodců, průměrná výše důchodů vyplácená důchodcům v Kč, počet důchodců pobírajících sólo starobní důchod, průměrná výše vyplácených sólo starobních důchodů v Kč podle roku a pohlaví"@cs ;
   rdfs:comment "Numbers of granted pensions, average amount of pensions, number of pensioners, average amount of granted pensions, number of pensioners with solo pension, average amount of granted solo pensions by year and sex"@en,
@@ -449,8 +449,8 @@ cssz-dataset:casove-rady-grafy-1-6 a qb:DataSet ;
   cssz:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
     
 cssz-dataset:casove-rady-grafy-7-8 a qb:DataSet ;
-  dcterms:title "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic"@en, "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody v České republice"@cs ;
-  rdfs:label "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic"@en, "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody v České republice"@cs ;
+  dcterms:title "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic - time series"@en, "Časové řady počtu vyplácených předčasných starobních důchodů a výdajů na předčasné starobní důchody v České republice"@cs ;
+  rdfs:label "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic - time series"@en, "Časové řady počtu vyplácených předčasných starobních důchodů a výdajů na předčasné starobní důchody v České republice"@cs ;
   dcterms:description "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic by year and pension kind"@en,
     "Počet vyplácených předčasných starobních důchodů, výdaje na předčasné starobní důchody podle druhu důchodu a roku"@cs ;
   rdfs:comment "Number of granted early retirement pensions and expenditure on early retirement pensions in the Czech Republic by year and pension kind"@en,
@@ -462,8 +462,8 @@ cssz-dataset:casove-rady-grafy-7-8 a qb:DataSet ;
   cssz:yearbookSection ybs:S_Annexes_2008, ybs:S_Annexes_2010 .
   
 cssz-dataset:casove-rady-grafy-9 a qb:DataSet ;
-  dcterms:title "Expenditure on pensions in the Czech Republic"@en, "Výdaje na starobní důchody v České republice"@cs ;
-  rdfs:label "Expenditure on pensions in the Czech Republic"@en, "Výdaje na starobní důchody v České republice"@cs ;
+  dcterms:title "Expenditure on pensions in the Czech Republic - time series"@en, "Časová řada výdajů na starobní důchody v České republice"@cs ;
+  rdfs:label "Expenditure on pensions in the Czech Republic - time series"@en, "Časová řada výdajů na starobní důchody v České republice"@cs ;
   dcterms:description "Expenditure on pensions in the Czech Republic by year and pension kind"@en,
     "Výdaje na starobní důchody podle druhu důchodu a roku"@cs ;
   rdfs:comment "Expenditure on pensions in the Czech Republic by year and pension kind"@en,
