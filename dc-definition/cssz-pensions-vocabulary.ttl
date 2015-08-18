@@ -141,6 +141,11 @@ cssz-dimension:skupina-diagnoz-dle-who a rdf:Property, qb:DimensionProperty ;
   rdfs:range icd10-onto:Chapter ;
   qb:concept dbpedia:Natural_kind .
   
+cssz-measure:mesicni-vyse-duchodu a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "amount of the pension"@en, "výše důchodu"@cs ;
+  rdfs:range xsd:nonNegativeInteger ;
+  qb:concept dbpedia:Pension .
+  
 cssz-measure:pocet-osob a rdf:Property, qb:MeasureProperty ;
   rdfs:label "number of persons"@en, "počet osob"@cs ;
   rdfs:comment "The total number of a defined group of people."@en, "Celkový počet osob určité skupiny."@cs ;
