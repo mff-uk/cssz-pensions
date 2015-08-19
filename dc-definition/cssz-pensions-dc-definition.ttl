@@ -970,7 +970,7 @@ cssz-dsd:duchodci-v-cr-krajich-okresech a qb:DataStructureDefinition ;
   qb:component [
     qb:dimension cssz-dimension:pohlavi ;
     qb:order 4 ;
-    rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující kraj České republiky, za který je počet důchodců uveden."@cs
+    rdfs:label "The dimension representing a sex for which the number of pensioners was measured."@en, "Dimenze reprezentující pohlaví, za které je počet důchodů uveden."@cs
   ] ;
   # Measure dimension
   qb:component [
