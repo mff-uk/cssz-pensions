@@ -27,7 +27,7 @@ pencan:PCR_X a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
 
 pencan:PCR_T a skos:Concept, pencan-onto:PensionCancellationReason ;
-  skos:prefLabel "Total"@cs, "Total"@en ;
+  skos:prefLabel "Celkem"@cs, "Total"@en ;
   skos:notation "T";
   skos:narrower pencan:PCR_1, pencan:PCR_2, pencan:PCR_3, pencan:PCR_4, pencan:PCR_5, pencan:PCR_6, pencan:PCR_8, pencan:PCR_9, pencan:PCR_10, pencan:PCR_12, pencan:PCR_13 ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
