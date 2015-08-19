@@ -36,7 +36,7 @@ ran:I_X a skos:Concept, ran-onto:Range ;
   skos:inScheme ran-onto:RangeScheme .
 
 ran:I_T a skos:Concept, ran-onto:Range ;
-  skos:prefLabel "Total"@cs, "Total"@en ;
+  skos:prefLabel "Celkem"@cs, "Total"@en ;
   skos:notation "I_T" ;
   skos:inScheme ran-onto:RangeScheme .
 
