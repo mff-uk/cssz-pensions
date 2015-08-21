@@ -19,7 +19,7 @@
 @prefix sdmx-subject:    <https://data.cssz.cz/ontology/sdmx/subject/> .
 
 # CL_CURRENCY
-sdmx-code:currency a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:currency a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#currency> ;
     skos:prefLabel "code list for Currency (CURRENCY) - codelist scheme"@en;
     rdfs:label "code list for Currency (CURRENCY) - codelist scheme"@en;
     skos:notation "CL_CURRENCY";
@@ -27,14 +27,14 @@ sdmx-code:currency a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Currency .
 
-sdmx-code:Currency a rdfs:Class, owl:Class;
+sdmx-code:Currency a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#Currency> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "code list for Currency (CURRENCY) - codelist class"@en;
     rdfs:comment """This code list provides code values for currencies."""@en;
     rdfs:seeAlso sdmx-code:currency .
 
 # CL_AREA
-sdmx-code:area a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:area a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#area> ;
     skos:prefLabel "Code list for providing values to concepts such as 'Reference area' and/or 'Counterpart area' - codelist scheme"@en;
     rdfs:label "Code list for providing values to concepts such as 'Reference area' and/or 'Counterpart area' - codelist scheme"@en;
     skos:notation "CL_AREA";
@@ -42,14 +42,14 @@ sdmx-code:area a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Area .
 
-sdmx-code:Area a rdfs:Class, owl:Class;
+sdmx-code:Area a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#Area> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Code list for providing values to concepts such as 'Reference area' and/or 'Counterpart area' - codelist class"@en;
     rdfs:comment """: This code list provides code values for geographical areas, defined as areas included within the borders of a country, region, group of countries, etc."""@en;
     rdfs:seeAlso sdmx-code:area .
 
 # CL_DECIMALS
-sdmx-code:decimals a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:decimals a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals> ;
     skos:prefLabel "Code list for Decimals (DECIMALS) - codelist scheme"@en;
     rdfs:label "Code list for Decimals (DECIMALS) - codelist scheme"@en;
     skos:notation "CL_DECIMALS";
@@ -57,7 +57,7 @@ sdmx-code:decimals a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Decimals .
 
-sdmx-code:Decimals a rdfs:Class, owl:Class;
+sdmx-code:Decimals a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#Decimals> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Code list for Decimals (DECIMALS) - codelist class"@en;
     rdfs:comment """It provides a list of values showing the number of decimal digits used in the data."""@en;
@@ -144,7 +144,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-9> .
 
 # CL_FREQ
-sdmx-code:freq a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:freq a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq> ;
     skos:prefLabel "Code list for Frequency (FREQ) - codelist scheme"@en;
     rdfs:label "Code list for Frequency (FREQ) - codelist scheme"@en;
     skos:notation "CL_FREQ";
@@ -152,7 +152,7 @@ sdmx-code:freq a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Freq .
 
-sdmx-code:Freq a rdfs:Class, owl:Class;
+sdmx-code:Freq a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#Freq> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Code list for Frequency (FREQ) - codelist class"@en;
     rdfs:comment """It provides a list of values indicating the "frequency" of the data (e.g. monthly) and, thus, indirectly, also implying the type of "time reference" that could be used for identifying the data with respect time."""@en;
@@ -226,7 +226,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-W> .
 
 # CL_CONF_STATUS
-sdmx-code:confStatus a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:confStatus a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus> ;
     skos:prefLabel "code list for Confidentiality Status (CONF_STATUS) - codelist scheme"@en;
     rdfs:label "code list for Confidentiality Status (CONF_STATUS) - codelist scheme"@en;
     skos:notation "CL_CONF_STATUS";
@@ -234,7 +234,7 @@ sdmx-code:confStatus a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:ConfStatus .
 
-sdmx-code:ConfStatus a rdfs:Class, owl:Class;
+sdmx-code:ConfStatus a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#ConfStatus> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "code list for Confidentiality Status (CONF_STATUS) - codelist class"@en;
     rdfs:comment """this code list provides coded information about the sensitivity and confidentiality status of the data."""@en;
@@ -288,7 +288,7 @@ sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
 sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/confStatus-S> .
 
 # CL_OBS_STATUS
-sdmx-code:obsStatus a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:obsStatus a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus> ;
     skos:prefLabel "Observation status - codelist scheme"@en;
     rdfs:label "Observation status - codelist scheme"@en;
     skos:notation "CL_OBS_STATUS";
@@ -296,7 +296,7 @@ sdmx-code:obsStatus a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:ObsStatus .
 
-sdmx-code:ObsStatus a rdfs:Class, owl:Class;
+sdmx-code:ObsStatus a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#ObsStatus> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Observation status - codelist class"@en;
     rdfs:comment """This code list provides coded information about the "status" of an observation (with respect events such as the ones reflected in the codes composing the code list)."""@en;
@@ -374,7 +374,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-S> .
 
 # CL_SEX
-sdmx-code:sex a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:sex a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex> ;
     skos:prefLabel "Code list for Sex (SEX) - codelist scheme"@en;
     rdfs:label "Code list for Sex (SEX) - codelist scheme"@en;
     rdfs:label "Číselník pohlaví"@cs;
@@ -383,7 +383,7 @@ sdmx-code:sex a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Sex .
 
-sdmx-code:Sex a rdfs:Class, owl:Class;
+sdmx-code:Sex a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#Sex> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Code list for Sex (SEX) - codelist class"@en;
     rdfs:label "Číselník pohlaví"@cs;
@@ -436,7 +436,7 @@ sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-N>
 sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-T> .
 
 # CL_TIME_FORMAT
-sdmx-code:timeFormat a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:timeFormat a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat> ;
     skos:prefLabel "Code list for the Time Format as written in the SDMX-EDI and SDMX-ML messages - codelist scheme"@en;
     rdfs:label "Code list for the Time Format as written in the SDMX-EDI and SDMX-ML messages - codelist scheme"@en;
     skos:notation "CL_TIME_FORMAT";
@@ -444,7 +444,7 @@ sdmx-code:timeFormat a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:TimeFormat .
 
-sdmx-code:TimeFormat a rdfs:Class, owl:Class;
+sdmx-code:TimeFormat a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#TimeFormat> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "Code list for the Time Format as written in the SDMX-EDI and SDMX-ML messages - codelist class"@en;
     rdfs:comment """These codes (based on the ISO 8601 standard) indicate the type of time references used in the data. The numeric codes below (203, 102,...,702) are used only in the SDMX-EDI messages; and the alphanumeric codes (P1D...PT1M) only in the SDMX-ML messages."""@en;
@@ -647,7 +647,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-PT1M> .
 
 # CL_UNIT_MULT
-sdmx-code:unitMult a skos:ConceptScheme, sdmx:CodeList;
+sdmx-code:unitMult a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult> ;
     skos:prefLabel "code list for the Unit Multiplier (UNIT_MULT) - codelist scheme"@en;
     rdfs:label "code list for the Unit Multiplier (UNIT_MULT) - codelist scheme"@en;
     skos:notation "CL_UNIT_MULT";
@@ -655,7 +655,7 @@ sdmx-code:unitMult a skos:ConceptScheme, sdmx:CodeList;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:UnitMult .
 
-sdmx-code:UnitMult a rdfs:Class, owl:Class;
+sdmx-code:UnitMult a rdfs:Class, owl:Class; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#UnitMult> ;
     rdfs:subClassOf skos:Concept ;
     rdfs:label "code list for the Unit Multiplier (UNIT_MULT) - codelist class"@en;
     rdfs:comment """it provides code values for indicating the magnitude in the units of measurements."""@en;
