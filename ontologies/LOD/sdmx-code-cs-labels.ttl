@@ -63,7 +63,7 @@ sdmx-code:Decimals a rdfs:Class, owl:Class;
     rdfs:comment """It provides a list of values showing the number of decimal digits used in the data."""@en;
     rdfs:seeAlso sdmx-code:decimals .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-0> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-0> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-0> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Zero"@en ;
@@ -71,7 +71,7 @@ sdmx-code:Decimals a rdfs:Class, owl:Class;
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-0> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-1> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-1> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-1> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "One"@en ;
@@ -79,7 +79,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-1> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-2> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-2> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-2> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Two"@en ;
@@ -87,7 +87,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-2> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-3> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-3> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-3> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Three"@en ;
@@ -95,7 +95,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-3> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-4> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-4> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-4> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Four"@en ;
@@ -103,7 +103,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-4> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-5> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-5> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-5> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Five"@en ;
@@ -111,7 +111,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-5> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-6> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-6> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-6> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Six"@en ;
@@ -119,7 +119,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-6> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-7> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-7> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-7> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Seven"@en ;
@@ -127,7 +127,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-7> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-8> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-8> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-8> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Eight"@en ;
@@ -135,7 +135,7 @@ sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/d
     . 
 sdmx-code:decimals skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/decimals-8> .
 
-<https://data.cssz.cz/ontology/sdmx/code/decimals-9> a skos:Concept, sdmx:Concept, sdmx-code:Decimals;
+<https://data.cssz.cz/ontology/sdmx/code/decimals-9> a skos:Concept, sdmx:Concept, sdmx-code:Decimals; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#decimals-9> ;
     skos:topConceptOf sdmx-code:decimals;
     skos:inScheme     sdmx-code:decimals;
     skos:prefLabel "Nine"@en ;
@@ -158,7 +158,7 @@ sdmx-code:Freq a rdfs:Class, owl:Class;
     rdfs:comment """It provides a list of values indicating the "frequency" of the data (e.g. monthly) and, thus, indirectly, also implying the type of "time reference" that could be used for identifying the data with respect time."""@en;
     rdfs:seeAlso sdmx-code:freq .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-A> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-A> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-A> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Annual"@en ;
@@ -167,7 +167,7 @@ sdmx-code:Freq a rdfs:Class, owl:Class;
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-A> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-B> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-B> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-B> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Daily - business week"@en ;
@@ -176,7 +176,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-B> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-D> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-D> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-D> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Daily"@en ;
@@ -184,7 +184,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-D> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-M> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-M> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-M> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Monthly"@en ;
@@ -192,7 +192,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-N> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-N> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-N> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Minutely"@en ;
@@ -201,7 +201,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-N> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-Q> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-Q> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-Q> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Quarterly"@en ;
@@ -209,7 +209,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-Q> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-S> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-S> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-S> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Half Yearly, semester"@en ;
@@ -217,7 +217,7 @@ sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-
     . 
 sdmx-code:freq skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/freq-S> .
 
-<https://data.cssz.cz/ontology/sdmx/code/freq-W> a skos:Concept, sdmx:Concept, sdmx-code:Freq;
+<https://data.cssz.cz/ontology/sdmx/code/freq-W> a skos:Concept, sdmx:Concept, sdmx-code:Freq; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#freq-W> ;
     skos:topConceptOf sdmx-code:freq;
     skos:inScheme     sdmx-code:freq;
     skos:prefLabel "Weekly"@en ;
@@ -240,7 +240,7 @@ sdmx-code:ConfStatus a rdfs:Class, owl:Class;
     rdfs:comment """this code list provides coded information about the sensitivity and confidentiality status of the data."""@en;
     rdfs:seeAlso sdmx-code:confStatus .
 
-<https://data.cssz.cz/ontology/sdmx/code/confStatus-C> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus;
+<https://data.cssz.cz/ontology/sdmx/code/confStatus-C> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus-C> ;
     skos:topConceptOf sdmx-code:confStatus;
     skos:inScheme     sdmx-code:confStatus;
     skos:prefLabel "Confidential statistical information"@en ;
@@ -249,7 +249,7 @@ sdmx-code:ConfStatus a rdfs:Class, owl:Class;
     . 
 sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/confStatus-C> .
 
-<https://data.cssz.cz/ontology/sdmx/code/confStatus-D> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus;
+<https://data.cssz.cz/ontology/sdmx/code/confStatus-D> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus-D> ;
     skos:topConceptOf sdmx-code:confStatus;
     skos:inScheme     sdmx-code:confStatus;
     skos:prefLabel "Secondary confidentiality set by the sender, not for publication"@en ;
@@ -258,7 +258,7 @@ sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/confStatus-D> .
 
-<https://data.cssz.cz/ontology/sdmx/code/confStatus-F> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus;
+<https://data.cssz.cz/ontology/sdmx/code/confStatus-F> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus-F> ;
     skos:topConceptOf sdmx-code:confStatus;
     skos:inScheme     sdmx-code:confStatus;
     skos:prefLabel "Free"@en ;
@@ -269,7 +269,7 @@ The focus of this code is not to describe and anticipate all potential permissib
     . 
 sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/confStatus-F> .
 
-<https://data.cssz.cz/ontology/sdmx/code/confStatus-N> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus;
+<https://data.cssz.cz/ontology/sdmx/code/confStatus-N> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus-N> ;
     skos:topConceptOf sdmx-code:confStatus;
     skos:inScheme     sdmx-code:confStatus;
     skos:prefLabel "Not for publication, restricted for internal use only"@en ;
@@ -278,7 +278,7 @@ sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:confStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/confStatus-N> .
 
-<https://data.cssz.cz/ontology/sdmx/code/confStatus-S> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus;
+<https://data.cssz.cz/ontology/sdmx/code/confStatus-S> a skos:Concept, sdmx:Concept, sdmx-code:ConfStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#confStatus-S> ;
     skos:topConceptOf sdmx-code:confStatus;
     skos:inScheme     sdmx-code:confStatus;
     skos:prefLabel "Secondary confidentiality set and managed by the receiver, not for publication"@en ;
@@ -302,7 +302,7 @@ sdmx-code:ObsStatus a rdfs:Class, owl:Class;
     rdfs:comment """This code list provides coded information about the "status" of an observation (with respect events such as the ones reflected in the codes composing the code list)."""@en;
     rdfs:seeAlso sdmx-code:obsStatus .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-A> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-A> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-A> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Normal"@en ;
@@ -311,7 +311,7 @@ sdmx-code:ObsStatus a rdfs:Class, owl:Class;
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-A> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-B> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-B> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-B> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Break"@en ;
@@ -320,7 +320,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-B> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-E> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-E> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-E> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Estimated value"@en ;
@@ -329,7 +329,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-E> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-F> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-F> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-F> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Forecast value"@en ;
@@ -337,7 +337,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-F> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-I> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-I> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-I> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Imputed value (CCSA definition)"@en ;
@@ -346,7 +346,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-I> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-M> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-M> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-M> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Missing value"@en ;
@@ -355,7 +355,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-P> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-P> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-P> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Provisional value"@en ;
@@ -364,7 +364,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
     . 
 sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/obsStatus-P> .
 
-<https://data.cssz.cz/ontology/sdmx/code/obsStatus-S> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus;
+<https://data.cssz.cz/ontology/sdmx/code/obsStatus-S> a skos:Concept, sdmx:Concept, sdmx-code:ObsStatus; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#obsStatus-S> ;
     skos:topConceptOf sdmx-code:obsStatus;
     skos:inScheme     sdmx-code:obsStatus;
     skos:prefLabel "Strike"@en ;
@@ -390,7 +390,7 @@ sdmx-code:Sex a rdfs:Class, owl:Class;
     rdfs:comment """This  code list provides the gender."""@en;
     rdfs:seeAlso sdmx-code:sex .
 
-<https://data.cssz.cz/ontology/sdmx/code/sex-F> a skos:Concept, sdmx:Concept, sdmx-code:Sex;
+<https://data.cssz.cz/ontology/sdmx/code/sex-F> a skos:Concept, sdmx:Concept, sdmx-code:Sex; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex-F> ;
     skos:topConceptOf sdmx-code:sex;
     skos:inScheme     sdmx-code:sex;
     skos:prefLabel "Female"@en ;
@@ -399,7 +399,7 @@ sdmx-code:Sex a rdfs:Class, owl:Class;
     . 
 sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-F> .
 
-<https://data.cssz.cz/ontology/sdmx/code/sex-M> a skos:Concept, sdmx:Concept, sdmx-code:Sex;
+<https://data.cssz.cz/ontology/sdmx/code/sex-M> a skos:Concept, sdmx:Concept, sdmx-code:Sex; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex-M> ;
     skos:topConceptOf sdmx-code:sex;
     skos:inScheme     sdmx-code:sex;
     skos:prefLabel "Male"@en ;
@@ -408,7 +408,7 @@ sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-F>
     . 
 sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/sex-U> a skos:Concept, sdmx:Concept, sdmx-code:Sex;
+<https://data.cssz.cz/ontology/sdmx/code/sex-U> a skos:Concept, sdmx:Concept, sdmx-code:Sex; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex-U> ;
     skos:topConceptOf sdmx-code:sex;
     skos:inScheme     sdmx-code:sex;
     skos:prefLabel "Not specified or unknown"@en ;
@@ -416,7 +416,7 @@ sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-M>
     . 
 sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-U> .
 
-<https://data.cssz.cz/ontology/sdmx/code/sex-N> a skos:Concept, sdmx:Concept, sdmx-code:Sex;
+<https://data.cssz.cz/ontology/sdmx/code/sex-N> a skos:Concept, sdmx:Concept, sdmx-code:Sex; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex-N> ;
     skos:topConceptOf sdmx-code:sex;
     skos:inScheme     sdmx-code:sex;
     skos:prefLabel "Not applicable"@en ;
@@ -425,7 +425,7 @@ sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-U>
     . 
 sdmx-code:sex skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/sex-N> .
 
-<https://data.cssz.cz/ontology/sdmx/code/sex-T> a skos:Concept, sdmx:Concept, sdmx-code:Sex;
+<https://data.cssz.cz/ontology/sdmx/code/sex-T> a skos:Concept, sdmx:Concept, sdmx-code:Sex; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex-T> ;
     skos:topConceptOf sdmx-code:sex;
     skos:inScheme     sdmx-code:sex;
     skos:prefLabel "Total"@en ;
@@ -450,7 +450,7 @@ sdmx-code:TimeFormat a rdfs:Class, owl:Class;
     rdfs:comment """These codes (based on the ISO 8601 standard) indicate the type of time references used in the data. The numeric codes below (203, 102,...,702) are used only in the SDMX-EDI messages; and the alphanumeric codes (P1D...PT1M) only in the SDMX-ML messages."""@en;
     rdfs:seeAlso sdmx-code:timeFormat .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-102> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-102> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-102> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMMDD"@en ;
@@ -460,7 +460,7 @@ year/month/day"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-102> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-203> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-203> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-203> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMMDDhhmm"@en ;
@@ -470,7 +470,7 @@ year/month/day/hours/minutes"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-203> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-602> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-602> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-602> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYY"@en ;
@@ -480,7 +480,7 @@ year"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-602> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-604> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-604> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-604> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYS"@en ;
@@ -490,7 +490,7 @@ year/semester"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-604> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-608> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-608> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-608> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYQ"@en ;
@@ -500,7 +500,7 @@ year/quarter"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-608> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-610> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-610> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-610> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMM"@en ;
@@ -510,7 +510,7 @@ year/month"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-610> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-616> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-616> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-616> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYWW"@en ;
@@ -520,7 +520,7 @@ year/ week"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-616> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-702> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-702> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-702> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYCCYY"@en ;
@@ -530,7 +530,7 @@ from year to year"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-702> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-704> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-704> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-704> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYSCCYYS"@en ;
@@ -540,7 +540,7 @@ from half-year to half-year"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-704> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-708> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-708> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-708> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYQCCYYQ"@en ;
@@ -550,7 +550,7 @@ from year/quarter to year/quarter"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-708> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-710> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-710> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-710> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMMCCYYMM"@en ;
@@ -560,7 +560,7 @@ from year/month to year/month"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-710> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-711> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-711> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-711> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMMDDCCYYMMDD"@en ;
@@ -570,7 +570,7 @@ from year/month/day to year/month/day"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-711> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-716> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-716> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-716> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYWWCCYYWW"@en ;
@@ -580,7 +580,7 @@ from year/week to year/week"""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-716> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-719> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-719> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-719> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "CCYYMMDDhhmmmCCYYMMDDhhmmm"@en ;
@@ -590,7 +590,7 @@ year/month/day/hours/minutes to year/month/day/hours/minutes."""@en ;
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-719> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1D> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1D> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P1D> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Daily (or Business)"@en ;
@@ -598,7 +598,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1D> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P1M> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Monthly"@en ;
@@ -606,7 +606,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1Y> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1Y> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P1Y> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Annual"@en ;
@@ -614,7 +614,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P1Y> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P3M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P3M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P3M> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Quarterly"@en ;
@@ -622,7 +622,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P3M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P6M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P6M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P6M> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Half-yearly"@en ;
@@ -630,7 +630,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P6M> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P7D> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-P7D> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-P7D> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Weekly"@en ;
@@ -638,7 +638,7 @@ sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code
     . 
 sdmx-code:timeFormat skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/timeFormat-P7D> .
 
-<https://data.cssz.cz/ontology/sdmx/code/timeFormat-PT1M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat;
+<https://data.cssz.cz/ontology/sdmx/code/timeFormat-PT1M> a skos:Concept, sdmx:Concept, sdmx-code:TimeFormat; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#timeFormat-PT1M> ;
     skos:topConceptOf sdmx-code:timeFormat;
     skos:inScheme     sdmx-code:timeFormat;
     skos:prefLabel "Minutely"@en ;
@@ -661,7 +661,7 @@ sdmx-code:UnitMult a rdfs:Class, owl:Class;
     rdfs:comment """it provides code values for indicating the magnitude in the units of measurements."""@en;
     rdfs:seeAlso sdmx-code:unitMult .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-0> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-0> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-0> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Units"@en ;
@@ -669,7 +669,7 @@ sdmx-code:UnitMult a rdfs:Class, owl:Class;
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-0> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-1> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-1> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-1> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Tens"@en ;
@@ -677,7 +677,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-1> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-2> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-2> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-2> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Hundreds"@en ;
@@ -685,7 +685,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-2> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-3> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-3> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-3> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Thousands"@en ;
@@ -693,7 +693,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-3> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-4> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-4> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-4> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Tens of thousands"@en ;
@@ -701,7 +701,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-4> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-6> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-6> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-6> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Millions"@en ;
@@ -709,7 +709,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-6> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-9> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-9> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-9> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Billions"@en ;
@@ -717,7 +717,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-9> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-12> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-12> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-12> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Trillions"@en ;
@@ -725,7 +725,7 @@ sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/u
     . 
 sdmx-code:unitMult skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/unitMult-12> .
 
-<https://data.cssz.cz/ontology/sdmx/code/unitMult-15> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult;
+<https://data.cssz.cz/ontology/sdmx/code/unitMult-15> a skos:Concept, sdmx:Concept, sdmx-code:UnitMult; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#unitMult-15> ;
     skos:topConceptOf sdmx-code:unitMult;
     skos:inScheme     sdmx-code:unitMult;
     skos:prefLabel "Quadrillions"@en ;
