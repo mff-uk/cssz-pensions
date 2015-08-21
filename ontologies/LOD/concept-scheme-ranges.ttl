@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix ran:   <http://linked.opendata.cz/generated/resource/range/> .
-@prefix ran-onto:   <http://linked.opendata.cz/ontology/ranges/> .
+@prefix ran:   <https://data.cssz.cz/generated/resource/range/> .
+@prefix ran-onto:   <https://data.cssz.cz/ontology/ranges/> .
 
 ran-onto:RangeScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of integer ranges"@en, "Číselník celočíselných intervalů"@cs ;
@@ -19,16 +19,6 @@ ran-onto:RangeScheme a skos:ConceptScheme, sdmx:CodeList ;
 ran-onto:Range a rdfs:Class, owl:Class ;
   rdfs:subClassOf skos:Concept ;
   rdfs:seeAlso ran-onto:RangeScheme .
-
-### NAVRHY NA SPECIFIKACI USPORADANI
-
-###### 1) Pomoci skos:OrderedCollection - Jedna se o standardni zpusob usporadavani resources. Jsem schopen ho udelat, protoze to delam pro konkretni dimenzi, jejiz (konecnou) mnozinu hodnot dopredu znam. Ten ordering bych jeste nejak potreboval navazat na definici te dane dimenze nebo primo na ran-onto:RangeScheme, coz nevim, jeslti existuje neco standardniho. Property, pomoci ktery bychom navazali dimenzi/conceptscheme na ordering bychom asi museli zavest, nebo nejaka existuje?
-# ran:ordering1 a skos:OrderedCollection ;
-#  skos:memberList ( ran:I1T999 ran:I1000T1999 ran:I2000T2999 ran:I3000T3999 ran:I4000T4999 ran:I5000T5999 ran:I6000T6999 ran:I7000T7999 ran:I8000T8999 ran:I9000T9999 ran:I10000T10999 ran:I11000T11999 ran:I12000T12999 ran:I13000T13999 ran:I14000T14999 ran:I15000T15999 ran:I16000T16999 ran:I17000T17999 ran:I18000T18999 ran:I19000T19999 ran:I20000T20999 ran:I21000T21999 ran:I22000T22999 ran:I23000T23999 ran:I24000T24999 ran:I25000T25999 ran:I26000T26999 ran:I27000T27999 ran:I28000T28999 ran:I29000T29999 ran:I30000T30999 ran:I31000T31999 ran:I32000T32999 ran:I33000T33999 ran:I34000T34999 ran:I35000T35999 ran:I36000T36999 ran:I37000T37999 ran:I38000T38999 ran:I39000T39999 ran:I40000T40999 ran:I41000T41999 ran:I42000T42999 ran:I43000T43999 ran:I44000T44999 ran:I45000T45999 ran:I46000T46999 ran:I47000T47999 ran:I48000T48999 ran:I49000T49999 ran:I50000T50999 ran:I51000T51999 ran:I52000T52999 ran:I53000T53999 ran:I54000T54999 ran:I55000T55999 ran:I56000T56999 ran:I57000T57999 ran:I58000T58999 ran:I59000T59999 ran:I60000T60999 ran:I61000T61999 ran:I62000T62999 ran:I63000T63999 ran:I64000T64999 ran:I65000T65999 ran:I66000T66999 ran:I67000T67999 ran:I68000T68999 ran:I69000T69999 ran:I70000T70999 ran:I71000T71999 ran:I72000T72999 ran:I73000T73999 ran:I74000T74999 ran:I75000T75999 ran:I76000T76999 ran:I77000T77999 ran:I78000T78999 ran:I79000T79999 ran:I80000T80999 ran:I81000T81999 ran:I82000T82999 ran:I83000T83999 ran:I84000T84999 ran:I85000T85999 ran:I86000T86999 ran:I87000T87999 ran:I88000T88999 ran:I89000T89999 ran:I90000T90999 ran:I91000T91999 ran:I92000T92999 ran:I93000T93999 ran:I94000T94999 ran:I95000T95999 ran:I96000T96999 ran:I97000T97999 ran:I98000T98999 ran:I99000T99999 ran:I100000T100999 ran:I101000T101999 ran:I102000T102999 ran:I103000T103999 ran:I104000T104999 ran:I105000T105999 ran:I106000T106999 ran:I107000T107999 ran:I108000T108999 ran:I109000T109999 ran:I110000T110999 ran:I111000T111999 ran:I112000T112999 ran:I113000T113999 ran:I114000T114999 ran:I115000T115999 ran:I116000T116999 ran:I117000T117999 ran:I118000T118999 ran:I119000T119999 ) .
-# ran-onto:RangeScheme <http://linked.opendata.cz/ontology/ordering/nase-nova-property> ran:ordering1 .
-  
-###### 2) Stejne jako v 1) udelat property, ktera specifikuje ordering pro dimenzi nebo rovnou conceptscheme. Misto usporadaneho vyctu hodnot jako v 1) bychom ale dali URI zpusobu usporadani.
-# ran-onto:RangeScheme <http://linked.opendata.cz/ontology/ordering/nase-nova-property> <http://linked.opendata.cz/ontology/ordering/NumericalAscending> .
 
 ran:I_X a skos:Concept, ran-onto:Range ;
   skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;

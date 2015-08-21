@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix icd10:   <http://data.cssz.cz/resource/icd-10/chapter/> .
-@prefix icd10-onto:   <http://data.cssz.cz/ontology/icd-10/> .
+@prefix icd10:   <https://data.cssz.cz/resource/icd-10/chapter/> .
+@prefix icd10-onto:   <https://data.cssz.cz/ontology/icd-10/> .
 
 icd10-onto:ICD10ChaptersScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of chapters (I–XIX) of the Tenth Revision of the International Statistical Classification of Diseases and Related Health Problems (ICD - 10) - WHO 1992"@en, "Číselník kapitol (I–XIX) Mezinárodní statistické klasifikace nemocí a přidružených zdravotních problémů (ve znění 10. decenální revize) - WHO 1992"@cs ;

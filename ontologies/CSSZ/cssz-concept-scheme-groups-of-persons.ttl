@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix czgop:   <http://data.cssz.cz/resource/group/> .
-@prefix czgop-onto:   <http://data.cssz.cz/ontology/groups-of-persons/> .
+@prefix czgop:   <https://data.cssz.cz/resource/group/> .
+@prefix czgop-onto:   <https://data.cssz.cz/ontology/groups-of-persons/> .
 
 czgop-onto:CzechGroupsOfPersonsScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of the groups of the Czech population."@en, "Číselník skupin osob české populace."@cs ;

@@ -6,8 +6,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix age:   <http://linked.opendata.cz/generated/resource/age/> .
-@prefix age-onto:   <http://linked.opendata.cz/ontology/age/> .
+@prefix age:   <https://data.cssz.cz/generated/resource/age/> .
+@prefix age-onto:   <https://data.cssz.cz/ontology/age/> .
 
 age-onto:AgeScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of age categories according to SDMX"@en, "Číselník věkových kategorií dle SDMX"@cs ;

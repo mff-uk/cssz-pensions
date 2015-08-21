@@ -1,47 +1,34 @@
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
-@prefix interval:	<http://reference.data.gov.uk/def/intervals/> .
-@prefix dcterms:  <http://purl.org/dc/terms/>.
-
-@prefix age:  	 	<http://linked.opendata.cz/generated/resource/age/> .
-
-@prefix qb:              <http://purl.org/linked-data/cube#> .
-@prefix sdmx:            <http://purl.org/linked-data/sdmx#> .
-@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
-@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
-@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
-@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
-@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
-@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
-@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
-
+@prefix rdf:      		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      		<http://www.w3.org/2001/XMLSchema#> .
+@prefix interval:		<http://reference.data.gov.uk/def/intervals/> .
+@prefix dcterms:  		<http://purl.org/dc/terms/>.
+@prefix qb:             <http://purl.org/linked-data/cube#> .
 @prefix dbpedia:  		<http://dbpedia.org/resource/> .
 
-@prefix cssz-dimension:		<http://data.cssz.cz/ontology/dimension/> .
-@prefix cssz-measure:		<http://data.cssz.cz/ontology/measure/> .
-@prefix cssz-dsd:			<http://data.cssz.cz/resource/data-structure-definition/> .
-@prefix cssz:	 			<http://data.cssz.cz/ontology/> .
+@prefix sdmx-concept:   <https://data.cssz.cz/ontology/sdmx/concept/> .
+@prefix sdmx-dimension: <https://data.cssz.cz/ontology/sdmx/dimension/> .
+@prefix sdmx-attribute: <https://data.cssz.cz/ontology/sdmx/attribute/> .
+@prefix sdmx-measure:   <https://data.cssz.cz/ontology/sdmx/measure/> .
+@prefix sdmx-metadata:  <https://data.cssz.cz/ontology/sdmx/metadata/> .
+@prefix sdmx-code:      <https://data.cssz.cz/ontology/sdmx/code/> .
+@prefix sdmx-subject:   <https://data.cssz.cz/ontology/sdmx/subject/> .
 
-@prefix age:   			<http://linked.opendata.cz/generated/resource/age/> .
-@prefix age-onto:  		<http://linked.opendata.cz/ontology/age/> .
-@prefix qua-onto:   	<http://linked.opendata.cz/ontology/quantiles/> .
-@prefix ran-onto:   	<http://linked.opendata.cz/ontology/ranges/> .
+@prefix cssz-dimension:	<https://data.cssz.cz/ontology/dimension/> .
+@prefix cssz-measure:	<https://data.cssz.cz/ontology/measure/> .
+@prefix cssz-dsd:		<https://data.cssz.cz/resource/data-structure-definition/> .
+@prefix cssz:	 		<https://data.cssz.cz/ontology/> .
 
-@prefix ybs-onto: 	 	<http://data.cssz.cz/ontology/yearbook-sections/> .
-@prefix pen-onto:   	<http://data.cssz.cz/ontology/pension-kinds/> .
-@prefix pencan-onto:   	<http://data.cssz.cz/ontology/pension-cancellation-reasons/> .
-@prefix dis-onto:   	<http://data.cssz.cz/ontology/disability-levels/> .
-@prefix czgop-onto:   	<http://data.cssz.cz/ontology/groups-of-persons/> .
-@prefix icd10-onto:   	<http://data.cssz.cz/ontology/icd-10/> .
+@prefix age:   			<https://data.cssz.cz/generated/resource/age/> .
+@prefix age-onto:  		<https://data.cssz.cz/ontology/age/> .
+@prefix qua-onto:   	<https://data.cssz.cz/ontology/quantiles/> .
+@prefix ran-onto:   	<https://data.cssz.cz/ontology/ranges/> .
 
-
-cssz:yearbookSection a rdf:Property ;
-  rdfs:subPropertyOf dcterms:source ;
-  rdfs:domain qb:DataSet ;
-  rdfs:range ybs-onto:YearbookSection ;
-  rdfs:comment "Kapitola ročenky z oblasti důchodového pojištění ČSSZ, ve které jsou obsažena zdrojová data datové kostky."@cs,
-               "Section of the pension statistics yearbook published by the Czech Social Security Administration which contains tje source data of the data cube." .
+@prefix pen-onto:   	<https://data.cssz.cz/ontology/pension-kinds/> .
+@prefix pencan-onto:   	<https://data.cssz.cz/ontology/pension-cancellation-reasons/> .
+@prefix dis-onto:   	<https://data.cssz.cz/ontology/disability-levels/> .
+@prefix czgop-onto:   	<https://data.cssz.cz/ontology/groups-of-persons/> .
+@prefix icd10-onto:   	<https://data.cssz.cz/ontology/icd-10/> .
 
 ### Definition of measures and properties
 

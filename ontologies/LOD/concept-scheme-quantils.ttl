@@ -4,10 +4,10 @@
 @prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
 @prefix time:     <http://www.w3.org/2006/time#> .
 
-@prefix qua:   <http://linked.opendata.cz/generated/resource/quantile/> .
-@prefix qua-onto:   <http://linked.opendata.cz/ontology/quantiles/> .
+@prefix qua:   <https://data.cssz.cz/generated/resource/quantile/> .
+@prefix qua-onto:   <https://data.cssz.cz/ontology/quantiles/> .
 
-@prefix age:   <http://linked.opendata.cz/ontology/age/> .
+@prefix age:   <https://data.cssz.cz/ontology/age/> .
 
 qua-onto:QuantileScheme a skos:ConceptScheme ;
   skos:prefLabel "Code list of quantiles"@en, "Číselník kvantilů"@cs ;

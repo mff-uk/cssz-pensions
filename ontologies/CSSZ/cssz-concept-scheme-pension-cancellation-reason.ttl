@@ -5,8 +5,8 @@
 
 @prefix sdmx:    <http://purl.org/linked-data/sdmx#> .
 
-@prefix pencan:   <http://data.cssz.cz/resource/pension-cancellation-reason/> .
-@prefix pencan-onto:   <http://data.cssz.cz/ontology/pension-cancellation-reasons/> .
+@prefix pencan:   <https://data.cssz.cz/resource/pension-cancellation-reason/> .
+@prefix pencan-onto:   <https://data.cssz.cz/ontology/pension-cancellation-reasons/> .
 
 pencan-onto:PensionCancellationReasonScheme a skos:ConceptScheme, sdmx:CodeList ;
   skos:prefLabel "Code list of pension cancellation reasons"@en, "Číselník důvodů zániku důchodu"@cs ;
