@@ -169,11 +169,11 @@ cssz-dataset:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-p
   qb:structure cssz-dsd:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu .
 
 cssz-dataset:zanikle-duchody a qb:DataSet ;
-  dcterms:title "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
-  rdfs:label "Numbers of defuncted pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
-  dcterms:description "Numbers of defuncted pensions in the Czech Republic by year, kind of pension, reason of defunct and sex"@en,
+  dcterms:title "Numbers of expired pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
+  rdfs:label "Numbers of expired pensions in the Czech Republic"@en, "Počet zaniklých důchodů v České republice"@cs ;
+  dcterms:description "Numbers of expired pensions in the Czech Republic by year, kind of pension, statistical reason for expiration and sex"@en,
     "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
-  rdfs:comment "Numbers of defuncted pensions in the Czech Republic by year, kind of pension, reason of defunct and sex"@en,
+  rdfs:comment "Numbers of expired pensions in the Czech Republic by year, kind of pension, statistical reason for expiration and sex"@en,
     "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
