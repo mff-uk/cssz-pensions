@@ -36,12 +36,12 @@
 ### DataSets
 
 cssz-dataset:vydaje-na-duchody-v-cr a qb:DataSet ;
-  dcterms:title "Costs on pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
-  rdfs:label "Costs on pensions in the Czech Republic"@en, "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+  dcterms:title "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
+  rdfs:label "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
   dcterms:description "Costs on pensions in the Czech Republic by year and kind of pension"@en,
-    "Počet vyplacených důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
+    "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
   rdfs:comment "Costs on pensions in the Czech Republic by year and kind of pension"@en,
-    "Výdaje na důchody podle roku a druhu penze"@cs ;
+    "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
@@ -196,9 +196,9 @@ cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
   dcterms:title "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
   rdfs:label "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
   dcterms:description "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
-    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
+    "Přehled o změnách mezi stupni invalidního důchodu v daném roce, dle pohlaví"@cs ;
   rdfs:comment "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
-    "Přehled o změnách mezi stupni invalidního důchodu dle druhu invalidního důchou, důvodu změny, pohlaví a roku"@cs ;
+    "Přehled o změnách mezi stupni invalidního důchodu v daném roce, dle pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
