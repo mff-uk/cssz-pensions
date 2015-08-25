@@ -39,9 +39,9 @@ cssz-dataset:vydaje-na-duchody-v-cr a qb:DataSet ;
   dcterms:title "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
   rdfs:label "Costs on pensions in the Czech Republic"@en, "Výdaje na důchody"@cs ;
   dcterms:description "Costs on pensions in the Czech Republic by year and kind of pension"@en,
-    "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+    "Výdaje na důchody podle roku a druhu penze"@cs ;
   rdfs:comment "Costs on pensions in the Czech Republic by year and kind of pension"@en,
-    "Počet vyplacených důchodů v České republice dle měsíční výše důchodu"@cs ;
+    "Výdaje na důchody podle roku a druhu penze"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
