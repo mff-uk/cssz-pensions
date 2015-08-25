@@ -208,9 +208,9 @@ cssz-dataset:duchodci-v-cr-krajich-okresech a qb:DataSet ;
   dcterms:title "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Přehled o počtu důchodců podle území, pohlaví, průměrné výše důchodu, průměrného věku a podle druhu důchodu"@cs ;
   rdfs:label "Total numbers of pensioners in regions and districts of Czech Republic"@en, "Přehled o počtu důchodců podle území, pohlaví, průměrné výše důchodu, průměrného věku a podle druhu důchodu"@cs ;
   dcterms:description "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
-    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje nebo okresu České republiky a pohlaví"@cs ;
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze a pohlaví za ČR, kraje a okresy"@cs ;
   rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
-    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze, kraje nebo okresu České republiky a pohlaví"@cs ;
+    "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze a pohlaví za ČR, kraje a okresy"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
   dcterms:issued "2014-09-15"^^xsd:date ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
