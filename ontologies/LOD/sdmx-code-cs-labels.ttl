@@ -376,6 +376,7 @@ sdmx-code:obsStatus skos:hasTopConcept <https://data.cssz.cz/ontology/sdmx/code/
 # CL_SEX
 sdmx-code:sex a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/linked-data/sdmx/2009/code#sex> ;
     skos:prefLabel "Code list for Sex (SEX) - codelist scheme"@en;
+	skos:prefLabel "Číselník pohlaví"@cs;
     rdfs:label "Code list for Sex (SEX) - codelist scheme"@en;
     rdfs:label "Číselník pohlaví"@cs;
     skos:notation "CL_SEX";
