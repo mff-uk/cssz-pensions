@@ -12,7 +12,7 @@ pencan-onto:PensionCancellationReasonScheme a skos:ConceptScheme, sdmx:CodeList 
   skos:prefLabel "Code list of pension cancellation reasons"@en, "Číselník důvodů zániku důchodu"@cs ;
   rdfs:label "Code list of pension cancellation reasons"@en, "Číselník důvodů zániku důchodu"@cs ;
   skos:notation "CL_CSSZ_PENSION_CANCELLATION_REASONS"@cs ;
-  skos:note "This code list is a representation of pension cancellation reasons."@en,
+  skos:definition "This code list is a representation of pension cancellation reasons."@en,
             "Tento číselník je reprezentací důvodů zániku důchodu."@cs ;
   skos:hasTopConcept pencan:PCR_T;
   rdfs:seeAlso pencan-onto:PensionCancellationReason .
@@ -24,78 +24,78 @@ pencan-onto:PensionCancellationReason a rdfs:Class, owl:Class ;
 pencan:PCR_X a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "Neudáno"@cs, "Unspecified"@en ;
   skos:notation "X";
-  skos:note "Neudáno"@cs ;
+  skos:definition "Neudáno"@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
 
 pencan:PCR_T a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "Celkem"@cs, "Total"@en ;
   skos:notation "T";
-  skos:note "Celkem"@cs ;
+  skos:definition "Celkem"@cs ;
   skos:narrower pencan:PCR_1, pencan:PCR_2, pencan:PCR_3, pencan:PCR_4, pencan:PCR_5, pencan:PCR_6, pencan:PCR_8, pencan:PCR_9, pencan:PCR_10, pencan:PCR_12, pencan:PCR_13 ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
 
 pencan:PCR_1 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "důchodce zemřel"@cs ;
   skos:notation "01Z";
-  skos:note "Důchodce zemřel."@cs ;
+  skos:definition "Důchodce zemřel."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_2 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "transformace invalidního důchodu na SI"@cs ;
   skos:notation "02Z";
-  skos:note "Transformace invalidního důchodu na starobní důchod SI."@cs ;
+  skos:definition "Transformace invalidního důchodu na starobní důchod SI."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_3 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "zaniká V, VM, protože zanikl nárok na D a vdova/vdovec nesplňuje podmínky pro nárok na pozůstalostní důchod"@cs ;
   skos:notation "03Z";
-  skos:note "Zaniká vdovský nebo vdovecký důchod, protože zanikl nárok na sirotčí důchod a vdova/vdovec nesplňuje podmínky pro nárok na pozůstalostní důchod."@cs ;
+  skos:definition "Zaniká vdovský nebo vdovecký důchod, protože zanikl nárok na sirotčí důchod a vdova/vdovec nesplňuje podmínky pro nárok na pozůstalostní důchod."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
 
 pencan:PCR_4 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "zaniká invalidita a tím i nárok na invalidní nebo vdovský/vdovecký důchod"@cs ;
   skos:notation "04Z";
-  skos:note "Do roku 2009: zanikla invalidita a tím zaniká nárok na I, IČ nebo V, VM. Od roku 2010: zaniká invalidita a tím nárok na IP, ID, IT nebo V, VM."@cs ;
+  skos:definition "Do roku 2009: zanikla invalidita a tím zaniká nárok na I, IČ nebo V, VM. Od roku 2010: zaniká invalidita a tím nárok na IP, ID, IT nebo V, VM."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_5 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "V, VM zaniká po roce"@cs ;
   skos:notation "05Z";
-  skos:note "Vdovský/vdovecký důchod zaniká po roce."@cs ;
+  skos:definition "Vdovský/vdovecký důchod zaniká po roce."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_6 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "zaniká nárok na sirotčí důchod"@cs ;
   skos:notation "06Z";
-  skos:note "Zaniká nárok na sirotčí důchod."@cs ;
+  skos:definition "Zaniká nárok na sirotčí důchod."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_8 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "zánik důchodu, protože se přiznává důchod jiného druhu"@cs ;
   skos:notation "08Z";
-  skos:note "Zánik důchodu, protože se přiznává důchod jiného druhu. Do roku 2009 např. IČ na S nebo I na S. Od roku 2010 např. IP, ID nebo IT na S."@cs ;
+  skos:definition "Zánik důchodu, protože se přiznává důchod jiného druhu. Do roku 2009 např. IČ na S nebo I na S. Od roku 2010 např. IP, ID nebo IT na S."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_9 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "předání výplaty důchodu MV, MO"@cs ;
   skos:notation "09Z";
-  skos:note "Předání výplaty důchodu Ministerstvu vnitra, Ministerstvu obrany."@cs ;
+  skos:definition "Předání výplaty důchodu Ministerstvu vnitra, Ministerstvu obrany."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_10 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "vzdal se důchodu, nedostavil se ke KLP, dočasné přerušení výplaty"@cs ;
   skos:notation "10Z";
-  skos:note "Důchodce se vzdal důchodu, nedostavil se ke kontrolní lékařské prohlídce, dočasné přerušení výplaty."@cs ;
+  skos:definition "Důchodce se vzdal důchodu, nedostavil se ke kontrolní lékařské prohlídce, dočasné přerušení výplaty."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_12 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "důchod chybně přiznán"@cs ;
   skos:notation "12Z";
-  skos:note "Důchod chybně přiznán."@cs ;
+  skos:definition "Důchod chybně přiznán."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
   
 pencan:PCR_13 a skos:Concept, pencan-onto:PensionCancellationReason ;
   skos:prefLabel "vdova se provdala/vdovec se oženil"@cs ;
   skos:notation "13Z";
-  skos:note "Vdova se provdala/vdovec se oženil."@cs ;
+  skos:definition "Vdova se provdala/vdovec se oženil."@cs ;
   skos:inScheme pencan-onto:PensionCancellationReasonScheme .
