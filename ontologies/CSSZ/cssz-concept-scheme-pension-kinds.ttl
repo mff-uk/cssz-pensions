@@ -14,8 +14,8 @@
 ###
 
 pen-onto:PensionKindScheme a skos:ConceptScheme, sdmx:CodeList ;
-  skos:prefLabel "Code list of kinds of pensions"@en, "Číselník druhů důchodů"@cs ;
-  rdfs:label "Code list of kinds of pensions"@en, "Číselník druhů důchodů"@cs ;
+  skos:prefLabel "Code list of kinds of pensions"@en, "Číselník druhů důchodů a jejich kombinací"@cs ;
+  rdfs:label "Code list of kinds of pensions"@en, "Číselník druhů důchodů a jejich kombinací"@cs ;
   skos:notation "CL_CSSZ_PENSION_KINDS"@cs ;
   skos:note "This code list is a representation kinds of pensions defined by the related Czech legislation."@en,
             "Tento číselník je reprezentací druhů penzí definovaných související českou legislativou."@cs ;
