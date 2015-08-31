@@ -380,7 +380,7 @@ sdmx-code:sex a skos:ConceptScheme, sdmx:CodeList; owl:sameAs <http://purl.org/l
     rdfs:label "Code list for Sex (SEX) - codelist scheme"@en;
     rdfs:label "Číselník pohlaví"@cs;
     skos:notation "CL_SEX";
-    skos:note """This  code list provides the gender."""@en;
+    skos:note """This code list provides the gender."""@en;
     skos:definition <http://sdmx.org/wp-content/uploads/2009/01/02_sdmx_cog_annex_2_cl_2009.pdf> ;
     rdfs:seeAlso sdmx-code:Sex .
 
