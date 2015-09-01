@@ -192,6 +192,18 @@ cssz-dataset:invalidita a qb:DataSet ;
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:invalidita .
 
+cssz-dataset:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice a qb:DataSet ;
+  dcterms:title "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice"@cs ;
+  rdfs:label "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice"@cs ;
+  dcterms:description "Numbers of paid-out pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
+    "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
+  rdfs:comment "Numbers of paid-out disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
+    "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:issued "2014-09-15"^^xsd:date ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice .
+
 cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
   dcterms:title "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
   rdfs:label "Yearly changes between degrees of disability pension"@en, "Změny mezi stupni invalidního důchodu v roce"@cs ;
@@ -740,6 +752,48 @@ cssz-dsd:invalidita a qb:DataStructureDefinition ;
     qb:measure cssz-measure:pocet-nove-priznanych-duchodu ;
     rdfs:label "The measure of the number of newly awarded pensions in the given year, with the given kind of pension, to persons of the given age and sex and with the given ICD-10 group of diagnoses."@en,
                "Měření počtu nově přiznaných důchodů podle roku, druhu důchodu, pohlaví, věku a skupiny diagnóz dle MKN-10."@cs
+  ] ;
+  # Attributes
+  qb:component [
+    qb:attribute sdmx-attribute:unitMeasure ;
+    rdfs:label "Unit of the measure"@en, "Jednotka měření"@cs ;
+    qb:componentRequired "true"^^xsd:boolean ;
+    qb:componentAttachment qb:DataSet
+  ] .
+
+cssz-dsd:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice a qb:DataStructureDefinition ;
+  rdfs:label "Definice struktury datové kostky počtu vyplacených důchodů podle skupin diagnóz definovaných v MKN-10."@cs ;
+  # Dimensions
+  qb:component [
+    qb:dimension cssz-dimension:refPeriod ;
+    qb:order 1 ;
+    rdfs:label "The dimension representing a year in which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující rok, za který je počet nově přiznaných důchodů uveden."@cs
+  ] ;
+  qb:component [
+    qb:dimension cssz-dimension:druh-duchodu ;
+    qb:order 2 ;
+    rdfs:label "The dimension representing a kind of pension for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující druh důchodu, pro který je počet nově přiznaných důchodů uveden."@cs
+  ] ;
+  qb:component [
+    qb:dimension cssz-dimension:skupina-diagnoz-dle-who ;
+    qb:order 3 ;
+    rdfs:label "The dimension representing the group of diagnoses defined by WHO in ICD-10 for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující skupinu diagnóz dle MKD-10 definované WHO, pro kterou je počet nově přiznaných důchodů uveden."@cs
+  ] ;
+  qb:component [
+    qb:dimension cssz-dimension:vekova-kategorie ;
+    qb:order 4 ;
+    rdfs:label "The dimension representing an age for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující věk, za který je počet nově příznaných důchodů uveden."@cs
+  ] ;
+  qb:component [
+    qb:dimension cssz-dimension:pohlavi ;
+    qb:order 5 ;
+    rdfs:label "The dimension representing a sex for which the number of newly awarded pensions was measured."@en, "Dimenze reprezentující pohlaví, za které je počet nově přiznaných důchodů uveden."@cs
+  ] ;
+  # Measure
+  qb:component [
+    qb:measure cssz-measure:pocet-vyplacenych-duchodu ;
+    rdfs:label "The measure of the number of paid-out pensions in the given year, with the given kind of pension, to persons of the given age and sex and with the given ICD-10 group of diagnoses."@en,
+               "Měření počtu vyplácených důchodů podle roku, druhu důchodu, pohlaví, věku a skupiny diagnóz dle MKN-10."@cs
   ] ;
   # Attributes
   qb:component [
