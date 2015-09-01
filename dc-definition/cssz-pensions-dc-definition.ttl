@@ -43,7 +43,7 @@ cssz-dataset:vydaje-na-duchody-v-cr a qb:DataSet ;
   rdfs:comment "Costs on pensions in the Czech Republic by year and kind of pension"@en,
     "Výdaje na důchody podle roku a druhu penze"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:vydaje-na-duchody-v-cr .
   
@@ -55,7 +55,7 @@ cssz-dataset:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadre
   rdfs:comment "Monthly pensions in the Czech Republic by year, quantil and kind of pension"@en,
     "Měsíční výše důchodů podle roku, kvantilu a druhu penze"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:rozlozeni-souboru-duchodcu-podle-vyse-duchodu-v-kvantilovem-vyjadreni .
   
@@ -67,7 +67,7 @@ cssz-dataset:prum-delka-pobirani-s-duchodu a qb:DataSet ;
   rdfs:comment "Average length of the pension by year when it ended and sex"@en,
     "Průměrná délka pobírání starobního důchodu podle roku zániku a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:prum-delka-pobirani-s-duchodu .
   
@@ -79,7 +79,7 @@ cssz-dataset:duchody-dle-veku a qb:DataSet ;
   rdfs:comment "Numbers of paid pensions in the Czech Republic by year, age, kind of pension and sex"@en,
     "Počet vyplacených důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:duchody-dle-veku .
   
@@ -91,7 +91,7 @@ cssz-dataset:vyplacene-duchody-dle-vyse a qb:DataSet ;
   rdfs:comment "Numbers of paid pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
     "Počet vyplacených důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:vyplacene-duchody-dle-vyse .
   
@@ -103,7 +103,7 @@ cssz-dataset:nove-priznane-duchody-dle-veku a qb:DataSet ;
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, age, kind of pension and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, věkové kategorie a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:nove-priznane-duchody-dle-veku .
   
@@ -115,7 +115,7 @@ cssz-dataset:prum-vek-u-nove-priznanych-duchodu-dle-druhu a qb:DataSet ;
   rdfs:comment "Average age of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
     "Průměrný věk u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:prum-vek-u-nove-priznanych-duchodu-dle-druhu .
 
@@ -127,7 +127,7 @@ cssz-dataset:nove-priznane-duchody-dle-vyse-duchodu a qb:DataSet ;
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, monthly pension and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, měsíční výše důchodu a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:nove-priznane-duchody-dle-vyse-duchodu .
   
@@ -139,7 +139,7 @@ cssz-dataset:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu a q
   rdfs:comment "Average amount of pensions of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
     "Průměrná výše důchodů v Kč u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:prum-vyse-duchodu-u-nove-priznanych-duchodu-podle-druhu-duchodu .
   
@@ -152,7 +152,7 @@ cssz-dataset:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu a qb:DataSe
   rdfs:comment "Numbers of newly granted pensions in the Czech Republic by year, kind of pension, personal assessment base and sex"@en,
     "Počet nově přiznaných důchodů v České republice podle roku, druhu penze, osobního vyměřovacího základu a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:nove-priznane-duchody-dle-osobniho-vymerovaciho-zakladu .
   
@@ -164,7 +164,7 @@ cssz-dataset:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-p
   rdfs:comment "Average amount of personal assessment base of pensioners with newly granted pensions in the Czech Republic by year, kind of pension and sex"@en,
     "Průměrná výše osobního vyměřovacího základu u nově přiznaných důchodů v České republice podle roku, druhu penze a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:prum-vyse-osobniho-vymerovaciho-zakladu-u-nove-priznanych-duchodu-podle-druhu-duchodu .
 
@@ -176,7 +176,7 @@ cssz-dataset:zanikle-duchody a qb:DataSet ;
   rdfs:comment "Numbers of expired pensions in the Czech Republic by year, kind of pension, statistical reason for expiration and sex"@en,
     "Počet zaniklých důchodů v České republice podle roku, druhu penze, statistického důvodu zániku a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:zanikle-duchody .
 
@@ -188,7 +188,7 @@ cssz-dataset:invalidita a qb:DataSet ;
   rdfs:comment "Numbers of newly granted disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
     "Počet nově přiznaných invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:invalidita .
 
@@ -200,7 +200,7 @@ cssz-dataset:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice a qb:DataSe
   rdfs:comment "Numbers of paid-out disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
     "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice .
 
@@ -212,7 +212,7 @@ cssz-dataset:zmeny-mezi-stupni-invalidniho-duchodu a qb:DataSet ;
   rdfs:comment "Summary of changes between degrees of disability pension classified by disability pension kind, reason of the change, sex and reference period"@en,
     "Přehled o změnách mezi stupni invalidního důchodu v daném roce, dle pohlaví"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:zmeny-mezi-stupni-invalidniho-duchodu .
 
@@ -224,7 +224,7 @@ cssz-dataset:duchodci-v-cr-krajich-okresech a qb:DataSet ;
   rdfs:comment "Total numbers of pensioners, average amount of pensions and average age of pensioners by year, kind of pension, region or district of Czech Republic and sex"@en,
     "Celkový počet důchodců, průměrná výše důchodu a průměrný věk důchodců podle roku, druhu penze a pohlaví za ČR, kraje a okresy"@cs ;
   dcterms:publisher <http://www.cssz.cz> ;
-  dcterms:issued "2014-09-15"^^xsd:date ;
+
   dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
   qb:structure cssz-dsd:duchodci-v-cr-krajich-okresech .
 
