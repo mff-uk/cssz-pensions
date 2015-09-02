@@ -5,6 +5,7 @@
 @prefix dcterms:  		<http://purl.org/dc/terms/>.
 @prefix qb:             <http://purl.org/linked-data/cube#> .
 @prefix dbpedia:  		<http://dbpedia.org/resource/> .
+@prefix time:			<http://www.w3.org/2006/time#> .
 
 @prefix sdmx-concept:   <https://data.cssz.cz/ontology/sdmx/concept/> .
 @prefix sdmx-dimension: <https://data.cssz.cz/ontology/sdmx/dimension/> .
@@ -78,14 +79,14 @@ cssz-dimension:refPeriod a rdf:Property, qb:DimensionProperty ;
   rdfs:label "reference period"@en, "referenční období"@cs ;
   rdfs:comment "The period of time or point in time to which the measured observation is intended to refer."@en, "Časové období nebo místo v čase, pro které platí měřená hodnota."@cs ;
   rdfs:subPropertyOf sdmx-dimension:refPeriod ;
-  rdfs:range interval:Interval ;
+  rdfs:range time:Interval ;
   qb:concept sdmx-concept:refPeriod .
 
 cssz-dimension:rok-zaniku-duchodu a rdf:Property, qb:DimensionProperty ;
   rdfs:label "year of expiration of the pension"@en, "rok zániku důchodu"@cs ;
   rdfs:comment "A year in which some pension expired."@en, "Rok, ve kterém došlo k zániku důvodu pro pobírání určitého důchodu."@cs ;
   rdfs:subPropertyOf sdmx-dimension:refPeriod ;
-  rdfs:range interval:Interval ;
+  rdfs:range time:Interval ;
   qb:concept sdmx-concept:refPeriod .
   
 cssz-dimension:refArea a rdf:Property, qb:DimensionProperty ;
