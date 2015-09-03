@@ -31,6 +31,7 @@
 @prefix czgop-onto:   	<https://data.cssz.cz/ontology/groups-of-persons/> .
 @prefix icd10-onto:   	<https://data.cssz.cz/ontology/icd-10/> .
 
+<https://data.cssz.cz/resource/dataset/rocenka/vocabulary> {
 ### Definition of measures and properties
 
 cssz-dimension:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
@@ -241,3 +242,4 @@ cssz-measure:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:comment "Number of pensions that expired for some of the defined reasons for expiration."@en, "Počet důchodů, které zanikly z některého z definovaných důvodů zaniku důchodu."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
+  }
