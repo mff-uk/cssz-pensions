@@ -1,0 +1,55 @@
+@prefix rdf:      		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+
+@prefix cssz-measure:	<https://data.cssz.cz/ontology/measure/> .
+
+<https://data.cssz.cz/resource/dataset/statistika-zadosti-dle-zak-106-1999-sb/vocabulary> {
+cssz-measure:celkovy-pocet-podanych-zadosti-o-informace  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Celkový počet podaných žádostí o informace"@cs ;
+  rdfs:comment "Celkový počet podaných žádostí o informace."@cs .
+
+cssz-measure:pocet-zadosti-o-informace-podanych-fyzickymi-osobami  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet žádostí o informace podaných fyzickými osobami"@cs ;
+  rdfs:comment "Počet žádostí o informace podaných fyzickými osobami."@cs .
+
+cssz-measure:pocet-zadosti-o-informace-podanych-pravnickymi-osobami  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet žádostí o informace podaných právnickými osobami"@cs ;
+  rdfs:comment "Počet žádostí o informace podaných právnickými osobami."@cs .
+  
+cssz-measure:pocet_zadosti_o_informace_podanych_elektronicky  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet žádostí o informace podaných elektronicky"@cs ;
+  rdfs:comment "Počet žádostí o informace podaných elektronicky."@cs .
+  
+cssz-measure:pocet_zadosti_o_informace_podanych_pisemne  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet žádostí o informace podaných písemně"@cs ;
+  rdfs:comment "Počet žádostí o informace podaných písemně."@cs .
+  
+cssz-measure:pocet-zadosti-o-informace-podanych-osobne  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet žádostí o informace podaných osobně"@cs ;
+  rdfs:comment "Počet žádostí o informace podaných osobně."@cs .
+  
+cssz-measure:pocet-vydanych-rozhodnuti-o-odmitnuti-zadosti  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet vydaných rozhodnutí o odmítnutí žádosti"@cs ;
+  rdfs:comment "Počet vydaných rozhodnutí o odmítnutí žádosti."@cs .
+  
+cssz-measure:pocet-podanych-odvolani-proti-rozhodnuti  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet podaných odvolání proti rozhodnutí"@cs ;
+  rdfs:comment "Počet podaných odvolání proti rozhodnutí."@cs .
+  
+cssz-measure:soudni-rizeni  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Soudní řízení"@cs ;
+  rdfs:comment "Počet rozsudků soudu ve věci přezkoumání zákonnosti rozhodnutí povinného subjektu o odmítnutí žádosti o poskytnutí informace."@cs .
+  
+cssz-measure:poskytnute-vyhradni-licence  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Poskytnuté výhradní licence"@cs ;
+  rdfs:comment "Počet poskytnutých výhradních licencí, včetně odůvodnění nezbytnosti poskytnutí výhradní licence."@cs .
+  
+cssz-measure:pocet-stiznosti  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Počet stížností"@cs ;
+  rdfs:comment "Počet stížností podaných podle § 16a z. č. 106/1999 Sb., důvody jejich podání a stručný popis způsobu jejich vyřízení."@cs .
+  
+cssz-measure:dalsi-informace  a rdf:Property, qb:MeasureProperty ;
+  rdfs:label "Další informace"@cs ;
+  rdfs:comment "Další informace vztahující se k uplatňování tohoto zákona."@cs .
+}

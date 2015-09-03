@@ -1,0 +1,91 @@
+@prefix rdf:      		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:      		<http://www.w3.org/2001/XMLSchema#> .
+@prefix interval:		<http://reference.data.gov.uk/def/intervals/> .
+@prefix dcterms:  		<http://purl.org/dc/terms/>.
+@prefix qb:             <http://purl.org/linked-data/cube#> .
+@prefix dbpedia:  		<http://dbpedia.org/resource/> .
+
+@prefix sdmx-concept:   <https://data.cssz.cz/ontology/sdmx/concept/> .
+@prefix sdmx-dimension: <https://data.cssz.cz/ontology/sdmx/dimension/> .
+@prefix sdmx-attribute: <https://data.cssz.cz/ontology/sdmx/attribute/> .
+@prefix sdmx-measure:   <https://data.cssz.cz/ontology/sdmx/measure/> .
+@prefix sdmx-metadata:  <https://data.cssz.cz/ontology/sdmx/metadata/> .
+@prefix sdmx-code:      <https://data.cssz.cz/ontology/sdmx/code/> .
+@prefix sdmx-subject:   <https://data.cssz.cz/ontology/sdmx/subject/> .
+
+@prefix cssz: 			<https://data.cssz.cz/ontology/> .
+@prefix cssz-dimension:	<https://data.cssz.cz/ontology/dimension/> .
+@prefix cssz-measure:	<https://data.cssz.cz/ontology/measure/> .
+@prefix cssz-dsd:		<https://data.cssz.cz/resource/data-structure-definition/> .
+@prefix cssz-dataset:   <https://data.cssz.cz/resource/dataset/> .
+
+cssz-dataset:statistika-zadosti-dle-zak-106-1999-sb a qb:DataSet ;
+  dcterms:title "Statistika žádostí dle zák. 106/1999 Sb."@cs ;
+  rdfs:label "Statistika žádostí dle zák. 106/1999 Sb."@cs ;
+  dcterms:description "Statistika žádostí o poskytnutí informací dle zák. 106/1999 Sb., která je součástí výroční zprávy o činnosti v oblasti poskytování informací"@cs ;
+  rdfs:comment "Statistika žádostí o poskytnutí informací dle zák. 106/1999 Sb., která je součástí výroční zprávy o činnosti v oblasti poskytování informací"@cs ;
+  dcterms:publisher <http://www.cssz.cz> ;
+  dcterms:subject sdmx-subject:1.6, <http://dbpedia.org/resource/Czech_republic> ;
+  qb:structure cssz-dsd:statistika-zadosti-dle-zak-106-1999-sb .
+  
+cssz-dsd:statistika-zadosti-dle-zak-106-1999-sb a qb:DataStructureDefinition ;
+  rdfs:label "Definice struktury datové kostky Statistika žádostí dle zák. 106/1999 Sb."@cs ;
+  qb:component [
+    qb:dimension cssz-dimension:refPeriod ;
+    qb:order 1 ;
+    rdfs:label "Referenční období"@cs
+  ] ;
+  qb:component [
+    qb:dimension qb:measureType ;
+    qb:order 2 ;
+    rdfs:label "Reprezentovaný fakt"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:celkovy-pocet-podanych-zadosti-o-informace ;
+    rdfs:label "Celkový počet podaných žádostí o informace"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-zadosti-o-informace-podanych-fyzickymi-osobami ;
+    rdfs:label "Počet žádostí o informace podaných fyzickými osobami"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-zadosti-o-informace-podanych-pravnickymi-osobami ;
+    rdfs:label "Počet žádostí o informace podaných právnickými osobami"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet_zadosti_o_informace_podanych_elektronicky ;
+    rdfs:label "Počet žádostí o informace podaných elektronicky"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-zadosti-o-informace-podanych-pisemne ;
+    rdfs:label "Počet žádostí o informace podaných písemně"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-zadosti-o-informace-podanych-osobne ;
+    rdfs:label "Počet žádostí o informace podaných osobně"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-vydanych-rozhodnuti-o-odmitnuti-zadosti ;
+    rdfs:label "Počet vydaných rozhodnutí o odmítnutí žádosti"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-podanych-odvolani-proti-rozhodnuti ;
+    rdfs:label "Počet podaných odvolání proti rozhodnutí"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:soudni-rizeni ;
+    rdfs:label "Soudní řízení"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:poskytnute-vyhradni-licence ;
+    rdfs:label "Poskytnuté výhradní licence"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:pocet-stiznosti ;
+    rdfs:label "Počet stížností"@cs
+  ] ;
+  qb:component [
+    qb:measure cssz-measure:dalsi-informace ;
+    rdfs:label "Další informace"@cs
+  ] .

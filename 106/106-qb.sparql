@@ -1,0 +1,42 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+
+PREFIX cssz-dimension: <https://data.cssz.cz/ontology/dimension/>
+PREFIX cssz-measure: <https://data.cssz.cz/ontology/measure/>
+
+PREFIX tabular: <http://unifiedviews.eu/ontology/t-tabular/>
+PREFIX temp: <https://data.cssz.cz/resource/temp/>
+
+PREFIX ds: <https://data.cssz.cz/resource/dataset/statistika-zadosti-dle-zak-106-1999-sb>
+
+CONSTRUCT 
+{
+?o a qb:Observation ;
+	qb:dataSet ds: ;
+	cssz-dimension:refPeriod ?refPeriod ;
+	qb:measureType ?measure ;
+	?measure ?value .
+}
+WHERE 
+{
+?row a tabular:Row ;
+     temp:col1 ?rok ;
+	 ?column ?value .
+	 
+VALUES (?measure ?column) 
+{
+(cssz-measure:celkovy-pocet-podanych-zadosti-o-informace temp:col2)
+(cssz-measure:pocet-zadosti-o-informace-podanych-fyzickymi-osobami temp:col3)
+(cssz-measure:pocet-zadosti-o-informace-podanych-pravnickymi-osobami temp:col4)
+(cssz-measure:pocet_zadosti_o_informace_podanych_elektronicky temp:col12)
+(cssz-measure:pocet-zadosti-o-informace-podanych-pisemne temp:col13)
+(cssz-measure:pocet-zadosti-o-informace-podanych-osobne temp:col14)
+(cssz-measure:pocet-vydanych-rozhodnuti-o-odmitnuti-zadosti temp:col5)
+(cssz-measure:pocet-podanych-odvolani-proti-rozhodnuti temp:col6)
+(cssz-measure:soudni-rizeni temp:col7)
+(cssz-measure:poskytnute-vyhradni-licence temp:col8)
+(cssz-measure:pocet-stiznosti temp:col9)
+(cssz-measure:dalsi-informace temp:col10)
+}
+BIND (IRI(CONCAT("https://data.cssz.cz/resource/observation/statistika-zadosti-dle-zak-106-1999-sb/", str(?rok), "/", REPLACE(STR(?measure), ".*/([^/]+)$", "$1"))) as ?o)
+BIND (IRI(CONCAT("https://data.cssz.cz/resource/reference.data.gov.uk/id/gregorian-year/", str(?rok))) as ?refPeriod)
+}

@@ -1,0 +1,87 @@
+{
+  "fields": [
+    {
+      "name": "referencni_obdobi",
+      "title": "Referenční období",
+      "type": "integer",
+      "description": "Toto pole obsahuje referenční období"
+    },
+    {
+      "name": "celkovy_pocet_podanych_zadosti_o_informace",
+      "title": "Celkový počet podaných žádostí o informace",
+      "type": "integer",
+      "description": "Celkový počet podaných žádostí o informace"
+    },
+    {
+      "name": "pocet_zadosti_o_informace_podanych_fyzickymi_osobami",
+      "title": "Počet žádostí o informace podaných fyzickými osobami",
+      "type": "integer",
+      "description": "Počet žádostí o informace podaných fyzickými osobami"
+    },
+    {
+      "name": "pocet_zadosti_o_informace_podanych_pravnickymi_osobami",
+      "title": "Počet žádostí o informace podaných právnickými osobami",
+      "type": "integer",
+      "description": "Počet žádostí o informace podaných právnickými osobami"
+    },
+    {
+      "name": "pocet_zadosti_o_informace_podanych_elektronicky",
+      "title": "Počet žádostí o informace podaných elektronicky",
+      "type": "integer",
+      "description": "Počet žádostí o informace podaných elektronicky"
+    },
+    {
+      "name": "pocet_zadosti_o_informace_podanych_pisemne",
+      "title": "Počet žádostí o informace podaných písemně",
+      "type": "integer",
+      "description": "Počet žádostí o informace podaných písemně"
+    },
+    {
+      "name": "pocet_zadosti_o_informace_podanych_osobne",
+      "title": "Počet žádostí o informace podaných osobně",
+      "type": "integer",
+      "description": "Počet žádostí o informace podaných osobně"
+    },
+    {
+      "name": "pocet_vydanych_rozhodnuti_o_odmitnuti_zadosti",
+      "title": "Počet vydaných rozhodnutí o odmítnutí žádosti",
+      "type": "integer",
+      "description": "Počet vydaných rozhodnutí o odmítnutí žádosti."
+    },
+    {
+      "name": "pocet_podanych_odvolani_proti_rozhodnuti",
+      "title": "Počet podaných odvolání proti rozhodnutí",
+      "type": "integer",
+      "description": "Počet podaných odvolání proti rozhodnutí"
+    },
+    {
+      "name": "soudni_rizeni",
+      "title": "Soudní řízení",
+      "type": "integer",
+      "description": "Počet rozsudků soudu ve věci přezkoumání zákonnosti rozhodnutí povinného subjektu o odmítnutí žádosti o poskytnutí informace."
+    },
+    {
+      "name": "poskytnute_vyhradni_licence",
+      "title": "Poskytnuté výhradní licence",
+      "type": "integer",
+      "description": "Počet poskytnutých výhradních licencí, včetně odůvodnění nezbytnosti poskytnutí výhradní licence."
+    },
+    {
+      "name": "pocet_stiznosti",
+      "title": "Počet stížností",
+      "type": "integer",
+      "description": "Počet stížností podaných podle § 16a z. č. 106/1999 Sb., důvody jejich podání a stručný popis způsobu jejich vyřízení."
+    },
+    {
+      "name": "dalsi_informace",
+      "title": "Další informace",
+      "type": "integer",
+      "description": "Další informace vztahující se k uplatňování tohoto zákona."
+    }
+
+  ],
+  "primaryKey": [
+      "referencni_obdobi"
+  ]
+
+}

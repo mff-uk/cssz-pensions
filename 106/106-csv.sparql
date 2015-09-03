@@ -1,0 +1,123 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+PREFIX cssz-dimension: <https://data.cssz.cz/ontology/dimension/>
+PREFIX cssz-measure: <https://data.cssz.cz/ontology/measure/>
+
+PREFIX ds: <https://data.cssz.cz/resource/dataset/statistika-zadosti-dle-zak-106-1999-sb>
+
+SELECT DISTINCT ?referencni_obdobi 
+(MAX(?celkovy_pocet_podanych_zadosti_o_informace1) as ?celkovy_pocet_podanych_zadosti_o_informace) 
+(MAX(?pocet_zadosti_o_informace_podanych_fyzickymi_osobami1) as ?pocet_zadosti_o_informace_podanych_fyzickymi_osobami)
+(MAX(?pocet_zadosti_o_informace_podanych_pravnickymi_osobami1) as ?pocet_zadosti_o_informace_podanych_pravnickymi_osobami)
+(MAX(?pocet_zadosti_o_informace_podanych_elektronicky1) as ?pocet_zadosti_o_informace_podanych_elektronicky)
+(MAX(?pocet_zadosti_o_informace_podanych_pisemne1) as ?pocet_zadosti_o_informace_podanych_pisemne)
+(MAX(?pocet_zadosti_o_informace_podanych_osobne1) as ?pocet_zadosti_o_informace_podanych_osobne)
+(MAX(?pocet_vydanych_rozhodnuti_o_odmitnuti_zadosti1) as ?pocet_vydanych_rozhodnuti_o_odmitnuti_zadosti)
+(MAX(?pocet_podanych_odvolani_proti_rozhodnuti1) as ?pocet_podanych_odvolani_proti_rozhodnuti)
+(MAX(?soudni_rizeni1) as ?soudni_rizeni)
+(MAX(?poskytnute_vyhradni_licence1) as ?poskytnute_vyhradni_licence)
+(MAX(?pocet_stiznosti1) as ?pocet_stiznosti)
+(MAX(?dalsi_informace1) as ?dalsi_informace)
+WHERE 
+{ 
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:celkovy-pocet-podanych-zadosti-o-informace ;
+  cssz-measure:celkovy-pocet-podanych-zadosti-o-informace ?celkovy_pocet_podanych_zadosti_o_informace1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-zadosti-o-informace-podanych-fyzickymi-osobami ;
+  cssz-measure:pocet-zadosti-o-informace-podanych-fyzickymi-osobami ?pocet_zadosti_o_informace_podanych_fyzickymi_osobami1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-zadosti-o-informace-podanych-pravnickymi-osobami ;
+  cssz-measure:pocet-zadosti-o-informace-podanych-pravnickymi-osobami ?pocet_zadosti_o_informace_podanych_pravnickymi_osobami1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet_zadosti_o_informace_podanych_elektronicky ;
+  cssz-measure:pocet_zadosti_o_informace_podanych_elektronicky ?pocet_zadosti_o_informace_podanych_elektronicky1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-zadosti-o-informace-podanych-pisemne ;
+  cssz-measure:pocet-zadosti-o-informace-podanych-pisemne ?pocet_zadosti_o_informace_podanych_pisemne1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-zadosti-o-informace-podanych-osobne ;
+  cssz-measure:pocet-zadosti-o-informace-podanych-osobne ?pocet_zadosti_o_informace_podanych_osobne1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-vydanych-rozhodnuti-o-odmitnuti-zadosti ;
+  cssz-measure:pocet-vydanych-rozhodnuti-o-odmitnuti-zadosti ?pocet_vydanych_rozhodnuti_o_odmitnuti_zadosti1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-podanych-odvolani-proti-rozhodnuti ;
+  cssz-measure:pocet-podanych-odvolani-proti-rozhodnuti ?pocet_podanych_odvolani_proti_rozhodnuti1 .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:soudni-rizeni ;
+  cssz-measure:soudni-rizeni ?soudni_rizeni1  .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:poskytnute-vyhradni-licence ;
+  cssz-measure:poskytnute-vyhradni-licence ?poskytnute_vyhradni_licence1  .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:pocet-stiznosti ;
+  cssz-measure:pocet-stiznosti ?pocet_stiznosti1  .
+ }
+UNION
+ {
+  ?observation a qb:Observation ;
+  qb:dataSet ds: ;
+  cssz-dimension:refPeriod/skos:notation ?referencni_obdobi;
+  qb:measureType cssz-measure:dalsi-informace ;
+  cssz-measure:dalsi-informace ?dalsi_informace1  .
+ }
+
+}
+GROUP BY ?referencni_obdobi
+ORDER BY ASC(?referencni_obdobi)
