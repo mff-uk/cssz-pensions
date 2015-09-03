@@ -9,12 +9,12 @@
 @prefix dischange-onto:   <https://data.cssz.cz/ontology/disability-change-reasons/> .
 
 dischange-onto:DisabilityChangeReasonScheme a skos:ConceptScheme, sdmx:CodeList ;
-  skos:prefLabel "Code list of disability change reason"@en, "Číselník důvodů změny invalidního důchodu"@cs ;
-  rdfs:label "Code list of disability change reason"@en, "Číselník důvodů změny invalidního důchodu"@cs ;
-  skos:notation "CL_CSSZ_DISABILITY_CHANGE_REASON" ;
-  skos:note "This code list is a representation of disability change reasons."@en,
-            "Tento číselník je reprezentací důvodů změn invalidního důchodu."@cs ;
-  rdfs:seeAlso dischange-onto:DisabilityChangeReason .
+	skos:prefLabel "Code list of disability grade change reason"@en, "Číselník důvodů změny stupně invalidního důchodu"@cs ;
+	rdfs:label "Code list of disability grade change reason"@en, "Číselník důvodů změny stupně invalidního důchodu"@cs ;
+	skos:notation "CL_CSSZ_DISABILITY_GRADE_CHANGE_REASON" ;
+	skos:note "This code list is a representation of disability grade change reasons."@en,
+            "Tento číselník je reprezentací důvodů změn stupně invalidního důchodu."@cs; 
+	rdfs:seeAlso dischange-onto:DisabilityChangeReason .
   
 dischange-onto:DisabilityChangeReason a rdfs:Class, owl:Class ;
   rdfs:subClassOf skos:Concept ;

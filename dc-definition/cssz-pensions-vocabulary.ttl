@@ -31,12 +31,11 @@
 @prefix czgop-onto:   	<https://data.cssz.cz/ontology/groups-of-persons/> .
 @prefix icd10-onto:   	<https://data.cssz.cz/ontology/icd-10/> .
 
-<https://data.cssz.cz/resource/dataset/rocenka/vocabulary> {
 ### Definition of measures and properties
 
 cssz-dimension:kvantily-relativni-vyse-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "quantile of the relative amount of pension"@en, "kvantil relativní výše důchodu"@cs ;
-  rdfs:comment "Distribution of pensions according to their quantile of their relative amount."@en, "Rozdělení důchodů podle kvantilu jejich relativní výše."@cs ;
+  rdfs:label "quantile of amount of pension"@en, "kvantil výše důchodu"@cs ;
+  rdfs:comment "Distribution of pensions according to the quantile of their amount."@en, "Rozdělení důchodů podle kvantilu jejich výše."@cs ;
   rdfs:range qua-onto:Quantile ;
   qb:concept dbpedia:Quantile .
 
@@ -71,8 +70,8 @@ cssz-dimension:stupen-invalidity a rdf:Property, qb:DimensionProperty ;
   qb:concept dbpedia:Disability, dbpedia:Natural_kind .
 
 cssz-dimension:duvod-zmeny-invalidniho-duchodu a rdf:Property, qb:DimensionProperty ;
-  rdfs:label "disability change reason"@en, "důvod změny invalidního důchodu"@cs ;
-  rdfs:comment "Distribution of entities according to the disability change reason."@en, "Rozdělení entit podle důvodu změny invalidního důchodu."@cs ;
+  rdfs:label "disability grade change reason"@en, "důvod změny stupně invalidního důchodu"@cs ;
+  rdfs:comment "Distribution of entities according to the disability grade change reason."@en, "Rozdělení entit podle důvodu změny stupně invalidního důchodu."@cs ;
   rdfs:range pencan-onto:PensionCancellationReason ;
   qb:concept dbpedia:Disability, dbpedia:Natural_kind .
 
@@ -242,4 +241,3 @@ cssz-measure:pocet-zaniklych-duchodu a rdf:Property, qb:MeasureProperty ;
   rdfs:comment "Number of pensions that expired for some of the defined reasons for expiration."@en, "Počet důchodů, které zanikly z některého z definovaných důvodů zaniku důchodu."@cs ;
   rdfs:subPropertyOf sdmx-measure:obsValue ;
   rdfs:range xsd:nonNegativeInteger .
-  }
