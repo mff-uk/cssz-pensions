@@ -193,8 +193,8 @@ cssz-dataset:invalidita a qb:DataSet ;
   qb:structure cssz-dsd:invalidita .
 
 cssz-dataset:pocet-vyplacenych-invalidnich-duchodu-v-ceske-republice a qb:DataSet ;
-  dcterms:title "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice"@cs ;
-  rdfs:label "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice"@cs ;
+  dcterms:title "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice dle skupin diagnóz"@cs ;
+  rdfs:label "Numbers of paid-out disability pensions in the Czech Republic"@en, "Počet vyplácených invalidních důchodů v České republice dle skupin diagnóz"@cs ;
   dcterms:description "Numbers of paid-out pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
     "Počet vyplácených invalidních důchodů v České republice podle roku, druhu penze, skupiny diagnóz dle WHO, věkové skupiny a pohlaví"@cs ;
   rdfs:comment "Numbers of paid-out disability pensions in the Czech Republic by year, kind of pension, diagnosis according to WHO, age and sex"@en,
